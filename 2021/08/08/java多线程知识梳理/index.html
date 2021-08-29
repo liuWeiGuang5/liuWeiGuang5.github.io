@@ -461,14 +461,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    20.9k
+                    23.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    87 分
+                    99 分
                 </div>
                 
 
@@ -493,127 +493,142 @@
 <!-- code_chunk_output -->
 
 <ul>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E6%A6%82%E8%BF%B0">线程概述</a><ul>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">线程相关概念</a><ul>
-<li><a href="#%E8%BF%9B%E7%A8%8B">进程</a></li>
-<li><a href="#%E7%BA%BF%E7%A8%8B">线程</a></li>
-<li><a href="#%E4%B8%BB%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%AD%90%E7%BA%BF%E7%A8%8B">主线程与子线程</a></li>
-<li><a href="#%E4%B8%B2%E8%A1%8C%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C">串行,并发与并行</a></li>
+<li><a href="#1-%E7%BA%BF%E7%A8%8B%E6%A6%82%E8%BF%B0">1. 线程概述</a><ul>
+<li><a href="#11-%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">1.1 线程相关概念</a><ul>
+<li><a href="#111-%E8%BF%9B%E7%A8%8B">1.1.1 进程</a></li>
+<li><a href="#112-%E7%BA%BF%E7%A8%8B">1.1.2 线程</a></li>
+<li><a href="#113-%E4%B8%BB%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%AD%90%E7%BA%BF%E7%A8%8B">1.1.3 主线程与子线程</a></li>
+<li><a href="#114-%E4%B8%B2%E8%A1%8C%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C">1.1.4 串行,并发与并行</a></li>
 </ul>
 </li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%AF%E5%8A%A8">线程的创建与启动</a></li>
+<li><a href="#12-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%AF%E5%8A%A8">1.2 线程的创建与启动</a></li>
 </ul>
 </li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95">线程的常用方法</a><ul>
-<li><a href="#currentthread%E6%96%B9%E6%B3%95">currentThread()方法</a></li>
-<li><a href="#setnamegetname">setName()/getName()</a></li>
-<li><a href="#isalive">isAlive()</a></li>
-<li><a href="#sleep">sleep()</a></li>
-<li><a href="#gitid">gitId()</a></li>
-<li><a href="#yield">yield()</a></li>
-<li><a href="#setpriority">setPriority()</a></li>
-<li><a href="#interrupt">interrupt()</a></li>
-<li><a href="#setdaemon">setDaemon()</a></li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">线程的生命周期</a></li>
+<li><a href="#2-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95">2. 线程的常用方法</a><ul>
+<li><a href="#21-currentthread%E6%96%B9%E6%B3%95">2.1 currentThread()方法</a></li>
+<li><a href="#22-setnamegetname">2.2 setName()/getName()</a></li>
+<li><a href="#23-isalive">2.3 isAlive()</a></li>
+<li><a href="#24-sleep">2.4 sleep()</a></li>
+<li><a href="#25-gitid">2.5 gitId()</a></li>
+<li><a href="#26-yield">2.6 yield()</a></li>
+<li><a href="#27-setpriority">2.7 setPriority()</a></li>
+<li><a href="#28-interrupt">2.8 interrupt()</a></li>
+<li><a href="#29-setdaemon">2.9 setDaemon()</a></li>
 </ul>
 </li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98">线程安全问题</a><ul>
-<li><a href="#%E5%8E%9F%E5%AD%90%E6%80%A7">原子性</a></li>
-<li><a href="#%E5%8F%AF%E8%A7%81%E6%80%A7">可见性</a></li>
-<li><a href="#%E6%9C%89%E5%BA%8F%E6%80%A7">有序性</a><ul>
-<li><a href="#%E9%87%8D%E6%8E%92%E5%BA%8F">重排序</a></li>
-<li><a href="#%E6%8C%87%E4%BB%A4%E9%87%8D%E6%8E%92%E5%BA%8F">指令重排序</a></li>
-<li><a href="#%E5%AD%98%E5%82%A8%E5%AD%90%E7%B3%BB%E7%BB%9F%E9%87%8D%E6%8E%92%E5%BA%8F">存储子系统重排序</a></li>
-<li><a href="#%E8%B2%8C%E4%BC%BC%E4%B8%B2%E8%A1%8C%E8%AF%AD%E4%B9%89">貌似串行语义</a></li>
+<li><a href="#3-%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">3. 线程的生命周期</a><ul>
+<li><a href="#31-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E5%8A%BF%E4%B8%8E%E5%AD%98%E5%9C%A8%E7%9A%84%E9%A3%8E%E9%99%A9">3.1 多线程编程的优势与存在的风险</a></li>
+<li><a href="#32-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E9%A3%8E%E9%99%A9">3.2 多线程编程存在的问题与风险:</a></li>
 </ul>
 </li>
-<li><a href="#%E4%BF%9D%E8%AF%81%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%80%A7">保证内存访问的顺序性</a></li>
-<li><a href="#java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B">Java内存模型</a></li>
+<li><a href="#4-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98">4. 线程安全问题</a><ul>
+<li><a href="#41-%E5%8E%9F%E5%AD%90%E6%80%A7">4.1 原子性</a></li>
+<li><a href="#42-%E5%8F%AF%E8%A7%81%E6%80%A7">4.2 可见性</a></li>
+<li><a href="#43-%E6%9C%89%E5%BA%8F%E6%80%A7">4.3 有序性</a><ul>
+<li><a href="#431-%E9%87%8D%E6%8E%92%E5%BA%8F">4.3.1 重排序</a></li>
+<li><a href="#432-%E6%8C%87%E4%BB%A4%E9%87%8D%E6%8E%92%E5%BA%8F">4.3.2 指令重排序</a></li>
+<li><a href="#433-%E5%AD%98%E5%82%A8%E5%AD%90%E7%B3%BB%E7%BB%9F%E9%87%8D%E6%8E%92%E5%BA%8F">4.3.3 存储子系统重排序</a></li>
+<li><a href="#444-%E8%B2%8C%E4%BC%BC%E4%B8%B2%E8%A1%8C%E8%AF%AD%E4%B9%89">4.4.4 貌似串行语义</a></li>
 </ul>
 </li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5">线程同步</a><ul>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6%E7%AE%80%E4%BB%8B">线程同步机制简介</a></li>
-<li><a href="#%E9%94%81%E6%A6%82%E8%BF%B0">锁概述</a><ul>
-<li><a href="#%E9%94%81%E7%9A%84%E4%BD%9C%E7%94%A8">锁的作用</a></li>
-<li><a href="#%E9%94%81%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A6%82%E5%BF%B5">锁相关的概念</a></li>
+<li><a href="#45-%E4%BF%9D%E8%AF%81%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%80%A7">4.5 保证内存访问的顺序性</a></li>
+<li><a href="#46-java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B">4.6 Java内存模型</a></li>
 </ul>
 </li>
-<li><a href="#%E5%86%85%E9%83%A8%E9%94%81synchronized-%E5%85%B3%E9%94%AE%E5%AD%97">内部锁:synchronized 关键字</a><ul>
-<li><a href="#synchronized-%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97">synchronized 同步代码块</a></li>
-<li><a href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95">同步方法</a></li>
-<li><a href="#%E8%84%8F%E8%AF%BB">脏读</a></li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E5%87%BA%E7%8E%B0%E5%BC%82%E5%B8%B8%E4%BC%9A%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E9%94%81">线程出现异常会自动释放锁</a></li>
-<li><a href="#%E6%AD%BB%E9%94%81">死锁</a></li>
+<li><a href="#5-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5">5. 线程同步</a><ul>
+<li><a href="#51-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6%E7%AE%80%E4%BB%8B">5.1 线程同步机制简介</a></li>
+<li><a href="#52-%E9%94%81%E6%A6%82%E8%BF%B0">5.2 锁概述</a><ul>
+<li><a href="#521-%E9%94%81%E7%9A%84%E4%BD%9C%E7%94%A8">5.2.1 锁的作用</a></li>
+<li><a href="#523-%E9%94%81%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A6%82%E5%BF%B5">5.2.3 锁相关的概念</a></li>
 </ul>
 </li>
-<li><a href="#%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6volatile-%E5%85%B3%E9%94%AE%E5%AD%97">轻量级同步机制:volatile 关键字</a><ul>
-<li><a href="#volatile-%E7%9A%84%E4%BD%9C%E7%94%A8">volatile 的作用</a></li>
-<li><a href="#volatile-%E9%9D%9E%E5%8E%9F%E5%AD%90%E7%89%B9%E6%80%A7">volatile 非原子特性</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%8E%9F%E5%AD%90%E7%B1%BB%E8%BF%9B%E8%A1%8C%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E6%93%8D%E4%BD%9C">常用原子类进行自增自减操作</a></li>
+<li><a href="#53-%E5%86%85%E9%83%A8%E9%94%81synchronized-%E5%85%B3%E9%94%AE%E5%AD%97">5.3 内部锁:synchronized 关键字</a><ul>
+<li><a href="#531-synchronized-%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97">5.3.1 synchronized 同步代码块</a></li>
+<li><a href="#532-%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95">5.3.2 同步方法</a></li>
+<li><a href="#533-%E8%84%8F%E8%AF%BB">5.3.3 脏读</a></li>
+<li><a href="#534-%E7%BA%BF%E7%A8%8B%E5%87%BA%E7%8E%B0%E5%BC%82%E5%B8%B8%E4%BC%9A%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E9%94%81">5.3.4 线程出现异常会自动释放锁</a></li>
+<li><a href="#535-%E6%AD%BB%E9%94%81">5.3.5 死锁</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#cas">CAS</a><ul>
-<li><a href="#%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E7%B1%BB">原子变量类</a><ul>
-<li><a href="#atomiclong">AtomicLong</a></li>
-<li><a href="#atomicintegerarray">AtomicIntegerArray</a></li>
-<li><a href="#atomicintegerfieldupdater">AtomicIntegerFieldUpdater</a></li>
-<li><a href="#atomicreference">AtomicReference</a></li>
+<li><a href="#54-%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6volatile-%E5%85%B3%E9%94%AE%E5%AD%97">5.4 轻量级同步机制:volatile 关键字</a><ul>
+<li><a href="#541-volatile-%E7%9A%84%E4%BD%9C%E7%94%A8">5.4.1 volatile 的作用</a></li>
+<li><a href="#542-volatile-%E9%9D%9E%E5%8E%9F%E5%AD%90%E7%89%B9%E6%80%A7">5.4.2 volatile 非原子特性</a></li>
+<li><a href="#543-%E5%B8%B8%E7%94%A8%E5%8E%9F%E5%AD%90%E7%B1%BB%E8%BF%9B%E8%A1%8C%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E6%93%8D%E4%BD%9C">5.4.3 常用原子类进行自增自减操作</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1">线程间的通信</a><ul>
-<li><a href="#%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6">等待/通知机制</a><ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6">什么是等待通知机制</a></li>
-<li><a href="#%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0">等待/通知机制的实现</a></li>
-<li><a href="#interrupt%E6%96%B9%E6%B3%95%E4%BC%9A%E4%B8%AD%E6%96%AD-wait">interrupt()方法会中断 wait()</a></li>
-<li><a href="#notify%E4%B8%8E-notifyall">notify()与 notifyAll()</a></li>
-<li><a href="#waitlong%E7%9A%84%E4%BD%BF%E7%94%A8">wait(long)的使用</a></li>
-<li><a href="#%E9%80%9A%E7%9F%A5%E8%BF%87%E6%97%A9">通知过早</a></li>
-<li><a href="#wait-%E7%AD%89%E5%BE%85%E6%9D%A1%E4%BB%B6%E5%8F%91%E7%94%9F%E4%BA%86%E5%8F%98%E5%8C%96%E9%87%8D%E7%82%B9">wait 等待条件发生了变化(重点)</a></li>
-<li><a href="#%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F">生产者消费者模式</a></li>
-</ul>
-</li>
-<li><a href="#%E9%80%9A%E8%BF%87%E7%AE%A1%E9%81%93%E6%B5%81%E5%AE%9E%E7%8E%B0%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1">通过管道流实现线程间的通信</a></li>
-<li><a href="#join">Join()</a></li>
-<li><a href="#threadlocal-%E7%9A%84%E4%BD%BF%E7%94%A8">ThreadLocal 的使用</a><ul>
-<li><a href="#threadlocal%E6%8C%87%E5%AE%9A%E5%88%9D%E5%A7%8B%E5%80%BC">ThreadLocal指定初始值</a></li>
+<li><a href="#6-cas">6. CAS</a><ul>
+<li><a href="#61-%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E7%B1%BB">6.1 原子变量类</a><ul>
+<li><a href="#611-atomiclong">6.1.1 AtomicLong</a></li>
+<li><a href="#612-atomicintegerarray">6.1.2 AtomicIntegerArray</a></li>
+<li><a href="#613-atomicintegerfieldupdater">6.1.3 AtomicIntegerFieldUpdater</a></li>
+<li><a href="#614-atomicreference">6.1.4 AtomicReference</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#lock-%E6%98%BE%E7%A4%BA%E9%94%81">Lock 显示锁</a><ul>
-<li><a href="#%E9%94%81%E7%9A%84%E5%8F%AF%E9%87%8D%E5%85%A5%E6%80%A7">锁的可重入性</a></li>
-<li><a href="#reentrantlock">ReentrantLock</a><ul>
-<li><a href="#reentrantlock-%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">ReentrantLock 的基本使用</a></li>
-<li><a href="#reentrantlock-%E9%94%81%E7%9A%84%E5%8F%AF%E9%87%8D%E5%85%A5%E6%80%A7">ReentrantLock 锁的可重入性</a></li>
-<li><a href="#lockinterruptibly%E6%96%B9%E6%B3%95">lockInterruptibly()方法</a></li>
-<li><a href="#trylock%E6%96%B9%E6%B3%95">tryLock()方法</a><ul>
-<li><a href="#%E4%BD%BF%E7%94%A8-trylock%E5%8F%AF%E4%BB%A5%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81">使用 tryLock()可以避免死锁</a></li>
+<li><a href="#7-%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1">7. 线程间的通信</a><ul>
+<li><a href="#71-%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6">7.1 等待/通知机制</a><ul>
+<li><a href="#711-%E4%BB%80%E4%B9%88%E6%98%AF%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6">7.1.1 什么是等待通知机制</a></li>
+<li><a href="#712-%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0">7.1.2 等待/通知机制的实现</a></li>
+<li><a href="#713-interrupt%E6%96%B9%E6%B3%95%E4%BC%9A%E4%B8%AD%E6%96%AD-wait">7.1.3 interrupt()方法会中断 wait()</a></li>
+<li><a href="#714-notify%E4%B8%8E-notifyall">7.1.4 notify()与 notifyAll()</a></li>
+<li><a href="#715-waitlong%E7%9A%84%E4%BD%BF%E7%94%A8">7.1.5 wait(long)的使用</a></li>
+<li><a href="#716-%E9%80%9A%E7%9F%A5%E8%BF%87%E6%97%A9">7.1.6 通知过早</a></li>
+<li><a href="#717-wait-%E7%AD%89%E5%BE%85%E6%9D%A1%E4%BB%B6%E5%8F%91%E7%94%9F%E4%BA%86%E5%8F%98%E5%8C%96%E9%87%8D%E7%82%B9">7.1.7 wait 等待条件发生了变化(重点)</a></li>
+<li><a href="#718-%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F">7.1.8 生产者消费者模式</a></li>
 </ul>
 </li>
-<li><a href="#newcondition%E6%96%B9%E6%B3%95">newCondition()方法</a><ul>
-<li><a href="#%E5%A4%9A%E4%B8%AA-condition-%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%9F%A5%E9%83%A8%E5%88%86%E7%BA%BF%E7%A8%8B-%E4%BD%BF%E7%94%A8%E6%9B%B4%E7%81%B5%E6%B4%BB">多个 Condition 实现通知部分线程, 使用更灵活</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8-condition-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%A4%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0">使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8-condition-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%9A%E5%AF%B9%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0">使用 Condition 实现生产者/消费者设计模式, 多对多线程交替打印</a></li>
+<li><a href="#72-%E9%80%9A%E8%BF%87%E7%AE%A1%E9%81%93%E6%B5%81%E5%AE%9E%E7%8E%B0%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1">7.2 通过管道流实现线程间的通信</a></li>
+<li><a href="#73-join">7.3 Join()</a></li>
+<li><a href="#73-threadlocal-%E7%9A%84%E4%BD%BF%E7%94%A8">7.3 ThreadLocal 的使用</a><ul>
+<li><a href="#731-threadlocal%E6%8C%87%E5%AE%9A%E5%88%9D%E5%A7%8B%E5%80%BC">7.3.1 ThreadLocal指定初始值</a></li>
 </ul>
 </li>
-<li><a href="#%E5%85%AC%E5%B9%B3%E9%94%81%E4%B8%8E%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81">公平锁与非公平锁</a></li>
-<li><a href="#%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95">几个常用的方法</a><ul>
-<li><a href="#1getholdcount">（1）getHoldCount</a></li>
+</ul>
+</li>
+<li><a href="#8-lock-%E6%98%BE%E7%A4%BA%E9%94%81">8. Lock 显示锁</a><ul>
+<li><a href="#81-%E9%94%81%E7%9A%84%E5%8F%AF%E9%87%8D%E5%85%A5%E6%80%A7">8.1 锁的可重入性</a></li>
+<li><a href="#82-reentrantlock">8.2 ReentrantLock</a><ul>
+<li><a href="#821-reentrantlock-%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">8.2.1 ReentrantLock 的基本使用</a></li>
+<li><a href="#822-reentrantlock-%E9%94%81%E7%9A%84%E5%8F%AF%E9%87%8D%E5%85%A5%E6%80%A7">8.2.2 ReentrantLock 锁的可重入性</a></li>
+<li><a href="#823-lockinterruptibly%E6%96%B9%E6%B3%95">8.2.3 lockInterruptibly()方法</a></li>
+<li><a href="#824-trylock%E6%96%B9%E6%B3%95">8.2.4 tryLock()方法</a><ul>
+<li><a href="#8241-%E4%BD%BF%E7%94%A8-trylock%E5%8F%AF%E4%BB%A5%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81">8.2.4.1 使用 tryLock()可以避免死锁</a></li>
+</ul>
+</li>
+<li><a href="#825-newcondition%E6%96%B9%E6%B3%95">8.2.5 newCondition()方法</a></li>
+<li><a href="#826-%E5%A4%9A%E4%B8%AA-condition-%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%9F%A5%E9%83%A8%E5%88%86%E7%BA%BF%E7%A8%8B-%E4%BD%BF%E7%94%A8%E6%9B%B4%E7%81%B5%E6%B4%BB">8.2.6 多个 Condition 实现通知部分线程, 使用更灵活</a></li>
+<li><a href="#827-%E4%BD%BF%E7%94%A8-condition-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%A4%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0">8.2.7 使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印</a></li>
+<li><a href="#828-%E4%BD%BF%E7%94%A8-condition-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%9A%E5%AF%B9%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0">8.2.8 使用 Condition 实现生产者/消费者设计模式, 多对多线程交替打印</a></li>
+<li><a href="#829-%E5%85%AC%E5%B9%B3%E9%94%81%E4%B8%8E%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81">8.2.9 公平锁与非公平锁</a></li>
+<li><a href="#8210-%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95">8.2.10 几个常用的方法</a><ul>
+<li><a href="#1-getholdcount">（1） getHoldCount</a></li>
 <li><a href="#2-getqueuelength">(2) getQueueLength</a></li>
 <li><a href="#3-getwaitqueuelength">(3) getWaitQueueLength</a></li>
-<li><a href="#5-hasqueuedthread-hasqueuedthreads">(5) hasQueuedThread、hasQueuedThreads</a></li>
-<li><a href="#6haswaiters">（6）hasWaiters</a></li>
-<li><a href="#7-isfair-isheldbycurrentthread">(7) isFair、isHeldByCurrentThread</a></li>
-<li><a href="#8-islocked">(8) isLocked</a></li>
+<li><a href="#4-hasqueuedthread-hasqueuedthreads">(4) hasQueuedThread、hasQueuedThreads</a></li>
+<li><a href="#5haswaiters">（5）hasWaiters</a></li>
+<li><a href="#6-isfair-isheldbycurrentthread">(6) isFair、isHeldByCurrentThread</a></li>
+<li><a href="#7-islocked">(7) isLocked</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#reentrantreadwritelock%E9%87%8D%E7%82%B9">ReentrantReadWriteLock（重点））</a></li>
+<li><a href="#83-reentrantreadwritelock%E9%87%8D%E7%82%B9">8.3 ReentrantReadWriteLock(重点)</a><ul>
+<li><a href="#831-%E8%AF%BB%E8%AF%BB%E5%85%B1%E4%BA%AB">8.3.1 读读共享</a></li>
+<li><a href="#832-%E5%86%99%E5%86%99%E4%BA%92%E6%96%A5">8.3.2 写写互斥</a></li>
+<li><a href="#833-%E8%AF%BB%E5%86%99%E4%BA%92%E6%96%A5">8.3.3 读写互斥</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#9-%E7%BA%BF%E7%A8%8B%E7%AE%A1%E7%90%86">9 线程管理</a><ul>
+<li><a href="#91-%E7%BA%BF%E7%A8%8B%E7%BB%84%E4%BA%86%E8%A7%A3">9.1 线程组(了解)</a><ul>
+<li><a href="#911-%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%BB%84">9.1.1 创建线程组</a></li>
+<li><a href="#912-%E7%BA%BF%E7%A8%8B%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">9.1.2 线程组的基本操作</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -623,15 +638,14 @@
 
 
 
-
-<h2 id="线程概述"><a href="#线程概述" class="headerlink" title="线程概述"></a>线程概述</h2><h3 id="线程相关概念"><a href="#线程相关概念" class="headerlink" title="线程相关概念"></a>线程相关概念</h3><h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>进程(Process)是计算机中的程序关于某数据集合上一次运行活动,是操作系统进行资源分配与调度的基本单位. 可以把进程简单的理解为正在操作系统中运行的一个程序. </p>
-<h4 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h4><p>线程(thread)是进程的一个执行单元. 一个线程就是进程中一个单一顺序的控制流, 进程的一个执行分支 </p>
+<h2 id="1-线程概述"><a href="#1-线程概述" class="headerlink" title="1. 线程概述"></a>1. 线程概述</h2><h3 id="1-1-线程相关概念"><a href="#1-1-线程相关概念" class="headerlink" title="1.1 线程相关概念"></a>1.1 线程相关概念</h3><h4 id="1-1-1-进程"><a href="#1-1-1-进程" class="headerlink" title="1.1.1 进程"></a>1.1.1 进程</h4><p>进程(Process)是计算机中的程序关于某数据集合上一次运行活动,是操作系统进行资源分配与调度的基本单位. 可以把进程简单的理解为正在操作系统中运行的一个程序. </p>
+<h4 id="1-1-2-线程"><a href="#1-1-2-线程" class="headerlink" title="1.1.2 线程"></a>1.1.2 线程</h4><p>线程(thread)是进程的一个执行单元. 一个线程就是进程中一个单一顺序的控制流, 进程的一个执行分支 </p>
 <p>进程是线程的容器,一个进程至少有一个线程.一个进程中也可以<br>有多个线程.  </p>
 <p>在操作系统中是以进程为单位分配资源,如虚拟存储空间,文件描<br>述符等. 每个线程都有各自的线程栈,自己的寄存器环境,自己的线程<br>本地存储. </p>
-<h4 id="主线程与子线程"><a href="#主线程与子线程" class="headerlink" title="主线程与子线程"></a>主线程与子线程</h4><p>JVM 启动时会创建一个主线程,该主线程负责执行 main 方法 . 主线程就是运行 main 方法的线程  </p>
+<h4 id="1-1-3-主线程与子线程"><a href="#1-1-3-主线程与子线程" class="headerlink" title="1.1.3 主线程与子线程"></a>1.1.3 主线程与子线程</h4><p>JVM 启动时会创建一个主线程,该主线程负责执行 main 方法 . 主线程就是运行 main 方法的线程  </p>
 <p>Java 中的线程不孤立的,线程之间存在一些联系. 如果在 A 线程中创建了 B 线程, 称 B 线程为 A 线程的子线程, 相应的 A 线程就是 B 线程的父线程 </p>
-<h4 id="串行-并发与并行"><a href="#串行-并发与并行" class="headerlink" title="串行,并发与并行"></a>串行,并发与并行</h4><p><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B/1.jpg"> </p>
-<h3 id="线程的创建与启动"><a href="#线程的创建与启动" class="headerlink" title="线程的创建与启动"></a>线程的创建与启动</h3><p>在 Java 中,创建一个线程就是创建一个 Thread 类(子类)的对象(实例) </p>
+<h4 id="1-1-4-串行-并发与并行"><a href="#1-1-4-串行-并发与并行" class="headerlink" title="1.1.4 串行,并发与并行"></a>1.1.4 串行,并发与并行</h4><p><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B/1.jpg"> </p>
+<h3 id="1-2-线程的创建与启动"><a href="#1-2-线程的创建与启动" class="headerlink" title="1.2 线程的创建与启动"></a>1.2 线程的创建与启动</h3><p>在 Java 中,创建一个线程就是创建一个 Thread 类(子类)的对象(实例) </p>
 <p><strong>Thread 类有两个常用 的构造方法:Thread()与 Thread(Runnable).对应的创建线程的两种方式:</strong></p>
 <ul>
 <li><strong>定义 Thread 类的子类</strong></li>
@@ -716,7 +730,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="线程的常用方法"><a href="#线程的常用方法" class="headerlink" title="线程的常用方法"></a>线程的常用方法</h2><h3 id="currentThread-方法"><a href="#currentThread-方法" class="headerlink" title="currentThread()方法"></a>currentThread()方法</h3><blockquote>
+<h2 id="2-线程的常用方法"><a href="#2-线程的常用方法" class="headerlink" title="2. 线程的常用方法"></a>2. 线程的常用方法</h2><h3 id="2-1-currentThread-方法"><a href="#2-1-currentThread-方法" class="headerlink" title="2.1 currentThread()方法"></a>2.1 currentThread()方法</h3><blockquote>
 <p><strong>Thread.currentThread()</strong> 方法可以获得当前线程 </p>
 </blockquote>
 <p>Java 中的任何一段代码都是执行在某个线程当中的. 执行当前代码的线程就是当前线程.<br>同一段代码可能被不同的线程执行,因此当前线程相对的,ThreadcurrentThread()方法的返回值是在代码实际运行时候的线程对象 </p>
@@ -743,7 +757,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>运行结果</code><br>main方法中打印当前线程:main<br>构造方法打印当前线程名称:main<br>run方法打印当前线程名称:Thread-0 </p>
-<h3 id="setName-getName"><a href="#setName-getName" class="headerlink" title="setName()/getName()"></a>setName()/getName()</h3><blockquote>
+<h3 id="2-2-setName-getName"><a href="#2-2-setName-getName" class="headerlink" title="2.2 setName()/getName()"></a>2.2 setName()/getName()</h3><blockquote>
 <p><strong>thread.setName(线程名称)</strong>, 设置线程名称<br>thread.getName()返回线程名称 </p>
 </blockquote>
 <pre class="line-numbers language-java"><code class="language-java"> 
@@ -769,7 +783,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>运行结果</code><br>main, id = 1<br>Thread-0, id = 12</p>
 <p>通过设置线程名称,有助于程序调试,提高程序的可读性, 建议为<br>每个线程都设置一个能够体现线程功能的名称  </p>
-<h3 id="isAlive"><a href="#isAlive" class="headerlink" title="isAlive()"></a>isAlive()</h3><blockquote>
+<h3 id="2-3-isAlive"><a href="#2-3-isAlive" class="headerlink" title="2.3 isAlive()"></a>2.3 isAlive()</h3><blockquote>
 <p><strong>thread.isAlive()</strong> 判断当前线程是否处于活动状态<br>活动状态就是线程已启动并且尚未终止</p>
 </blockquote>
 <pre class="line-numbers language-java"><code class="language-java"> 
@@ -792,7 +806,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>运行结果</code><br>begin == false<br>end == true<br>run方法,isalive=:true  </p>
-<h3 id="sleep"><a href="#sleep" class="headerlink" title="sleep()"></a>sleep()</h3><blockquote>
+<h3 id="2-4-sleep"><a href="#2-4-sleep" class="headerlink" title="2.4 sleep()"></a>2.4 sleep()</h3><blockquote>
 <p><strong>Thread.sleep(millis)</strong>; 让当前线程休眠指定的毫秒数</p>
 </blockquote>
 <p>当前线程是指 Thread.currentThread()返回的线程<br><code>十秒倒计时</code></p>
@@ -810,17 +824,17 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="gitId"><a href="#gitId" class="headerlink" title="gitId()"></a>gitId()</h3><blockquote>
+<h3 id="2-5-gitId"><a href="#2-5-gitId" class="headerlink" title="2.5 gitId()"></a>2.5 gitId()</h3><blockquote>
 <p><strong>thread.getId()</strong> 可以获得线程的唯一标识</p>
 </blockquote>
 <p>注意:<br>某个编号的线程运行结束后,该编号可能被后续创建的线程使用<br>重启的 JVM 后,同一个线程的编号可能不一样 </p>
 <ul>
 <li>代码和getName一样 </li>
 </ul>
-<h3 id="yield"><a href="#yield" class="headerlink" title="yield()"></a>yield()</h3><blockquote>
+<h3 id="2-6-yield"><a href="#2-6-yield" class="headerlink" title="2.6 yield()"></a>2.6 yield()</h3><blockquote>
 <p><strong>Thread.yield()</strong> 方法的作用是放弃当前的 CPU 资源,就是说当一个线程使用了这个方法之后，它就会把自己CPU执行的时间让掉，让自己或者其它的线程运行。</p>
 </blockquote>
-<h3 id="setPriority"><a href="#setPriority" class="headerlink" title="setPriority()"></a>setPriority()</h3><blockquote>
+<h3 id="2-7-setPriority"><a href="#2-7-setPriority" class="headerlink" title="2.7 setPriority()"></a>2.7 setPriority()</h3><blockquote>
 <p>thread.setPriority( num ); 设置线程的优先级</p>
 </blockquote>
 <ul>
@@ -835,7 +849,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li><p>线程的优先级具有继承性, 在 A 线程中创建了 B 线程,则 B 线程的 优先级与 A 线程是一样的</p>
 </li>
 </ul>
-<h3 id="interrupt"><a href="#interrupt" class="headerlink" title="interrupt()"></a>interrupt()</h3><p>中断线程.</p>
+<h3 id="2-8-interrupt"><a href="#2-8-interrupt" class="headerlink" title="2.8 interrupt()"></a>2.8 interrupt()</h3><p>中断线程.</p>
 <blockquote>
 <p>注意调用 interrupt()方法仅仅是在当前线程打一个停止标志,并不是真正的停止线程</p>
 </blockquote>
@@ -856,11 +870,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="setDaemon"><a href="#setDaemon" class="headerlink" title="setDaemon()"></a>setDaemon()</h3><p>Java 中的线程分为用户线程与守护线程<br>守护线程应该在主线程启动之前设置</p>
+<h3 id="2-9-setDaemon"><a href="#2-9-setDaemon" class="headerlink" title="2.9 setDaemon()"></a>2.9 setDaemon()</h3><p>Java 中的线程分为用户线程与守护线程<br>守护线程应该在主线程启动之前设置</p>
 <ul>
 <li>守护线程是为其他线程提供服务的线程,如垃圾回收器(GC)就是一 个典型的守护线程 守护线程不能单独运行, 当 JVM 中没有其他用户线程,只有守护线 程时,守护线程会自动销毁, JVM 会退出 </li>
 </ul>
-<h3 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h3><p><strong>线程的生命周期是线程对象的生老病死,即线程的状态<br>线程生命周期可以通过 getState()方法获得, 线程的状态是<br>Thread.State 枚举类型定义的, 由以下几种:</strong></p>
+<h2 id="3-线程的生命周期"><a href="#3-线程的生命周期" class="headerlink" title="3. 线程的生命周期"></a>3. 线程的生命周期</h2><p><strong>线程的生命周期是线程对象的生老病死,即线程的状态<br>线程生命周期可以通过 getState()方法获得, 线程的状态是<br>Thread.State 枚举类型定义的, 由以下几种:</strong></p>
 <blockquote>
 <p>NEW,新建状态. 创建了线程对象,在调用 start()启动之前的状态;</p>
 </blockquote>
@@ -881,22 +895,21 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 </blockquote>
 <p><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B/6.jpg">  </p>
 <p><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B/7.jpg">  </p>
-<p><strong>线程编程的优势与存在的风险</strong><br>多线程编程具有以下优势:</p>
+<h3 id="3-1-多线程编程的优势与存在的风险"><a href="#3-1-多线程编程的优势与存在的风险" class="headerlink" title="3.1 多线程编程的优势与存在的风险"></a>3.1 多线程编程的优势与存在的风险</h3><p>多线程编程具有以下优势:</p>
 <ol>
 <li>提高系统的吞吐率(Throughout). 多线程编程可以使一个进程有多个并发(concurrent,即同时进行的)的操作</li>
 <li>提高响应性(Responsiveness).Web 服务器会采用一些专门的线程负责用户的请求处理,缩短了用户的等待时间</li>
 <li>充分利用多核(Multicore)处理器资源. 通过多线程可以充分的利用 CPU资源  </li>
 </ol>
-<p><strong>多线程编程存在的问题与风险:</strong>  </p>
-<p>1.线程安全(Thread safe)问题.多线程共享数据时,如果没有采取正确的并发访问控制措施,就可能会产生数据一致性问题,如读取脏数据(过期的数据), 如丢失数据更新. </p>
+<h3 id="3-2-多线程编程存在的问题与风险"><a href="#3-2-多线程编程存在的问题与风险" class="headerlink" title="3.2 多线程编程存在的问题与风险:"></a>3.2 多线程编程存在的问题与风险:</h3><p>1.线程安全(Thread safe)问题.多线程共享数据时,如果没有采取正确的并发访问控制措施,就可能会产生数据一致性问题,如读取脏数据(过期的数据), 如丢失数据更新. </p>
 <p>2.线程活性(thread liveness)问题.由于程序自身的缺陷或者由资源稀缺性导致线程一直处于非 RUNNABLE 状态,这就是线程活性问题, 常见的活性故障有以下几种:<br>(1) 死锁(Deadlock). 类似鹬蚌相争.<br>(2) 锁死(Lockout), 类似于睡美人故事中王子挂了<br>(3) 活锁(Livelock). 类似于小猫咬自己尾巴<br>(4) 饥饿(Starvation).类似于健壮的雏鸟总是从母鸟嘴抢到食物.</p>
 <p>3.上下文切换(Context Switch). 处理器从执行一个线程切换到执<br>行另外一个线程</p>
 <p>4.可靠性. 可能会由一个线程导致 JVM 意外终止,其他的线程也无法执行</p>
-<h2 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h2><p>非线程安全主要是指多个线程对同一个对象的实例变量进行操作<br>时,会出现值被更改,值不同步的情况. 线程安全问题表现为三个方面:</p>
+<h2 id="4-线程安全问题"><a href="#4-线程安全问题" class="headerlink" title="4. 线程安全问题"></a>4. 线程安全问题</h2><p>非线程安全主要是指多个线程对同一个对象的实例变量进行操作<br>时,会出现值被更改,值不同步的情况. 线程安全问题表现为三个方面:</p>
 <blockquote>
 <p>原子性<br>可见性<br>有序性 </p>
 </blockquote>
-<h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h3><p>原子(Atomic)就是不可分割的意思. 原子操作的不可分割有两层<br>含义:<br><strong>1) 访问(读,写)某个共享变量的操作从其他线程来看,该操作要么已经执行完毕,要么尚未发生, 即其他线程看不到当前操作的中间结果<br>2) 访问同一组共享变量的原子操作是不能够交错的</strong>  </p>
+<h3 id="4-1-原子性"><a href="#4-1-原子性" class="headerlink" title="4.1 原子性"></a>4.1 原子性</h3><p>原子(Atomic)就是不可分割的意思. 原子操作的不可分割有两层<br>含义:<br><strong>1) 访问(读,写)某个共享变量的操作从其他线程来看,该操作要么已经执行完毕,要么尚未发生, 即其他线程看不到当前操作的中间结果<br>2) 访问同一组共享变量的原子操作是不能够交错的</strong>  </p>
 <p>如现实生活中从 ATM 机取款, 对于用户来说,要么操作成功,用户拿到钱, 余额减少了,增加了一条交易记录; 要么没拿到钱,相当于取款操作没有发生 </p>
 <p>Java 有两种方式实现原子性:  </p>
 <ul>
@@ -905,9 +918,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li><p>另一种利用处理器的 CAS(Compare and Swap)指令. 锁具有排它性,保证共享变量在某一时刻只能被一个线程访问. CAS 指令直接在硬件(处理器和内存)层次上实现,看作是硬件锁`</p>
 </li>
 </ul>
-<h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3><p>在多线程环境中, 一个线程对某个共享变量进行更新之后 , 后续其他的线程可能无法立即读到这个更新的结果, 这就是线程安全问题的另外一种形式: 可见性(visibility).<br>如果一个线程对共享变量更新后, 后续访问该变量的其他线程可以读到更新的结果, 称这个线程对共享变量的更新对其他线程可见, 否则称这个线程对共享变量的更新对其他线程不可见. 多线程程序因为可见性问题可能会导致其他线程读取到了旧数据(脏数据) </p>
-<h3 id="有序性"><a href="#有序性" class="headerlink" title="有序性"></a>有序性</h3><p>有序性(Ordering)是指在什么情况下一个处理器上运行的一个线程所执行的 内存访问操作在另外一个处理器运行的其他线程看来是乱序的(Out of Order).<br>乱序是指内存访问操作的顺序看起来发生了变化  </p>
-<h4 id="重排序"><a href="#重排序" class="headerlink" title="重排序"></a>重排序</h4><p>在多核处理器的环境下,编写的顺序结构,这种操作执行的顺序可能是没有保障的:</p>
+<h3 id="4-2-可见性"><a href="#4-2-可见性" class="headerlink" title="4.2 可见性"></a>4.2 可见性</h3><p>在多线程环境中, 一个线程对某个共享变量进行更新之后 , 后续其他的线程可能无法立即读到这个更新的结果, 这就是线程安全问题的另外一种形式: 可见性(visibility).<br>如果一个线程对共享变量更新后, 后续访问该变量的其他线程可以读到更新的结果, 称这个线程对共享变量的更新对其他线程可见, 否则称这个线程对共享变量的更新对其他线程不可见. 多线程程序因为可见性问题可能会导致其他线程读取到了旧数据(脏数据) </p>
+<h3 id="4-3-有序性"><a href="#4-3-有序性" class="headerlink" title="4.3 有序性"></a>4.3 有序性</h3><p>有序性(Ordering)是指在什么情况下一个处理器上运行的一个线程所执行的 内存访问操作在另外一个处理器运行的其他线程看来是乱序的(Out of Order).<br>乱序是指内存访问操作的顺序看起来发生了变化  </p>
+<h4 id="4-3-1-重排序"><a href="#4-3-1-重排序" class="headerlink" title="4.3.1 重排序"></a>4.3.1 重排序</h4><p>在多核处理器的环境下,编写的顺序结构,这种操作执行的顺序可能是没有保障的:</p>
 <ul>
 <li><p>编译器可能会改变两个操作的先后顺序;</p>
 </li>
@@ -928,7 +941,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <p><strong>可以把重排序分为指令重排序与存储子系统重排序两种</strong></p>
 <p><code>指令重排序主要是由 JIT 编译器,处理器引起的, 指程序顺序与执行顺序不一样</code></p>
 <p><code>存储子系统重排序是由高速缓存,写缓冲器引起的, 感知顺序与执行顺序不一致</code></p>
-<h4 id="指令重排序"><a href="#指令重排序" class="headerlink" title="指令重排序"></a>指令重排序</h4><p>在源码顺序与程序顺序不一致,或者程序顺序与执行顺序不一致的情况下,我们就说发生了指令重排序(Instruction Reorder).</p>
+<h4 id="4-3-2-指令重排序"><a href="#4-3-2-指令重排序" class="headerlink" title="4.3.2 指令重排序"></a>4.3.2 指令重排序</h4><p>在源码顺序与程序顺序不一致,或者程序顺序与执行顺序不一致的情况下,我们就说发生了指令重排序(Instruction Reorder).</p>
 <p>指令重排是一种动作,确实对指令的顺序做了调整, 重排序的对象指令.</p>
 <ul>
 <li><p>javac 编译器一般不会执行指令重排序, 而 JIT 编译器可能执行指令重排序.</p>
@@ -937,7 +950,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 </li>
 </ul>
 <p>指令重排不会对单线程程序的结果正确性产生影响,可能导致多线程程序出现非预期的结果</p>
-<h4 id="存储子系统重排序"><a href="#存储子系统重排序" class="headerlink" title="存储子系统重排序"></a>存储子系统重排序</h4><ul>
+<h4 id="4-3-3-存储子系统重排序"><a href="#4-3-3-存储子系统重排序" class="headerlink" title="4.3.3 存储子系统重排序"></a>4.3.3 存储子系统重排序</h4><ul>
 <li><p>存储子系统是指写缓冲器与高速缓存.</p>
 </li>
 <li><p>高速缓存(Cache)是 CPU 中为了匹配与主内存处理速度不匹配而设计的一个高速缓存</p>
@@ -958,7 +971,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <p>3、LoadStore 重排序,一个处理器先执行读内存操作 L1 再执行写内存操作 W1, 其他处理器对两个内存操作的感知顺序可能是 W1-&gt;L1</p>
 <p>4、StoreLoad重排序,一个处理器先执行写内存操作W1再执行读内存操作 L1, 其他处理器对两个内存操作的感知顺序可能是 L1-&gt;W1</p>
 <p>内存重排序与具体的处理器微架构有关,不同架构的处理器所允许的内存重排序不同</p>
-<h4 id="貌似串行语义"><a href="#貌似串行语义" class="headerlink" title="貌似串行语义"></a>貌似串行语义</h4><p>JIT 编译器,处理器,存储子系统是按照一定的规则对指令,内存操作的结果进行重排序, 给单线程程序造成一种假象—-指令是按照源码的顺序执行的.这种假象称为貌似串行语义. 并不能保证多线程环境程序的正确性</p>
+<h4 id="4-4-4-貌似串行语义"><a href="#4-4-4-貌似串行语义" class="headerlink" title="4.4.4 貌似串行语义"></a>4.4.4 貌似串行语义</h4><p>JIT 编译器,处理器,存储子系统是按照一定的规则对指令,内存操作的结果进行重排序, 给单线程程序造成一种假象—-指令是按照源码的顺序执行的.这种假象称为貌似串行语义. 并不能保证多线程环境程序的正确性</p>
 <p>为了保证貌似串行语义,有数据依赖关系的语句不会被重排序,只有不存在数据依赖关系的语句才会被重排序.如果两个操作(指令)访问同一个变量,且其中一个操作(指令)为写操作,那么这两个操作之间就存在数据依赖关系(Data dependency).</p>
 <blockquote>
 <p>x = 1; y = x + 1; 后一条语句的操作数包含前一条语句的执 行结果;<br>y = x; x = 1; 先读取 x 变量,再更新 x 变量的值;<br>x = 1; x = 2; 两条语句同时对一个变量进行写操作</p>
@@ -968,8 +981,8 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <p>double price = 45.8; int quantity = 10;</p>
 </blockquote>
 <p>存在控制依赖关系的语句允许重排.<strong>一条语句(指令)的执行结果会决定另一条语句(指令)能否被执行,这两条语句(指令)存在控制依赖关系(Control Dependency).</strong> 如在 if 语句中允许重排,可能存在处理器先执行 if 代码块,再判断 if 条件是否成立</p>
-<h3 id="保证内存访问的顺序性"><a href="#保证内存访问的顺序性" class="headerlink" title="保证内存访问的顺序性"></a>保证内存访问的顺序性</h3><p>可以使用 volatile 关键字, synchronized 关键字实现有序 </p>
-<h3 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h3><blockquote>
+<h3 id="4-5-保证内存访问的顺序性"><a href="#4-5-保证内存访问的顺序性" class="headerlink" title="4.5 保证内存访问的顺序性"></a>4.5 保证内存访问的顺序性</h3><p>可以使用 volatile 关键字, synchronized 关键字实现有序 </p>
+<h3 id="4-6-Java内存模型"><a href="#4-6-Java内存模型" class="headerlink" title="4.6 Java内存模型"></a>4.6 Java内存模型</h3><blockquote>
 <p>1)每个线程都有独立的栈空间<br>2)每个线程都可以访问堆内存<br>3)计算机的CPU不直接从主内存中读取数据，CPU读取数据时， 先把主内存的数据读到Cache缓存中，把Cache中的数据读到Regi ster寄存器中</p>
 </blockquote>
 <blockquote>
@@ -984,11 +997,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <blockquote>
 <p>规定:<br>每个线程之间的共享数据都存储在主内存中<br>每个线程都有一个私有的本地内存(工作内存),线程的工作内存是抽象的概念,不是真实存在的，它涵盖写缓冲器，寄存器其他硬件的优化.<br>每个线程从主内存中把数据读取到本地工作内存中,在工作内存中保存共享数据的副本<br>线程在自己的工作内存中处理数据，仅对当前线程可见，对其他线程是不可见的<br><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B/3.jpg">  </p>
 </blockquote>
-<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><h3 id="线程同步机制简介"><a href="#线程同步机制简介" class="headerlink" title="线程同步机制简介"></a>线程同步机制简介</h3><ul>
+<h2 id="5-线程同步"><a href="#5-线程同步" class="headerlink" title="5. 线程同步"></a>5. 线程同步</h2><h3 id="5-1-线程同步机制简介"><a href="#5-1-线程同步机制简介" class="headerlink" title="5.1 线程同步机制简介"></a>5.1 线程同步机制简介</h3><ul>
 <li>线程同步机制是一套用于协调线程之间的数据访问的机制.该机制可以保障线程安全.</li>
 <li>Java 平台提供的线程同步机制包括: 锁, volatile 关键字, final 关键字,static 关键字,以及相关的 API,如 Object.wait()/Object.notify()等</li>
 </ul>
-<h3 id="锁概述"><a href="#锁概述" class="headerlink" title="锁概述"></a>锁概述</h3><p>线程安全问题的产生前提是多个线程并发访问共享数据.</p>
+<h3 id="5-2-锁概述"><a href="#5-2-锁概述" class="headerlink" title="5.2 锁概述"></a>5.2 锁概述</h3><p>线程安全问题的产生前提是多个线程并发访问共享数据.</p>
 <ul>
 <li><p>将多个线程对共享数据的并发访问转换为串行访问,即一个共享数据一次只能被一个线程访问.锁就是复用这种思路来保障线程安全的</p>
 </li>
@@ -999,7 +1012,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li><p>JVM 把锁分为内部锁和显示锁两种. 内部锁通过 synchronized关键字实现; 显示锁通过 java.concurrent.locks.Lock 接口的实现类实现的  </p>
 </li>
 </ul>
-<h4 id="锁的作用"><a href="#锁的作用" class="headerlink" title="锁的作用"></a>锁的作用</h4><p><strong>锁可以实现对共享数据的安全访问. 保障线程的原子性,可见性与有序性</strong></p>
+<h4 id="5-2-1-锁的作用"><a href="#5-2-1-锁的作用" class="headerlink" title="5.2.1 锁的作用"></a>5.2.1 锁的作用</h4><p><strong>锁可以实现对共享数据的安全访问. 保障线程的原子性,可见性与有序性</strong></p>
 <ul>
 <li><p>锁是通过互斥保障原子性. 一个锁只能被一个线程持有, 这就保证临界区的代码一次只能被一个线程执行.使得临界区代码所执行的操作自然而然的具有不可分割的特性,即具备了原子性.</p>
 </li>
@@ -1020,7 +1033,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 </ul>
 </li>
 </ul>
-<h4 id="锁相关的概念"><a href="#锁相关的概念" class="headerlink" title="锁相关的概念"></a>锁相关的概念</h4><p><strong>1)可重入性</strong><br><code>可重入性(Reentrancy)描述: 一个线程持有该锁的时候能再次(多次)申请该锁</code></p>
+<h4 id="5-2-3-锁相关的概念"><a href="#5-2-3-锁相关的概念" class="headerlink" title="5.2.3 锁相关的概念"></a>5.2.3 锁相关的概念</h4><p><strong>1)可重入性</strong><br><code>可重入性(Reentrancy)描述: 一个线程持有该锁的时候能再次(多次)申请该锁</code></p>
 <blockquote>
 <p>void methodA(){ 申请 a 锁 methodB(); 释放 a 锁 }<br>void methodB(){ 申请 a 锁 …. 释放 a 锁 }</p>
 </blockquote>
@@ -1033,7 +1046,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <ul>
 <li>锁保护共享数据量大,称该锁的粒度粗, 否则就称该锁的粒度细.<br>锁的粒度过粗会导致线程在申请锁时会进行不必要的等待.锁的粒度过细会增加锁调度的开销.</li>
 </ul>
-<h3 id="内部锁-synchronized-关键字"><a href="#内部锁-synchronized-关键字" class="headerlink" title="内部锁:synchronized 关键字"></a>内部锁:synchronized 关键字</h3><p>Java 中的每个对象都有一个与之关联的内部锁(Intrinsic lock). 这种锁也称为监视器(Monitor), 这种内部锁是一种排他锁,可以保障原子性,可见性与有序性.</p>
+<h3 id="5-3-内部锁-synchronized-关键字"><a href="#5-3-内部锁-synchronized-关键字" class="headerlink" title="5.3 内部锁:synchronized 关键字"></a>5.3 内部锁:synchronized 关键字</h3><p>Java 中的每个对象都有一个与之关联的内部锁(Intrinsic lock). 这种锁也称为监视器(Monitor), 这种内部锁是一种排他锁,可以保障原子性,可见性与有序性.</p>
 <p>内部锁是通过 synchronized 关键字实现的.synchronized 关键字修饰代码块,修饰该方法</p>
 <p>修饰代码块的语法:</p>
 <blockquote>
@@ -1043,7 +1056,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li>修饰实例方法就称为同步实例方法</li>
 <li>修饰静态方法称称为同步静态方法</li>
 </ul>
-<h4 id="synchronized-同步代码块"><a href="#synchronized-同步代码块" class="headerlink" title="synchronized 同步代码块"></a>synchronized 同步代码块</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="5-3-1-synchronized-同步代码块"><a href="#5-3-1-synchronized-同步代码块" class="headerlink" title="5.3.1 synchronized 同步代码块"></a>5.3.1 synchronized 同步代码块</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test01</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//可以实现同步，锁相同</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         Test01 obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1131,7 +1144,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <blockquote>
 <p>使用一个常量对象作为锁对象,不同方法(实例方法、静态方法)中的同步代码块也可以同步  </p>
 </blockquote>
-<h4 id="同步方法"><a href="#同步方法" class="headerlink" title="同步方法"></a>同步方法</h4><p><strong>把整个方法体作为同步代码块,默认的锁对象是 this 对象</strong></p>
+<h4 id="5-3-2-同步方法"><a href="#5-3-2-同步方法" class="headerlink" title="5.3.2 同步方法"></a>5.3.2 同步方法</h4><p><strong>把整个方法体作为同步代码块,默认的锁对象是 this 对象</strong></p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">//把整个方法体作为同步代码块,默认的锁对象是 this 对象</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test05</span> <span class="token punctuation">{</span>
@@ -1232,7 +1245,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="5-3-3-脏读"><a href="#5-3-3-脏读" class="headerlink" title="5.3.3 脏读"></a>5.3.3 脏读</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/**
  * 脏读
  * 出现读取属性值出现了一些意外, 读取的是中间值,而不是修改之后的值
@@ -1276,10 +1289,10 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="线程出现异常会自动释放锁"><a href="#线程出现异常会自动释放锁" class="headerlink" title="线程出现异常会自动释放锁"></a>线程出现异常会自动释放锁</h4><ul>
+<h4 id="5-3-4-线程出现异常会自动释放锁"><a href="#5-3-4-线程出现异常会自动释放锁" class="headerlink" title="5.3.4 线程出现异常会自动释放锁"></a>5.3.4 线程出现异常会自动释放锁</h4><ul>
 <li>同步过程中线程出现异常, 会自动释放锁对象.并不会影响其他线程的执行</li>
 </ul>
-<h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="5-3-5-死锁"><a href="#5-3-5-死锁" class="headerlink" title="5.3.5 死锁"></a>5.3.5 死锁</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/**
  * 死锁 
  * 在多线程程序中,同步时可能需要使用多个锁,如果获得锁的顺序 不一致,可能会导致死锁 
@@ -1322,7 +1335,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="轻量级同步机制-volatile-关键字"><a href="#轻量级同步机制-volatile-关键字" class="headerlink" title="轻量级同步机制:volatile 关键字"></a>轻量级同步机制:volatile 关键字</h3><h4 id="volatile-的作用"><a href="#volatile-的作用" class="headerlink" title="volatile 的作用"></a>volatile 的作用</h4><ul>
+<h3 id="5-4-轻量级同步机制-volatile-关键字"><a href="#5-4-轻量级同步机制-volatile-关键字" class="headerlink" title="5.4 轻量级同步机制:volatile 关键字"></a>5.4 轻量级同步机制:volatile 关键字</h3><h4 id="5-4-1-volatile-的作用"><a href="#5-4-1-volatile-的作用" class="headerlink" title="5.4.1 volatile 的作用"></a>5.4.1 volatile 的作用</h4><ul>
 <li>volatile 关键的作用使变量在多个线程之间可见.  </li>
 </ul>
 <pre class="line-numbers language-java"><code class="language-java"> 
@@ -1382,7 +1395,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li><p>关键字 volatile 解决的是变量在多个线程之间的可见性; synchronized 关键字解决多个线程之间访问公共资源的同步性.  </p>
 </li>
 </ul>
-<h4 id="volatile-非原子特性"><a href="#volatile-非原子特性" class="headerlink" title="volatile 非原子特性"></a>volatile 非原子特性</h4><p>volatile 关键字增加了实例变量在多个线程之间的可见性,但是不具备原子性.  </p>
+<h4 id="5-4-2-volatile-非原子特性"><a href="#5-4-2-volatile-非原子特性" class="headerlink" title="5.4.2 volatile 非原子特性"></a>5.4.2 volatile 非原子特性</h4><p>volatile 关键字增加了实例变量在多个线程之间的可见性,但是不具备原子性.  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test03</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1416,7 +1429,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="常用原子类进行自增自减操作"><a href="#常用原子类进行自增自减操作" class="headerlink" title="常用原子类进行自增自减操作"></a>常用原子类进行自增自减操作</h4><p>我们知道 i++操作不是原子操作, 除了使用 Synchronized 进行同步外,也可以使用 AtomicInteger/AtomicLong 原子类进行实现 </p>
+<h4 id="5-4-3-常用原子类进行自增自减操作"><a href="#5-4-3-常用原子类进行自增自减操作" class="headerlink" title="5.4.3 常用原子类进行自增自减操作"></a>5.4.3 常用原子类进行自增自减操作</h4><p>我们知道 i++操作不是原子操作, 除了使用 Synchronized 进行同步外,也可以使用 AtomicInteger/AtomicLong 原子类进行实现 </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>atomic<span class="token punctuation">.</span>AtomicInteger<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//使用原子类进行自增 </span>
@@ -1445,7 +1458,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h2><ul>
+<h2 id="6-CAS"><a href="#6-CAS" class="headerlink" title="6. CAS"></a>6. CAS</h2><ul>
 <li>CAS(Compare And Swap)是由硬件实现的.</li>
 <li>CAS 可以将 read- modify - write 这类的操作转换为原子操作.</li>
 <li>CAS 原理: 在把数据更新到主内存时,再次读取主内存变量的值,如果现在变量的值与期望的值(操作起始时读取的值)一样就更新.<br><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B/5.png">  </li>
@@ -1518,8 +1531,8 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 </blockquote>
 </li>
 </ul>
-<h3 id="原子变量类"><a href="#原子变量类" class="headerlink" title="原子变量类"></a>原子变量类</h3><p>原子变量类基于CAS实现的, 当对共享变量进行read-modify-write更新操作时,通过原子变量类可以保障操作的原子性与可见性.对变量的 read-modify-write 更新操作是指当前操作不是一个简单的赋值,而是变量的新值依赖变量的旧值,如自增操作i++. 由于volatile只能保证 可见性,无法保障原子性, <strong>原子变量类内部就是借助一个 Volatile 变量,</strong> 并且保障了该变量的 read-modify-write 操作的原子性, 有时把原子变量类看作增强的 volatile 变量. 原子变量类有 12 个,如:<br>|  分组             | 原子变量类  |<br>|  —-             | —-  |<br>| 基础数据型         | AtomicInteger, AtomicLong, AtomicBoolean |<br>| 数组型            | AtomicIntegerArray, AtomicLongArray,AtomicReferenceArray |<br>| 字段更新器         | AtomicIntegerFieldUpdater,AtomicLongFieldUpdater, AtomicReferenceFieldUpdater |<br>| 引用型            | AtomicReference, AtomicStampedReference, AtomicMarkableReference |  </p>
-<h4 id="AtomicLong"><a href="#AtomicLong" class="headerlink" title="AtomicLong"></a>AtomicLong</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h3 id="6-1-原子变量类"><a href="#6-1-原子变量类" class="headerlink" title="6.1 原子变量类"></a>6.1 原子变量类</h3><p>原子变量类基于CAS实现的, 当对共享变量进行read-modify-write更新操作时,通过原子变量类可以保障操作的原子性与可见性.对变量的 read-modify-write 更新操作是指当前操作不是一个简单的赋值,而是变量的新值依赖变量的旧值,如自增操作i++. 由于volatile只能保证 可见性,无法保障原子性, <strong>原子变量类内部就是借助一个 Volatile 变量,</strong> 并且保障了该变量的 read-modify-write 操作的原子性, 有时把原子变量类看作增强的 volatile 变量. 原子变量类有 12 个,如:<br>|  分组             | 原子变量类  |<br>|  —-             | —-  |<br>| 基础数据型         | AtomicInteger, AtomicLong, AtomicBoolean |<br>| 数组型            | AtomicIntegerArray, AtomicLongArray,AtomicReferenceArray |<br>| 字段更新器         | AtomicIntegerFieldUpdater,AtomicLongFieldUpdater, AtomicReferenceFieldUpdater |<br>| 引用型            | AtomicReference, AtomicStampedReference, AtomicMarkableReference |  </p>
+<h4 id="6-1-1-AtomicLong"><a href="#6-1-1-AtomicLong" class="headerlink" title="6.1.1 AtomicLong"></a>6.1.1 AtomicLong</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Random<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>atomic<span class="token punctuation">.</span>AtomicLong<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/**
@@ -1589,7 +1602,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="AtomicIntegerArray"><a href="#AtomicIntegerArray" class="headerlink" title="AtomicIntegerArray"></a>AtomicIntegerArray</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="6-1-2-AtomicIntegerArray"><a href="#6-1-2-AtomicIntegerArray" class="headerlink" title="6.1.2 AtomicIntegerArray"></a>6.1.2 AtomicIntegerArray</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>atomic<span class="token punctuation">.</span>AtomicIntegerArray<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/**
  * AtomicIntegerArray 的基本操作
@@ -1656,7 +1669,7 @@ atomicIntegerArray<span class="token punctuation">.</span><span class="token fun
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="AtomicIntegerFieldUpdater"><a href="#AtomicIntegerFieldUpdater" class="headerlink" title="AtomicIntegerFieldUpdater"></a>AtomicIntegerFieldUpdater</h4><p>AtomicIntegerFieldUpdater 可以对原子整数字段进行更新,要求:</p>
+<h4 id="6-1-3-AtomicIntegerFieldUpdater"><a href="#6-1-3-AtomicIntegerFieldUpdater" class="headerlink" title="6.1.3 AtomicIntegerFieldUpdater"></a>6.1.3 AtomicIntegerFieldUpdater</h4><p>AtomicIntegerFieldUpdater 可以对原子整数字段进行更新,要求:</p>
 <ul>
 <li>字符必须使用 volatile 修饰,使线程之间可见</li>
 <li>只能是实例变量,不能是静态变量,也不能使用 final 修饰</li>
@@ -1708,7 +1721,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="AtomicReference"><a href="#AtomicReference" class="headerlink" title="AtomicReference"></a>AtomicReference</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="6-1-4-AtomicReference"><a href="#6-1-4-AtomicReference" class="headerlink" title="6.1.4 AtomicReference"></a>6.1.4 AtomicReference</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/*使用 AtomicReference 原子读写一个对象*/</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test01</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//创建一个 AtomicReference 对象 </span>
@@ -1822,7 +1835,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="线程间的通信"><a href="#线程间的通信" class="headerlink" title="线程间的通信"></a>线程间的通信</h2><h3 id="等待-通知机制"><a href="#等待-通知机制" class="headerlink" title="等待/通知机制"></a>等待/通知机制</h3><h4 id="什么是等待通知机制"><a href="#什么是等待通知机制" class="headerlink" title="什么是等待通知机制"></a>什么是等待通知机制</h4><ul>
+<h2 id="7-线程间的通信"><a href="#7-线程间的通信" class="headerlink" title="7. 线程间的通信"></a>7. 线程间的通信</h2><h3 id="7-1-等待-通知机制"><a href="#7-1-等待-通知机制" class="headerlink" title="7.1 等待/通知机制"></a>7.1 等待/通知机制</h3><h4 id="7-1-1-什么是等待通知机制"><a href="#7-1-1-什么是等待通知机制" class="headerlink" title="7.1.1 什么是等待通知机制"></a>7.1.1 什么是等待通知机制</h4><ul>
 <li><p>在单线程编程中,要执行的操作需要满足一定的条件才能执行,可以把这个操作放在 if 语句块中.</p>
 </li>
 <li><p>在多线程编程中,可能 A 线程的条件没有满足只是暂时的, 稍后其他的线程 B 可能会更新条件使得 A 线程的条件得到满足. 可以将 A 线程暂停,直到它的条件得到满足后再将 A 线程唤醒.它的伪代码:</p>
@@ -1831,7 +1844,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 </blockquote>
 </li>
 </ul>
-<h4 id="等待-通知机制的实现"><a href="#等待-通知机制的实现" class="headerlink" title="等待/通知机制的实现"></a>等待/通知机制的实现</h4><p><strong>Object 类中的 wait()方法可以使执行当前代码的线程等待,暂停执行,直到接到通知或被中断为止</strong></p>
+<h4 id="7-1-2-等待-通知机制的实现"><a href="#7-1-2-等待-通知机制的实现" class="headerlink" title="7.1.2 等待/通知机制的实现"></a>7.1.2 等待/通知机制的实现</h4><p><strong>Object 类中的 wait()方法可以使执行当前代码的线程等待,暂停执行,直到接到通知或被中断为止</strong></p>
 <p>注意:</p>
 <ul>
 <li>wait()方法只能在同步代码块中由锁对象调用</li>
@@ -1885,7 +1898,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>notify()不会立即释放锁对象，当唤醒线程执行完同步代码块之后才会释放锁对象</strong>   </p>
-<h4 id="interrupt-方法会中断-wait"><a href="#interrupt-方法会中断-wait" class="headerlink" title="interrupt()方法会中断 wait()"></a>interrupt()方法会中断 wait()</h4><p><strong>当线程处于 wait()等待状态时, 调用线程对象的 interrupt()方法会中断线程的等待状态, 会产生 InterruptedException 异常</strong></p>
+<h4 id="7-1-3-interrupt-方法会中断-wait"><a href="#7-1-3-interrupt-方法会中断-wait" class="headerlink" title="7.1.3 interrupt()方法会中断 wait()"></a>7.1.3 interrupt()方法会中断 wait()</h4><p><strong>当线程处于 wait()等待状态时, 调用线程对象的 interrupt()方法会中断线程的等待状态, 会产生 InterruptedException 异常</strong></p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
@@ -1918,7 +1931,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 <blockquote>
 <p>begin wait…<br>wait 等待被中断了****  </p>
 </blockquote>
-<h4 id="notify-与-notifyAll"><a href="#notify-与-notifyAll" class="headerlink" title="notify()与 notifyAll()"></a>notify()与 notifyAll()</h4><p><strong>notify()一次只能唤醒一个线程,如果有多个等待的线程,只能随机 唤醒其中的某一个; 想要唤醒所有等待线程,需要调用 notifyAll().</strong></p>
+<h4 id="7-1-4-notify-与-notifyAll"><a href="#7-1-4-notify-与-notifyAll" class="headerlink" title="7.1.4 notify()与 notifyAll()"></a>7.1.4 notify()与 notifyAll()</h4><p><strong>notify()一次只能唤醒一个线程,如果有多个等待的线程,只能随机 唤醒其中的某一个; 想要唤醒所有等待线程,需要调用 notifyAll().</strong></p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
@@ -1964,7 +1977,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="wait-long-的使用"><a href="#wait-long-的使用" class="headerlink" title="wait(long)的使用"></a>wait(long)的使用</h4><p><strong>wait(long)带有 long 类型参数的 wait()等待,如果在参数指定的时间内没有被唤醒,超时后会自动唤醒</strong>  </p>
+<h4 id="7-1-5-wait-long-的使用"><a href="#7-1-5-wait-long-的使用" class="headerlink" title="7.1.5 wait(long)的使用"></a>7.1.5 wait(long)的使用</h4><p><strong>wait(long)带有 long 类型参数的 wait()等待,如果在参数指定的时间内没有被唤醒,超时后会自动唤醒</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1987,7 +2000,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="通知过早"><a href="#通知过早" class="headerlink" title="通知过早"></a>通知过早</h4><p><strong>线程 wait()等待后,可以调用 notify()唤醒线程, 如果 notify()唤醒的过早,在等待之前就调用了 notify()可能会打乱程序正常的运行逻辑.</strong>  </p>
+<h4 id="7-1-6-通知过早"><a href="#7-1-6-通知过早" class="headerlink" title="7.1.6 通知过早"></a>7.1.6 通知过早</h4><p><strong>线程 wait()等待后,可以调用 notify()唤醒线程, 如果 notify()唤醒的过早,在等待之前就调用了 notify()可能会打乱程序正常的运行逻辑.</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2023,7 +2036,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span> 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="wait-等待条件发生了变化-重点"><a href="#wait-等待条件发生了变化-重点" class="headerlink" title="wait 等待条件发生了变化(重点)"></a>wait 等待条件发生了变化(重点)</h4><p><strong>wait()方法套在while循环中，线程下次醒过来后会继续进行循环，判断件是否满足，满足就重新等待。</strong></p>
+<h4 id="7-1-7-wait-等待条件发生了变化-重点"><a href="#7-1-7-wait-等待条件发生了变化-重点" class="headerlink" title="7.1.7 wait 等待条件发生了变化(重点)"></a>7.1.7 wait 等待条件发生了变化(重点)</h4><p><strong>wait()方法套在while循环中，线程下次醒过来后会继续进行循环，判断件是否满足，满足就重新等待。</strong></p>
 <p><code>在使用 wait/nofity 模式时,注意 wait 条件发生了变化,也可能会造 成逻辑的混乱</code>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/**
@@ -2125,7 +2138,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 <blockquote>
 <p>当多个线程并发访问同一个资源的时候, 若消费者同时被唤醒,但是只有一个资源可用, 那么if会导致资源被用完后直接去获取资源(发生越界异常等),而while则会让每个消费者获取之前再去判断一下资源是否可用.可用则获取,不可用则继续wait住.  </p>
 </blockquote>
-<h4 id="生产者消费者模式"><a href="#生产者消费者模式" class="headerlink" title="生产者消费者模式"></a>生产者消费者模式</h4><p><strong>在 Java 中,负责产生数据的模块是生产者,负责使用数据的模块是消费者. 生产者消费者解决数据的平衡问题,即先有数据然后才能使用,没有数据时,消费者需要等待</strong>  </p>
+<h4 id="7-1-8-生产者消费者模式"><a href="#7-1-8-生产者消费者模式" class="headerlink" title="7.1.8 生产者消费者模式"></a>7.1.8 生产者消费者模式</h4><p><strong>在 Java 中,负责产生数据的模块是生产者,负责使用数据的模块是消费者. 生产者消费者解决数据的平衡问题,即先有数据然后才能使用,没有数据时,消费者需要等待</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ValueOP</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> String value <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
@@ -2302,7 +2315,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="通过管道流实现线程间的通信"><a href="#通过管道流实现线程间的通信" class="headerlink" title="通过管道流实现线程间的通信"></a>通过管道流实现线程间的通信</h3><pre class="line-numbers language-java"><code class="language-java"> 
+<h3 id="7-2-通过管道流实现线程间的通信"><a href="#7-2-通过管道流实现线程间的通信" class="headerlink" title="7.2 通过管道流实现线程间的通信"></a>7.2 通过管道流实现线程间的通信</h3><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">//发送数据</span>
 <span class="token keyword">class</span> <span class="token class-name">SendThread</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> PipedOutputStream outputStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PipedOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2364,7 +2377,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Join"><a href="#Join" class="headerlink" title="Join()"></a>Join()</h3><p>join有什么用? 他是用来确定线程何时结束的 .看例子</p>
+<h3 id="7-3-Join"><a href="#7-3-Join" class="headerlink" title="7.3 Join()"></a>7.3 Join()</h3><p>join有什么用? 他是用来确定线程何时结束的 .看例子</p>
 <p>例子1://a和b进入同一个方法</p>
 <blockquote>
 <p>main{<br>a.start();<br>b.start();<br>}<br> /*顺序是这样的: 主线程开始-&gt;a和b(看脸谁先跑)-&gt;a和b\主线程(看脸谁先死);</p>
@@ -2374,7 +2387,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 </blockquote>
 <p>它的执行顺序应该是主线程启动-》a线程开启-》主线程阻塞-》a线程死亡-》b线程启动-》(b和主线程看速度谁先死)a，b线程虽然和主线程都是独立的线程，但都是由start()方法启动的</p>
 <p><strong>主线程中调用a.join(),在a线程结束前，主线程陷入阻塞状态，a线程结束后，主线程顺序执行a.join()后的代码,并不会因为a的死亡导致主线程的死亡</strong>  </p>
-<h3 id="ThreadLocal-的使用"><a href="#ThreadLocal-的使用" class="headerlink" title="ThreadLocal 的使用"></a>ThreadLocal 的使用</h3><p><strong>除了控制资源的访问外, 还可以通过增加资源来保证线程安全. ThreadLocal 主要解决为每个线程绑定自己的值</strong>  </p>
+<h3 id="7-3-ThreadLocal-的使用"><a href="#7-3-ThreadLocal-的使用" class="headerlink" title="7.3 ThreadLocal 的使用"></a>7.3 ThreadLocal 的使用</h3><p><strong>除了控制资源的访问外, 还可以通过增加资源来保证线程安全. ThreadLocal 主要解决为每个线程绑定自己的值</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/**
  * 在多线程环境中,把字符串转换为日期对象,多个线程使用同一个 SimpleDateFormat 对象可能会产生线程安全问题,有异常
@@ -2415,7 +2428,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="ThreadLocal指定初始值"><a href="#ThreadLocal指定初始值" class="headerlink" title="ThreadLocal指定初始值"></a>ThreadLocal指定初始值</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="7-3-1-ThreadLocal指定初始值"><a href="#7-3-1-ThreadLocal指定初始值" class="headerlink" title="7.3.1 ThreadLocal指定初始值"></a>7.3.1 ThreadLocal指定初始值</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/**
  * ThreadLocal 初始值, 定义 ThreadLocal 类的子类,在子类中重写 initialValue()方法指定初始值,再第一次调用 get()方法不会返回 null
  */</span>
@@ -2461,8 +2474,8 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="Lock-显示锁"><a href="#Lock-显示锁" class="headerlink" title="Lock 显示锁"></a>Lock 显示锁</h2><p><strong>在 JDK5 中 增 加 了 Lock 锁 接 口 , 有 ReentrantLock 实 现 类,ReentrantLock 锁称为可重入锁, 它功能比 synchronized 多</strong></p>
-<h3 id="锁的可重入性"><a href="#锁的可重入性" class="headerlink" title="锁的可重入性"></a>锁的可重入性</h3><p><strong>锁的可重入是指,当一个线程获得一个对象锁后,再次请求该对象 锁时是可以获得该对象的锁的.</strong>  </p>
+<h2 id="8-Lock-显示锁"><a href="#8-Lock-显示锁" class="headerlink" title="8. Lock 显示锁"></a>8. Lock 显示锁</h2><p><strong>在 JDK5 中 增 加 了 Lock 锁 接 口 , 有 ReentrantLock 实 现 类,ReentrantLock 锁称为可重入锁, 它功能比 synchronized 多</strong></p>
+<h3 id="8-1-锁的可重入性"><a href="#8-1-锁的可重入性" class="headerlink" title="8.1 锁的可重入性"></a>8.1 锁的可重入性</h3><p><strong>锁的可重入是指,当一个线程获得一个对象锁后,再次请求该对象 锁时是可以获得该对象的锁的.</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test01</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">sm1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2489,7 +2502,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h3><h4 id="ReentrantLock-的基本使用"><a href="#ReentrantLock-的基本使用" class="headerlink" title="ReentrantLock 的基本使用"></a>ReentrantLock 的基本使用</h4><p><strong>调用 lock()方法获得锁, 调用 unlock()释放锁</strong>  </p>
+<h3 id="8-2-ReentrantLock"><a href="#8-2-ReentrantLock" class="headerlink" title="8.2 ReentrantLock"></a>8.2 ReentrantLock</h3><h4 id="8-2-1-ReentrantLock-的基本使用"><a href="#8-2-1-ReentrantLock-的基本使用" class="headerlink" title="8.2.1 ReentrantLock 的基本使用"></a>8.2.1 ReentrantLock 的基本使用</h4><p><strong>调用 lock()方法获得锁, 调用 unlock()释放锁</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test02</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//定义显示锁 </span>
@@ -2521,7 +2534,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="ReentrantLock-锁的可重入性"><a href="#ReentrantLock-锁的可重入性" class="headerlink" title="ReentrantLock 锁的可重入性"></a>ReentrantLock 锁的可重入性</h4><pre class="line-numbers language-java"><code class="language-java"> 
+<h4 id="8-2-2-ReentrantLock-锁的可重入性"><a href="#8-2-2-ReentrantLock-锁的可重入性" class="headerlink" title="8.2.2 ReentrantLock 锁的可重入性"></a>8.2.2 ReentrantLock 锁的可重入性</h4><pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/* ReentrantLock 锁的可重入性  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test04</span> <span class="token punctuation">{</span>
     <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Subthread</span> <span class="token keyword">extends</span> <span class="token class-name">Thread</span> <span class="token punctuation">{</span>
@@ -2557,7 +2570,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="lockInterruptibly-方法"><a href="#lockInterruptibly-方法" class="headerlink" title="lockInterruptibly()方法"></a>lockInterruptibly()方法</h4><p><strong>lockInterruptibly() 方法的作用:如果当前线程未被中断则获得锁, 如果当前线程被中断则出现异常.</strong>  </p>
+<h4 id="8-2-3-lockInterruptibly-方法"><a href="#8-2-3-lockInterruptibly-方法" class="headerlink" title="8.2.3 lockInterruptibly()方法"></a>8.2.3 lockInterruptibly()方法</h4><p><strong>lockInterruptibly() 方法的作用:如果当前线程未被中断则获得锁, 如果当前线程被中断则出现异常.</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/* lockInterruptibly() 方法的作用:如果当前线程未被中断则获得锁,如果当前线程被中断则
  出现异常.*/</span>
@@ -2665,7 +2678,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="tryLock-方法"><a href="#tryLock-方法" class="headerlink" title="tryLock()方法"></a>tryLock()方法</h4><p><strong>tryLock(long time, TimeUnit unit) 的作用在给定等待时长内锁没有被另外的线程持有,并且当前线程也没有被中断,则获得该锁.通过该方法可以实现锁对象的限时等待.</strong>  </p>
+<h4 id="8-2-4-tryLock-方法"><a href="#8-2-4-tryLock-方法" class="headerlink" title="8.2.4 tryLock()方法"></a>8.2.4 tryLock()方法</h4><p><strong>tryLock(long time, TimeUnit unit) 的作用在给定等待时长内锁没有被另外的线程持有,并且当前线程也没有被中断,则获得该锁.通过该方法可以实现锁对象的限时等待.</strong>  </p>
 <pre class="line-numbers language-java"><code class="language-java"> 
 <span class="token comment" spellcheck="true">/*tryLock(long time, TimeUnit unit) 的基本使用 */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test07</span> <span class="token punctuation">{</span>
@@ -2745,7 +2758,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="使用-tryLock-可以避免死锁"><a href="#使用-tryLock-可以避免死锁" class="headerlink" title="使用 tryLock()可以避免死锁"></a>使用 tryLock()可以避免死锁</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+<h5 id="8-2-4-1-使用-tryLock-可以避免死锁"><a href="#8-2-4-1-使用-tryLock-可以避免死锁" class="headerlink" title="8.2.4.1 使用 tryLock()可以避免死锁"></a>8.2.4.1 使用 tryLock()可以避免死锁</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         IntLock intLock1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IntLock</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         IntLock intLock2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IntLock</span><span class="token punctuation">(</span><span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2822,7 +2835,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="newCondition-方法"><a href="#newCondition-方法" class="headerlink" title="newCondition()方法"></a>newCondition()方法</h4><p><strong>关键字 synchronized 与 wait()/notify()这两个方法一起使用可以实现等待/通知模式. Lock 锁的 newContition()方法返回 Condition 对象,Condition 类也可以实现等待/通知模式.</strong></p>
+<h4 id="8-2-5-newCondition-方法"><a href="#8-2-5-newCondition-方法" class="headerlink" title="8.2.5 newCondition()方法"></a>8.2.5 newCondition()方法</h4><p><strong>关键字 synchronized 与 wait()/notify()这两个方法一起使用可以实现等待/通知模式. Lock 锁的 newContition()方法返回 Condition 对象,Condition 类也可以实现等待/通知模式.</strong></p>
 <ul>
 <li><p>使用 notify()通知时, JVM 会随机唤醒某个等待的线程. 使用 Condition 类可以进行选择性通知. Condition 比较常用的两个方法:</p>
 </li>
@@ -2867,7 +2880,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="多个-Condition-实现通知部分线程-使用更灵活"><a href="#多个-Condition-实现通知部分线程-使用更灵活" class="headerlink" title="多个 Condition 实现通知部分线程, 使用更灵活"></a>多个 Condition 实现通知部分线程, 使用更灵活</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test02</span> <span class="token punctuation">{</span>
+<h4 id="8-2-6-多个-Condition-实现通知部分线程-使用更灵活"><a href="#8-2-6-多个-Condition-实现通知部分线程-使用更灵活" class="headerlink" title="8.2.6 多个 Condition 实现通知部分线程, 使用更灵活"></a>8.2.6 多个 Condition 实现通知部分线程, 使用更灵活</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test02</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
         Service service <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Service</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//开启两个线程,分别调用 waitMethodA(),waitMethodB()方法</span>
@@ -2951,7 +2964,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="使用-Condition-实现生产者-消费者设计模式-两个线程交替打印"><a href="#使用-Condition-实现生产者-消费者设计模式-两个线程交替打印" class="headerlink" title="使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印"></a>使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test03</span> <span class="token punctuation">{</span>
+<h4 id="8-2-7-使用-Condition-实现生产者-消费者设计模式-两个线程交替打印"><a href="#8-2-7-使用-Condition-实现生产者-消费者设计模式-两个线程交替打印" class="headerlink" title="8.2.7 使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印"></a>8.2.7 使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test03</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         MyService myService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//创建线程打印--</span>
@@ -3019,7 +3032,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="使用-Condition-实现生产者-消费者设计模式-多对多线程交替打印"><a href="#使用-Condition-实现生产者-消费者设计模式-多对多线程交替打印" class="headerlink" title="使用 Condition 实现生产者/消费者设计模式, 多对多线程交替打印"></a>使用 Condition 实现生产者/消费者设计模式, 多对多线程交替打印</h5><pre class="line-numbers language-java"><code class="language-java">
+<h4 id="8-2-8-使用-Condition-实现生产者-消费者设计模式-多对多线程交替打印"><a href="#8-2-8-使用-Condition-实现生产者-消费者设计模式-多对多线程交替打印" class="headerlink" title="8.2.8 使用 Condition 实现生产者/消费者设计模式, 多对多线程交替打印"></a>8.2.8 使用 Condition 实现生产者/消费者设计模式, 多对多线程交替打印</h4><pre class="line-numbers language-java"><code class="language-java">
 <span class="token comment" spellcheck="true">/**
  * 使用 Condition 实现生产者/消费者设计模式, 两个线程交替打印
  */</span>
@@ -3094,7 +3107,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="公平锁与非公平锁"><a href="#公平锁与非公平锁" class="headerlink" title="公平锁与非公平锁"></a>公平锁与非公平锁</h4><ul>
+<h4 id="8-2-9-公平锁与非公平锁"><a href="#8-2-9-公平锁与非公平锁" class="headerlink" title="8.2.9 公平锁与非公平锁"></a>8.2.9 公平锁与非公平锁</h4><ul>
 <li>大多数情况下,锁的申请都是非公平的. 如果线程1与线程2都在请求锁 A, 当锁 A 可用时, 系统只是会从阻塞队列中随机的选择一个线程, 不能保证其公平性</li>
 <li><strong>公平的锁会按照时间先后顺序,保证先到先得, 公平锁的这一特点不会出现线程饥饿现象.</strong></li>
 <li>synchronized 内部锁就是非公平的.<strong>ReentrantLock 重入锁提供了一个构造方法:ReentrantLock(boolean fair) ,当在创建锁对象时实参传递 true 可以把该锁设置为公平锁.</strong></li>
@@ -3133,7 +3146,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="几个常用的方法"><a href="#几个常用的方法" class="headerlink" title="几个常用的方法"></a>几个常用的方法</h4><ul>
+<h4 id="8-2-10-几个常用的方法"><a href="#8-2-10-几个常用的方法" class="headerlink" title="8.2.10 几个常用的方法"></a>8.2.10 几个常用的方法</h4><ul>
 <li>int getHoldCount() 返回当前线程调用 lock()方法的次数</li>
 <li>int getQueueLength() 返回正等待获得锁的线程预估数<br>int getWaitQueueLength(Condition condition) 返回与 Condition 条件相关的等待的线程预估数</li>
 <li>boolean hasQueuedThread(Thread thread) 查询参数指定的线程是否在等待获得锁</li>
@@ -3143,7 +3156,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 <li>boolean isHeldByCurrentThread() 判断当前线程是否持有该锁</li>
 <li>boolean isLocked() 查询当前锁是否被线程持有；  </li>
 </ul>
-<h5 id="（1）getHoldCount"><a href="#（1）getHoldCount" class="headerlink" title="（1）getHoldCount"></a>（1）getHoldCount</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*int getHoldCount()  方法可以返回当前线程调用lock()方法的次数*/</span>
+<h5 id="（1）-getHoldCount"><a href="#（1）-getHoldCount" class="headerlink" title="（1） getHoldCount"></a>（1） getHoldCount</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*int getHoldCount()  方法可以返回当前线程调用lock()方法的次数*/</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test02</span> <span class="token punctuation">{</span>
     <span class="token keyword">static</span> ReentrantLock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//定义锁对象</span>
 
@@ -3255,7 +3268,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="5-hasQueuedThread、hasQueuedThreads"><a href="#5-hasQueuedThread、hasQueuedThreads" class="headerlink" title="(5) hasQueuedThread、hasQueuedThreads"></a>(5) hasQueuedThread、hasQueuedThreads</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<h5 id="4-hasQueuedThread、hasQueuedThreads"><a href="#4-hasQueuedThread、hasQueuedThreads" class="headerlink" title="(4) hasQueuedThread、hasQueuedThreads"></a>(4) hasQueuedThread、hasQueuedThreads</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * boolean hasQueuedThread(Thread thread)  查询指定的线程是否在等待获得锁
  * boolean hasQueuedThreads()  查询是否有线程在等待获得锁
  */</span>
@@ -3300,7 +3313,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="（6）hasWaiters"><a href="#（6）hasWaiters" class="headerlink" title="（6）hasWaiters"></a>（6）hasWaiters</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//boolean hasWaiters(Condition condition)   查询是否有线程正在等待指定以Condition条件</span>
+<h5 id="（5）hasWaiters"><a href="#（5）hasWaiters" class="headerlink" title="（5）hasWaiters"></a>（5）hasWaiters</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//boolean hasWaiters(Condition condition)   查询是否有线程正在等待指定以Condition条件</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test06</span> <span class="token punctuation">{</span>
     <span class="token keyword">static</span> ReentrantLock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//创建锁对象</span>
     <span class="token keyword">static</span> Condition condition <span class="token operator">=</span> lock<span class="token punctuation">.</span><span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//返回锁定的条件</span>
@@ -3333,7 +3346,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="7-isFair、isHeldByCurrentThread"><a href="#7-isFair、isHeldByCurrentThread" class="headerlink" title="(7) isFair、isHeldByCurrentThread"></a>(7) isFair、isHeldByCurrentThread</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<h5 id="6-isFair、isHeldByCurrentThread"><a href="#6-isFair、isHeldByCurrentThread" class="headerlink" title="(6) isFair、isHeldByCurrentThread"></a>(6) isFair、isHeldByCurrentThread</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * boolean isFair()  判断是否为公平锁
  * boolean isHeldByCurrentThread()  判断锁是否被当前线程持有
  */</span>
@@ -3373,7 +3386,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="8-isLocked"><a href="#8-isLocked" class="headerlink" title="(8) isLocked"></a>(8) isLocked</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/* boolean isLocked()  判断锁是否被线程持有 */</span>
+<h5 id="7-isLocked"><a href="#7-isLocked" class="headerlink" title="(7) isLocked"></a>(7) isLocked</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/* boolean isLocked()  判断锁是否被线程持有 */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">static</span> ReentrantLock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -3409,7 +3422,7 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 <blockquote>
 <p>运行结果<br>11 – false<br> before lock() – false<br>after lock() == true<br> 22 — false  </p>
 </blockquote>
-<h3 id="ReentrantReadWriteLock（重点））"><a href="#ReentrantReadWriteLock（重点））" class="headerlink" title="ReentrantReadWriteLock（重点））"></a>ReentrantReadWriteLock（重点））</h3><ul>
+<h3 id="8-3-ReentrantReadWriteLock-重点"><a href="#8-3-ReentrantReadWriteLock-重点" class="headerlink" title="8.3 ReentrantReadWriteLock(重点)"></a>8.3 ReentrantReadWriteLock(重点)</h3><ul>
 <li><p>synchronized内部锁与ReentrantLock,锁都是独占锁(排它锁),同一时间只允许一个线程执行同步代码块,可以保证线程的安全性,但是执行效率低.</p>
 </li>
 <li><p>ReentrantReadWriteLock读写锁是一种改进的排他锁,也可以称作共享/排他锁.允许多个线程同时读取共享数据,但是一次只允许一个线程对共享数据进行更新!</p>
@@ -3421,6 +3434,253 @@ mport java<span class="token punctuation">.</span>util<span class="token punctua
 <li><p><strong>读写锁允许读读共享, 读写互斥,写写互斥</strong></p>
 </li>
 </ul>
+<p><strong>读写锁的特点如下：</strong></p>
+<p><code>1）如果有其它线程读数据，则允许其它线程执行读操作，但不允许写操作。</code></p>
+<p><code>2）如果有其它线程写数据，则其它线程都不允许读、写操作。</code></p>
+<p><strong>读写锁分为读锁和写锁，规则如下：</strong></p>
+<p><code>1）如果某线程申请了读锁，其它线程可以再申请读锁，但不能申请写锁。</code></p>
+<p><code>2）如果某线程申请了写锁，其它线程不能申请读锁，也不能申请写锁。</code>  </p>
+<blockquote>
+<p>在java.util.concurrent.locks包中定义了ReadWriteLock接口,该接口中定义readLock()返回读锁,定义 writeLock()方法返回写锁. 该接口 的实现类ReentrantReadWriteLock. 注意 readLock()与 writeLock()方法返回的锁对象是同一个锁的两个不同的角色, 不是分别获得两个不同的锁. ReadWriteLock 接口实例可 以充当两个角色.读写锁的其他使用方法</p>
+</blockquote>
+<pre class="line-numbers language-java"><code class="language-java">ReadWriteLock rwLock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantReadWriteLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//定义读写锁 </span>
+Lock readLock <span class="token operator">=</span> rwLock<span class="token punctuation">.</span><span class="token function">readLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获得读锁</span>
+Lock writeLock <span class="token operator">=</span> rwLock<span class="token punctuation">.</span><span class="token function">writeLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获得写锁</span>
+
+readLock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读数据 ,//申请读锁</span>
+<span class="token keyword">try</span><span class="token punctuation">{</span>
+    读取共享数据
+<span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
+    readLock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//总是在 finally 子句中释放锁 </span>
+
+writeLock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//写数据,//申请写锁 </span>
+<span class="token keyword">try</span><span class="token punctuation">{</span>
+    更新修改共享数据 
+<span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
+     writeLock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//总是在 finally 子句中释放锁</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="8-3-1-读读共享"><a href="#8-3-1-读读共享" class="headerlink" title="8.3.1 读读共享"></a>8.3.1 读读共享</h4><p><strong>ReadWriteLock 读写锁可以实现多个线程同时读取共享数据,即读 读共享,可以提高程序的读取数据的效率</strong> </p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * ReadWriteLock读写锁可以实现读读共享,允许多个线程同时获得读锁
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test01</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Service</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//定义读写锁</span>
+        ReadWriteLock readWriteLock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantReadWriteLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//定义方法读取数据</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                readWriteLock<span class="token punctuation">.</span><span class="token function">readLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//获得读锁</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"获得读锁,开始读取数据的时间--"</span> <span class="token operator">+</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                TimeUnit<span class="token punctuation">.</span>SECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//模拟读取数据用时</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+                readWriteLock<span class="token punctuation">.</span><span class="token function">readLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//释放读锁</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Service service <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Service</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//创建5个线程,调用read()方法</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    service<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//在线程中调用read()读取数据</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//运行程序后,这多个线程几乎可以同时获得锁读,执行lock()后面的代码</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="8-3-2-写写互斥"><a href="#8-3-2-写写互斥" class="headerlink" title="8.3.2 写写互斥"></a>8.3.2 写写互斥</h4><p><strong>通过 ReadWriteLock 读写锁中的写锁,只允许有一个线程执行 lock() 后面的代码.</strong>  </p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**演示ReadWriteLock的writeLock()写锁是互斥的,
+    只允许有一个线程持有 */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test02</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Service</span><span class="token punctuation">{</span>
+        ReadWriteLock readWriteLock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantReadWriteLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                readWriteLock<span class="token punctuation">.</span><span class="token function">writeLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 申请获得写锁</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"获得写锁，开始修改数据的时间"</span><span class="token operator">+</span>
+                        System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
+                readWriteLock<span class="token punctuation">.</span><span class="token function">writeLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"读取数据完毕时 的时间"</span><span class="token operator">+</span>
+                        System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Service service <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Service</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 创建5个线程来修改数据</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    service<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="8-3-3-读写互斥"><a href="#8-3-3-读写互斥" class="headerlink" title="8.3.3 读写互斥"></a>8.3.3 读写互斥</h4><p><strong>写锁是独占锁,是排他锁,读线程与写线程也是互斥的</strong>  </p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**演示ReadWriteLock的读写互斥,
+一个线程获得读锁时,写线程等待; 
+一个线程获得写锁时,其他线程等待 */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test03</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Service</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//先定义读写锁</span>
+        ReadWriteLock readWriteLock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantReadWriteLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Lock readLock <span class="token operator">=</span> readWriteLock<span class="token punctuation">.</span><span class="token function">readLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//获得读锁</span>
+        Lock writeLock <span class="token operator">=</span> readWriteLock<span class="token punctuation">.</span><span class="token function">writeLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//获得写锁</span>
+
+        <span class="token comment" spellcheck="true">//定义方法读取数据</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                readLock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//申请获得读锁</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"获得读锁,开始读取数据的时间--"</span> <span class="token operator">+</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//模拟读取数据的用时</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"读取数据完毕时的时间=="</span> <span class="token operator">+</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                readLock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//释放读锁</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">//定义方法修改数据</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                writeLock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//申请获得写锁</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"获得写锁,开始修改数据的时间--"</span> <span class="token operator">+</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//模拟修改数据的用时</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"修改数据完毕时的时间=="</span> <span class="token operator">+</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                writeLock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//释放写锁</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Service service <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Service</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//定义一个线程读数据</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                service<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//定义一个线程写数据</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                service<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="9-线程管理"><a href="#9-线程管理" class="headerlink" title="9 线程管理"></a>9 线程管理</h2><h3 id="9-1-线程组-了解"><a href="#9-1-线程组-了解" class="headerlink" title="9.1 线程组(了解)"></a>9.1 线程组(了解)</h3><ul>
+<li>类似于在计算机中使用文件夹管理文件,也可以使用线程组来管理线程. 在线程组中定义一组相似(相关)的线程,在线程组中也可以定义子线程组</li>
+<li>Thread 类有几个构造方法允许在创建线程时指定线程组,如果在创建线程时没有指定线程组则该线程就属于父线程所在的线程组. JVM 在创建 main 线程时会为它指定一个线程组,因此每个 Java 线程都有一个线程组与之关联, 可以调用线程的 getThreadGroup()方法返回线程组.</li>
+<li>线程组开始是出于安全的考虑设计用来 区分不同的 Applet,然而 ThreadGroup 并未实现这一目标,在新开发的系统中,已经不常用线程 组, 现在一般会将一组相关的线程存入一个数组或一个集合中,如果仅仅是用来区分线程时,可以使用线程名称来区分, 多数情况下,可以忽略线程组</li>
+</ul>
+<h4 id="9-1-1-创建线程组"><a href="#9-1-1-创建线程组" class="headerlink" title="9.1.1 创建线程组"></a>9.1.1 创建线程组</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/* 演示创建线程组  */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test01</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 1) 返回当前main线程的线程组</span>
+        ThreadGroup mainGroup <span class="token operator">=</span> Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getThreadGroup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>mainGroup<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//2) 定义线程组,如果不指定所属线程组,则自动归属当前线程所属的线程组中</span>
+        ThreadGroup group1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadGroup</span><span class="token punctuation">(</span><span class="token string">"group1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>group1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//3)定义线程组, 同时指定父线程组</span>
+        ThreadGroup group2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadGroup</span><span class="token punctuation">(</span>mainGroup<span class="token punctuation">,</span> <span class="token string">"group2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//现在group1与group2都是maingroup线程组中的子线程组, 调用线程组的getParent()方法返回父线程组</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>group1<span class="token punctuation">.</span><span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> mainGroup<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//true</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>group2<span class="token punctuation">.</span><span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> mainGroup<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//4) 在创建线程时指定所属线程组</span>
+        Runnable r <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//在创建线程时,如果没有指定线程组,则默认线程归属到父线程的线程组中</span>
+        <span class="token comment" spellcheck="true">//在main线程中创建了t1线程,称main线程为父线程,t1线程为子线程, t1没有指定线程组则t1线程就归属到父线程main线程的线程组中</span>
+        Thread t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> <span class="token string">"t1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//Thread[t1,5,main], t1的线程组是main线程组</span>
+        <span class="token comment" spellcheck="true">//创建线程时,可以指定线程所属线程组</span>
+        Thread t2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>group1<span class="token punctuation">,</span> r<span class="token punctuation">,</span> <span class="token string">"t2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Thread t3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>group2<span class="token punctuation">,</span> r<span class="token punctuation">,</span> <span class="token string">"t3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>t2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>t3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="9-1-2-线程组的基本操作"><a href="#9-1-2-线程组的基本操作" class="headerlink" title="9.1.2 线程组的基本操作"></a>9.1.2 线程组的基本操作</h4><ul>
+<li>activeCount() 返回当前线程组及子线程组中活动线程的数量(近似值)</li>
+<li>activeGroupCount() 返回当前线程组及子线程组中活动线程组的数量(近似值)</li>
+<li>int enumerate(Thread[] list) 将当前线程组中的活动线程复制到参数数组中</li>
+<li>enumerate(ThreadGroup[] list) 将当前线程组中的活动线程组复制到参数数组中</li>
+<li>getMaxPriority() 返回线程组的最大优先级,默认是 10</li>
+<li>getName() 返回线程组的名称</li>
+<li>getParent() 返回父线程组</li>
+<li>interrupt() 中断线程组中所有的线程</li>
+<li>isDaemon() 判断当前线程组是否为守护线程组</li>
+<li>list() 将当前线程组中的活动线程打印出来</li>
+<li>parentOf(ThreadGroup g) 判断当前线程组是否为参数线程组的父线程组</li>
+<li>setDaemon(boolean daemon) 设置线程组为守护线程组  </li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/** 演示线程组的基本操作 */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test02</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ThreadGroup mainGroup <span class="token operator">=</span> Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getThreadGroup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//返回当前线程组</span>
+        <span class="token comment" spellcheck="true">//再定义线程组</span>
+        ThreadGroup group <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadGroup</span><span class="token punctuation">(</span><span class="token string">"group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//默认group的父线程组是main线程组</span>
+        Runnable r <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-----------当前线程: "</span> <span class="token operator">+</span> Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                        Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        Thread t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> <span class="token string">"t1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//默认在main线程组中创建线程</span>
+        Thread t2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>group<span class="token punctuation">,</span> r<span class="token punctuation">,</span> <span class="token string">"t2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//在指定的group线程组中创建线程</span>
+        t1<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t2<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//打印线程组的相关属性</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"main 线程组中活动线程数量: "</span> <span class="token operator">+</span> mainGroup<span class="token punctuation">.</span><span class="token function">activeCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//4, main线程组中活动线程: main, t1, t2, 垃圾回收器</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"group 子线程组中活动线程数量: "</span> <span class="token operator">+</span> group<span class="token punctuation">.</span><span class="token function">activeCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">//1,  t2</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"main线程组中子线程组数量: "</span> <span class="token operator">+</span> mainGroup<span class="token punctuation">.</span><span class="token function">activeGroupCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//1,  group</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"group子线程组中子线程组数量: "</span> <span class="token operator">+</span> group<span class="token punctuation">.</span><span class="token function">activeGroupCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//0</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"main线程组的父线程组: "</span> <span class="token operator">+</span> mainGroup<span class="token punctuation">.</span><span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//main线程组的父线程组是system</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"group线程组的父线程组: "</span> <span class="token operator">+</span> group<span class="token punctuation">.</span><span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//main</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>mainGroup<span class="token punctuation">.</span><span class="token function">parentOf</span><span class="token punctuation">(</span>mainGroup<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//true, 线程组也是它自己的父线程组</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>mainGroup<span class="token punctuation">.</span><span class="token function">parentOf</span><span class="token punctuation">(</span>group<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//true</span>
+        mainGroup<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//把main线程组中所有的线程打印输出</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
