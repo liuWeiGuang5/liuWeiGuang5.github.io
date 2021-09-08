@@ -1,0 +1,2094 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java SE基础笔记, java,spring,web,linux,redis,springboot等">
+    <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java SE基础笔记 | MyBlog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/guixinchn/image/blog/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">MyBlog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">MyBlog</div>
+        <div class="logo-desc">
+            
+            本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/liuWeiGuang5" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/liuWeiGuang5" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java SE基础笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-09-06
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    13.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    50 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="windows的dos命令"><a href="#windows的dos命令" class="headerlink" title="windows的dos命令"></a>windows的dos命令</h3><pre><code>    cls 清屏
+    exit 退出
+    ipconfig 查看IP地址
+    ping 查看两台计算机之间是否可以正常通信
+    d: 回车 切换盘符
+    cd 命令切换目录：相对路径和绝对路径
+        C:\Windows&gt;cd System32 相对路径（相对于当前位置而言）
+        C:\&gt;cd c:\windows\system32 绝对路径（路径以盘符开始）
+    cd .. 回到上级
+    cd \ 回到根
+    mkdir 创建目录
+    del 删除文件
+    dir 查看当前目录下有哪些子目录或者子文件
+    
+    注意：
+        在DOS命令窗口中，可以使用tab键自动补全。
+        在DOS命令窗口中，使用上下箭头可以翻出历史命令。
+</code></pre>
+<h3 id="快捷键："><a href="#快捷键：" class="headerlink" title="快捷键："></a>快捷键：</h3><pre><code>    补充两个windows系统的组合键：
+        win + r 打开运行窗口
+        win + d 显示桌面
+        win + l 锁屏（离开电脑的时候要锁屏）
+        alt + tab 切换应用
+</code></pre>
+<h2 id="一、Java语言的概述以及Java语言的发展史。"><a href="#一、Java语言的概述以及Java语言的发展史。" class="headerlink" title="一、Java语言的概述以及Java语言的发展史。"></a>一、Java语言的概述以及Java语言的发展史。</h2><ul>
+<li>JDK（Java开发工具箱，做Java开发必须安装的，这是最根本的一个环境。）<br>JDK不是集成开发环境。<br>JDK这个开发工具箱中是Java最核心的库。</li>
+</ul>
+<p><strong>98年的时候：Java升级到JDK1.2，Java被分为三大块：</strong><br>        J2SE：标准版（基础，要学java，必须先学习SE。基础语法+基础库）<br>        J2EE：企业版（专门为企业开发软件，为企业提供解决方案。例如：OA办公系统，保险行业的系统，金融行业的系统，医院系统….）<br>        J2ME：微型版（专门为微型设备做嵌入式开发的。）</p>
+<p><strong>java诞生十周年改了名字：</strong><br>        JavaSE<br>        JavaEE<br>        JavaME</p>
+<h2 id="二、Java语言的特性"><a href="#二、Java语言的特性" class="headerlink" title="二、Java语言的特性"></a>二、Java语言的特性</h2><h3 id="2-1、简单性"><a href="#2-1、简单性" class="headerlink" title="2.1、简单性"></a>2.1、简单性</h3><p>在Java语言当中真正操作内存的是：JVM（Java虚拟机）<br>所有的java程序都是运行在Java虚拟机当中的。<br>而Java虚拟机执行过程中再去操作内存。<br>对于C或者C++来说程序员都是可以直接通过指针操作内存的。<br>C或者C++更灵活，可以直接程序员操作内存，但是要求程序员技术精湛。</p>
+<h2 id="2-2、java是堪称完全面向对象的。"><a href="#2-2、java是堪称完全面向对象的。" class="headerlink" title="2.2、java是堪称完全面向对象的。"></a>2.2、java是堪称完全面向对象的。</h2><p>面向对象更容易让人理解，人类通常是以对象的方式认知世界的。<br>采用面向对象的方式可以让复杂问题简单化。</p>
+<h2 id="2-3、健壮性"><a href="#2-3、健壮性" class="headerlink" title="2.3、健壮性"></a>2.3、健壮性</h2><p>主要是因为Java中有一种机制：<br>        自动垃圾回收机制（GC机制）。<br>        java语言是健壮的，相对于C语言来说，C语言没有Java健壮。<br>        Java不容易导致内存的泄漏。<br>        C++或者C语言使用不当时很容易导致内存泄漏。</p>
+<p>JVM负责调度GC机制。程序员不需要干涉。</p>
+<p>以上讲解中又描述了这几个术语：<br>JVM（C++语言写的一个虚拟的计算机）、GC（垃圾回收机制）</p>
+<h2 id="2-4、java完全-完美支持多线程并发。"><a href="#2-4、java完全-完美支持多线程并发。" class="headerlink" title="2.4、java完全/完美支持多线程并发。"></a>2.4、java完全/完美支持多线程并发。</h2><h2 id="2-5、可移植性-跨平台"><a href="#2-5、可移植性-跨平台" class="headerlink" title="2.5、可移植性/跨平台"></a>2.5、可移植性/跨平台</h2><p>java语言只要编写一次，可以做到到处运行。<br>例如：java程序编写完之后，可以运行在windows操作系统上，不需要做任何改动可以直接运行在Linux操作系统上，同样也可以运行到MaC OS上面。</p>
+<p>一次编写，到处运行。（平台改变了，程序不需要改。）</p>
+<p>JVM这种机制实现了跨平台，那么这种机制优点和缺点分别是什么？<br>            优点：一次编写到处运行，可以跨平台。<br>            缺点：麻烦。对于运行java程序来说必须先有一个JVM。<br>            就像你要想在网页上看视频，你必须先安装一个flash是一样的。</p>
+<h2 id="三、JDK、JRE、JVM三者之间的关系？"><a href="#三、JDK、JRE、JVM三者之间的关系？" class="headerlink" title="三、JDK、JRE、JVM三者之间的关系？"></a>三、JDK、JRE、JVM三者之间的关系？</h2><pre><code>JDK:Java开发工具箱
+JRE:java运行环境
+JVM:java虚拟机
+
+JDK包括JRE，JRE包括JVM。
+
+JVM是不能独立安装的。
+JRE和JDK都是可以独立安装的。
+有单独的JDK安装包。
+也有单独的JRE安装包。
+没有单独的JVM安装包。
+</code></pre>
+<p>安装JDK的时候：JRE就自动安装了，同时JRE内部的JVM也就自动安装了。<br>安装JRE的时候：JVM也就自动安装了</p>
+<h2 id="四、对Java的加载与执行的理解（理论比较重要）"><a href="#四、对Java的加载与执行的理解（理论比较重要）" class="headerlink" title="四、对Java的加载与执行的理解（理论比较重要）"></a>四、对Java的加载与执行的理解（理论比较重要）</h2><p><strong>java程序从编写到最终运行经历了哪些过程？</strong></p>
+<p>java程序非常重要的两个阶段：</p>
+<blockquote>
+<p>编译阶段<br>  运行阶段</p>
+</blockquote>
+<p>注意：java程序员直接编写的java代码（普通文本）是无法执行被JVM<br>    识别的。java程序员编写的java代码这种普通文本必须经过一个编译，<br>    将这个“普通文本代码”变成“字节码”，JVM能够识别“字节码”。<br><strong>java代码这种普通文本变成字节码的过程，被称为：编译。</strong></p>
+<p>java代码这种普通文本被称为：java源代码。（你编写的代码是源代码）<br>源代码不能直接执行，需要先进行编译，生成源代码对应的“字节码”<br>JVM可以识别的是字节码。</p>
+<p><strong>编译阶段和运行阶段可以在不同的操作系统上完成吗？</strong><br>在windows上编译编译之后生成了“字节码”，把“字节码”放到linux上运行，完全可以，因为Java是跨平台的。可以做到一次编写到处运行。</p>
+<p><strong>java源代码一旦编译之后，源代码可以删除吗？只留下字节码可以执行吗？</strong><br>        完全可以执行，因为源代码不参与程序的执行过程。<br>        参与程序执行过程的是字节码。<br>        但是最好不要删除源代码。因为有可能执行结果不是你需要的，<br>        当执行结果不是你需要的时候，你可以重新打开源代码进行修改，<br>        然后重新编译生成新的字节码，再重新执行。这样会有新的执行效果。</p>
+<p>放源代码的文件扩展名必须是：xxx.java<br>并且需要注意的是：编译生成的字节码文件扩展名是：xxx.class</p>
+<ul>
+<li>.java文件就是源文件，这个文件中编写源代码。</li>
+<li>.class文件就是字节码文件，这个文件是编译源代码而得到的。</li>
+</ul>
+<p>另外需要注意的是：<br>1个java源文件是可以编译生成多个class文件的。最终运行的是class文件。</p>
+<p><strong>字节码文件是二进制文件吗？</strong><br>        字节码文件不是二进制文件。<br>        如果是二进制的话，就不需要JVM了。<br>        因为操作系统可以直接执行二进制。</p>
+<p><strong>java程序从开发到最终运行经历了什么？</strong></p>
+<ul>
+<li><p>编译期：（可以在windows上）</p>
+</li>
+<li><ul>
+<li>第一步：在硬盘的某个位置（随意），新建一个xxx.java文件</li>
+</ul>
+</li>
+<li><ul>
+<li>第二步：使用记事本或者其它文本编辑器例如EditPlus打开xxx.java文件</li>
+</ul>
+</li>
+<li><ul>
+<li>第三步：在xxx.java文件中编写“符合java语法规则的”源代码。</li>
+</ul>
+</li>
+<li><ul>
+<li>第四步：保存（一定要将xxx.java文件保存一下）</li>
+</ul>
+</li>
+<li><ul>
+<li>第五步：使用编译器（javac【JDK安装后自带】）对xxx.java文件进行编译。</li>
+</ul>
+</li>
+<li><ul>
+<li>第六步：如果xxx.java文件中编写的源代码是符合语法规则的，编译会通过，<br>如果xxx.java文件中编写的源代码违背了语法规则，那么编译器会报错，编译器<br>报错之后class文件是不会生成的，只有编译通过了才会生成class字节码文件。<br>并且一个java源文件是可以生成多个class文件的。（编译实质上是检查语法）</li>
+</ul>
+</li>
+<li><p>运行期（JRE在起作用）：（可以在windows上，也可以在其他的OS上。）</p>
+</li>
+<li><ul>
+<li>第七步：如果是在Linux上运行，需要将windows上生成的class文件拷贝过去<br>不需要拷贝源代码，真正运行的是字节码。（但是源代码也不要删除，有用）</li>
+</ul>
+</li>
+<li><ul>
+<li>第八步：使用JDK自带的一个命令/工具：java（负责运行的命令/工具）执行字节码</li>
+</ul>
+</li>
+<li><ul>
+<li>第九步：往下的步骤就全部交给JVM了，就不需要程序员干涉了。<br>JVM会将字节码文件装载进去，然后JVM对字节码进行解释（解释器负责将字节码<br>解释为1010101010..等的二进制）</li>
+</ul>
+</li>
+<li><ul>
+<li>第十步：JVM会将生成的二进制码交给OS操作系统，操作系统会执行二进制码和<br>硬件进行交互。</li>
+</ul>
+</li>
+<li><p><em>注意：在以上的过程中，需要使用两个非常重要的命令？</em>*<br><code>javac 命令</code>，负责编译<br><code>java 命令</code>，负责运行</p>
+</li>
+</ul>
+<h2 id="五、“java-HelloWorld”的执行过程以及原理。"><a href="#五、“java-HelloWorld”的执行过程以及原理。" class="headerlink" title="五、“java HelloWorld”的执行过程以及原理。"></a>五、“java HelloWorld”的执行过程以及原理。</h2><ul>
+<li>第一步：会先启动JVM（java虚拟机）</li>
+<li>第二步：JVM启动之后，JVM会去启动“类加载器classloader”<br>类加载器的作用：加载类的。本质上类加载器负责去硬盘上找“类”对应的“字节码”文件。<br>假设是“java HelloWorld”，那么类加载器会去硬盘上搜索：HelloWorld.class文件。<br>假设是“java Test”，那么类加载器会去硬盘上搜索：Test.class文件。<br>  …….</li>
+<li>第三步：<br>类加载器如果在硬盘上找不到对应的字节码文件，会报错，报什么错？<br>错误: 找不到或无法加载主类<br>类加载器如果在硬盘上找到了对应的字节码文件，类加载器会将该字节码<br>文件装载到JVM当中，JVM启动“解释器”将字节码解释为“101010000…”这种<br>二进制码，操作系统执行二进制码和硬件交互。</li>
+<li><em>问题？？？？？</em>*<br>默认情况下，类加载器去硬盘上找“字节码”文件的时候，默认从哪找？<br>默认情况下类加载器（classloader）会从当前路径下找。</li>
+<li><em>能不能给类加载器指定一个路径，让类加载器去指定的路径下加载字节码文件。</em>*<br>答案：可以的。但是我们需要设置一个环境变量，叫做：classpath</li>
+<li><em>classpath是一个环境变量，是给谁指路的？</em>*<br>答案：是给“类加载器”指路的。</li>
+</ul>
+<p>classpath环境变量不属于windows操作系统，classpath环境变量隶属于java。</p>
+<p>classpath环境变量是java特有的。<br>classpath=A路径;B路径;C路径…..<br>classpath是一个变量名<br>A路径;B路径;C路径…..是变量值</p>
+<p><strong>我们把classpath配置一下，这个环境变量在windows中没有，需要新建！</strong><br>        计算机–&gt;右键–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;新建…</p>
+<p>注意：变量名不能随意写：大小写无所谓，但必须叫做：classpath<br>        CLASSPATH<br>        ClassPath<br>        Classpath<br>        classpath<br>        都行。</p>
+<p>classpath=D:\course<br>非常重要的一个特点，必须记住：<br>配置了classpath=D:\course之后，类加载器只会去D:\course目录下找“xxx.class”文件<br>不再从当前路径下找了。</p>
+<p>结论是：<br>到目前为止：classpath环境变量不需要配置。<br>但你必须理解classpath环境变量是干什么的！！！！</p>
+<p><strong>你一定要理解classpath环境变量的作用是什么？</strong><br>是给类加载器指路的。<br>在没有配置环境变量classpath的时候，默认从当前路径下加载。<br>如果配置了环境变量classpath的话，就只能从指定的路径下加载了。</p>
+<p>path java_home classpath，这3个环境变量path需要配置，后面两个暂时不配置。</p>
+<h2 id="六、关于java程序代码注释的解释说明！"><a href="#六、关于java程序代码注释的解释说明！" class="headerlink" title="六、关于java程序代码注释的解释说明！"></a>六、关于java程序代码注释的解释说明！</h2><pre><code>// 单行注释
+
+/*
+    多行注释
+*/
+
+/**
+* javadoc注释：这里的注释信息可以自动被javadoc.exe命令解析提取并生成到帮助文档当中。
+*/
+</code></pre>
+<h2 id="七、标识符"><a href="#七、标识符" class="headerlink" title="七、标识符"></a>七、标识符</h2><p><strong>标识符可以表示什么</strong><br>类名、接口名、方法名、变量名、常量名</p>
+<p><strong>标识符命名规则</strong><br>标识符只能由数字、字母(可以有中文)、下划线、美元符号组成，不能有其他符号 </p>
+<ul>
+<li>标识符不能以数字开头 </li>
+<li>标识符严格区分大小写  </li>
+<li>关键字不能做标识符  </li>
+<li>理论上没有长度限制  </li>
+<li><em>标识符命名规范</em>*  </li>
+<li>见名知意  </li>
+<li>驼峰命名方式 </li>
+<li>类名、接口名：首字母大写，后边的每一个单词的首字母大写</li>
+<li>变量名、方法名：首字母小写，后边的每一个单词的首字母大写</li>
+<li>常量名:全部大写，每个单词之间用下划线衔接</li>
+</ul>
+<h2 id="八、关键字"><a href="#八、关键字" class="headerlink" title="八、关键字"></a>八、关键字</h2><p><strong>什么是关键字？</strong><br>在SUN公司开发Java语言的时候，提前定义好了一些具有特殊含义的单词，<br>        这些单词全部小写，具有特殊含义，不能用作标识符。</p>
+<p><strong>切记：</strong><br>        java语言中的所有关键字都是全部小写。<br>        注意：java语言中是严格区分大小写的。public和Public不一样。<br>        Class和class不一样。static和Static也不一样。</p>
+<p><strong>那么关键字有哪些呢</strong><br>        关键字：<br>            public<br>            static<br>            void<br>            class<br>            byte<br>            short<br>            int<br>            long<br>            float<br>            double<br>            boolean<br>            char<br>            true<br>            false<br>            if<br>            while<br>            for<br>            private<br>            protected…….</p>
+<h2 id="九、变量"><a href="#九、变量" class="headerlink" title="九、变量"></a>九、变量</h2><h3 id="9-1、字面量"><a href="#9-1、字面量" class="headerlink" title="9.1、字面量"></a>9.1、字面量</h3><p>字面量就是数据<br>数据就是字面量<br>是一个东西。</p>
+<p>10 100 123 ：整型<br>1.34 3.14 2.0：浮点型<br>true false ：布尔型<br>        ‘a’ ‘国’：字符型<br>        “a” “abc”  “国” “中国”：字符串型</p>
+<p>10：整数，是一个数字<br>        “10”：它不是数字，是一个字符串，或者说，它属于“文字类”的。<br>        性质完全不同，在计算机中的对应的二进制码也是完全不同的。</p>
+<h3 id="9-2、变量"><a href="#9-2、变量" class="headerlink" title="9.2、变量"></a>9.2、变量</h3><p><strong>变量的理解</strong><br>            什么是变量？<br>                变量就是一个存数据盒子。（盒子大小谁来决定啊？数据类型）<br>                在内存中的最基本的存储单元。<br>                存数据用的，而且这个数据是可变的，所以叫做变量。</p>
+<p><strong>变量的使用</strong><br>变量的三要素？<br>                数据类型、变量名、值  （值就是数据，就是字面量。）<br>                int i = 100;</p>
+<p>java中的变量必须先声明，再赋值才能访问（必须手动赋值。）<br>            int k; System.out.println(k); 这样是不行的。</p>
+<p>可以在一行上声明多个变量：<br>                int a, b, c = 100;<br>                c变量赋值100，a,b变量只声明了没有赋值。<br>                int a = 10, b = 20, c = 100;<br>                可以这样每个都赋值。</p>
+<p>声明和赋值可以分开，也可以一起做！！！<br>                int i;<br>                i = 100; // 先声明再赋值<br>                int k = 200; // 声明的同时赋值</p>
+<p><strong>在“同一个域”当中，变量名不能重名！</strong><br>            但可以重新赋值!!!!!!<br>                {<br>                    int i = 100;<br>                    //double i = 2.0; // 重名了编译器会报错，不允许。<br>                    i = 300; // 可以重新赋值。<br>                }</p>
+<p><strong>到底什么叫做同一个域？</strong><br>                一个大括号代表一个域。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token punctuation">{</span>A域
+    <span class="token punctuation">{</span>B域
+        <span class="token punctuation">{</span>C域
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>A域包括B域，B域包括C域。</p>
+<p><strong>变量的分类</strong><br>            根据位置进行分类：记住就行<br>                在方法体当中声明的变量叫做局部变量。<br>                    public static void m1(){<br>                        //局部变量，方法执行结束之后内存释放。<br>                        int k = 100;<br>                        int i = 200;<br>                    }<br>在方法体外以及类体内声明的变量叫做成员变量。<br>                    public class T{<br>                        public static void x(){<br>                        }<br>                        // 成员变量<br>                        int i = 200;<br>                    }</p>
+<p><strong>变量的作用域</strong></p>
+<pre><code>        出了大括号就不认识了。别的先别管。
+        &#123;
+            int i = 100;
+            &#123;
+                在这里可以访问i
+            &#125;
+        &#125;
+
+        &#123;
+            在这里是无法访问i变量。
+        &#125;
+</code></pre>
+<h2 id="十、数据类型"><a href="#十、数据类型" class="headerlink" title="十、数据类型"></a>十、数据类型</h2><h3 id="数据类型有什么用？"><a href="#数据类型有什么用？" class="headerlink" title="数据类型有什么用？"></a>数据类型有什么用？</h3><p>数据类型用来声明变量，程序在运行过程中根据不同的数据类型分配不同大小的空间。<br>        int i = 10;<br>        double d = 1.23;<br>        i变量和d变量类型不同，空间大小不同。</p>
+<h3 id="数据类型在java语言中包括两种："><a href="#数据类型在java语言中包括两种：" class="headerlink" title="数据类型在java语言中包括两种："></a>数据类型在java语言中包括两种：</h3><p><strong>第一种：基本数据类型</strong><br>            基本数据类型又可以划分为4大类8小种：<br>                第一类：整数型<br>                    byte,short,int,long （没有小数的）<br>                第二类：浮点型<br>                    float,double （带有小数的）<br>                第三类：布尔型<br>                    boolean：只有两个值true和false，true表示真，false表示假<br>                第四类：字符型<br>                    char：java中规定字符型字面量必须使用单引号括起来。属于文字。</p>
+<p>8小种：<br>                byte,short,int,long<br>                float,double<br>                boolean<br>                char</p>
+<p><strong>第二种：引用数据类型</strong><br>            字符串型String属于引用数据类型。<br>            String字符串不属于基本数据类型范畴。<br>            java中除了基本数据类型之外，剩下的都是引用数据类型。<br>            引用数据类型后期面向对象的时候才会接触。</p>
+<p><strong>整数型：byte short int long有什么区别？</strong><br>        浮点型：float和double有什么区别？<br>        区别：占用的空间大小不同。</p>
+<p><strong>关于计算机存储单位？</strong><br>            计算机只能识别二进制。（1001101100…）<br>            1字节 = 8bit（8比特）–&gt; 1byte = 8bit<br>            1bit就是一个1或0.<br>            1KB = 1024byte<br>            1MB = 1024KB<br>            1GB = 1024MB<br>            1TB = 1024GB</p>
+<pre><code>        byte b = 2; 在计算机中是这样表示的：00000010
+        short s = 2; 在计算机中是这样表示的：00000000 00000010
+        int i = 2;在计算机中是这样表示的：00000000 00000000 00000000 00000010
+        ...
+
+        类型            占用字节数量(byte)
+        ------------------------------------
+        byte                1
+        short                2
+        int                4
+        long                8
+        float                4
+        double            8
+        boolean            1  (1byte的1或0，00000001(true)或00000000(false))
+        char                2
+</code></pre>
+<p><strong>byte类型的取值范围?</strong><br>        byte是 [-128 ~ 127] 共可以标识256个不同的数字。<br>        byte类型的最大值是怎么计算出来的？<br>            byte是1个字节，是8个比特位，所以byte可以存储的最大值是：<br>                01111111<br>        注意：在计算机当中，一个二进制位最左边的是符号位，当为0时表示正数，<br>        当为1时表示负数。所以byte类型最大值是：01111111</p>
+<p>byte类型最大值是：2的7次方 - 1.</p>
+<p><strong>有几个取值范围需要记住：</strong><br>            (1个字节)byte: [-128 ~ 127]<br>            (2个字节)short:[-32768 ~ 32767] 可以表示65536个不同的数字<br>            (4个字节)int: [-2147483648 ~ 2147483647]<br>            (2个字节)char: [0~65535]  可以表示65536个不同的数字</p>
+<p>short和char实际上容量相同，不过char可以表示更大的数字。<br>            因为char表示的是文字，文件没有正负之分，所以char可以表示<br>            更大的数字。</p>
+<p><strong>对于8种基本数据类型来说：</strong><br>        其中byte,short,int,long,float,double,boolean，这7种类型计算机表示起来<br>        比较容易，因为他们都是数字。其中布尔类型只有两个值true和false，实际上<br>        true和false分别在C++中对应的是1和0，1为true，false为0。</p>
+<p>对于char类型来说计算机表示起来比较麻烦，因为char对应的是文字，每一个国家的文字不一样，文字不能直接通过“自然算法”转换成二进制。这个时候怎么办？<br>            字符编码诞生了。</p>
+<h3 id="数据类型详细介绍"><a href="#数据类型详细介绍" class="headerlink" title="数据类型详细介绍"></a>数据类型详细介绍</h3><pre><code>        char
+            可以存储1个汉字
+            用单引号括起来
+            转义字符：
+                \t
+                \n
+                \&#39;
+                \&quot;
+                \\
+                \u
+                ....
+            char c = 97;
+            System.out.println(c); //输出&#39;a&#39;
+
+        byte short int long
+            int最常用
+            任何一个数字，例如：1232 3 5 9，默认都是当做int处理，想当做long，必须加L或者l
+            123L这就是long类型
+            自动类型转换：小--&gt;大
+            强制类型转换：大--&gt;小，需要加强制类型转换符。另外运行可能损失精度。
+
+            当一个整数没有超出byte short char的取值范围，
+            可以直接赋值给byte short char类型的变量。
+
+            在java中整数型字面量表示的时候有四种方式：
+                10 十进制
+                010 八进制
+                0x10 十六进制
+                0b10 二进制
+
+        float double
+            浮点型的数字默认被当做double来处理，
+            想以float形式存在，数字后面添加F/f
+            float f = 1.0; //错误的
+            float f = 1.0f;
+            float f = (float)1.0;
+
+            要知道浮点型数据在java语言中存储的都是近似值。
+            还有一点：float和double的空间永远比整数型空间大，比long大。
+
+        boolean
+            boolean类型只有两个值：true false，没有其他值。
+            布尔类型使用在逻辑运算，条件判断当中。
+</code></pre>
+<h3 id="基本数据类型转换的6条规则："><a href="#基本数据类型转换的6条规则：" class="headerlink" title="基本数据类型转换的6条规则："></a>基本数据类型转换的6条规则：</h3><pre><code>        第一条：只有boolean不能转换，其它都行。
+
+        第二条：自动类型转换
+            byte &lt; short(char) &lt; int &lt; long &lt; float &lt; double
+            char可以取到更大的正整数。
+
+        第三条：强制类型转换需要加强制类型转换符。可能损失精度。
+
+        第四条：当一个整数没有超出byte short char的取值范围时，可以直接赋值
+        给byte short char类型的变量。
+
+        第五条：byte short char混合运算的时候，各自先转换成int再做运算。
+
+        第六条：多种数据类型混合运算的时候，先转换成容量最大的那一种再做运算。
+    
+</code></pre>
+<h3 id="什么是字符编码？"><a href="#什么是字符编码？" class="headerlink" title="什么是字符编码？"></a>什么是字符编码？</h3><p>字符编码是人为的定义的一套转换表。<br>            在字符编码中规定了一系列的文字对应的二进制。<br>            字符编码其实本质上就是一本字典，该字段中描述了文字与二进制之间的对照关系。<br>            字符编码是人为规定的。（是某个计算机协会规定的。）</p>
+<p>字符编码涉及到编码和解码两个过程，编码和解码的时候必须采用同一套字符编码方式，不然就会出现乱码。</p>
+<p>关于字符编码的发展过程？<br>起初的时候计算机是不支持文字的，只支持科学计算。实际上计算机起初是为了<br>            战争而开发的，计算导弹的轨道….</p>
+<p>后来随着计算机的发展，计算机开始支持文字，最先支持的文字是英文，英文<br>            对应的字符编码方式是：ASCII码。</p>
+<p>ASCII码采用1byte进行存储，因为英文字母是26个。（键盘上所有的键全部算上也超不过256个。1byte可以表示256种不同的情况。所以英文本身在计算机方面就占有优势。）</p>
+<pre><code>            &#39;a&#39; --(采用ASCII码进行编码)-&gt; 01100001
+            01100001 --(采用ASCII码进行解码)-&gt; &#39;a&#39;
+            如果编码和解码采用的不是同一个编码方式，会出现乱码。
+            &#39;b&#39; ---&gt; 98
+            &#39;c&#39; ---&gt; 99...
+            &#39;a&#39; ---&gt; 97
+
+            &#39;A&#39; ---&gt; 65
+            &#39;B&#39; ---&gt; 66
+            ...
+
+            &#39;0&#39; ---&gt; 48  （这个&#39;0&#39;不是那个0，是文字&#39;0&#39;）
+            &#39;1&#39; ---&gt; 49
+        
+</code></pre>
+<p>随着计算机语言的发展，后来国际标准组织制定了ISO-8859-1编码方式，<br>            又称为latin-1编码方式，向上兼容ASCII码。但不支持中文。</p>
+<p>后来发展到亚洲，才支持中文，日文，韩文….<br>            中文这块的编码方式：GB2312&lt;GBK&lt;GB18030 （容量的关系）<br>            以上编码方式是简体中文。<br>繁体中文：big5（台湾使用的是大五码。）</p>
+<p>在java中，java语言为了支持全球所有的文字，采用了一种字符编码方式<br>            叫做unicode编码。unicode编码统一了全球所有的文字，支持所有文字。<br>            具体的实现包括：UTF-8 UTF-16 UTF-32….</p>
+<p>需要记住：<br>            ASCII（’a’是97 ‘A’是65 ‘0’是48…）<br>            ISO-8859-1（latin-1）<br>            GB2312<br>            GBK<br>            GB18030<br>            Big5<br>            unicode（utf8 utf16 utf32）</p>
+<h2 id="十一、怎么接收用户键盘输入？"><a href="#十一、怎么接收用户键盘输入？" class="headerlink" title="十一、怎么接收用户键盘输入？"></a>十一、怎么接收用户键盘输入？</h2><pre class="line-numbers language-java"><code class="language-java">    java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 接收整数</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// 接收字符串</span>
+    String str <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><pre><code>    算术运算符
+        + - * / % ++ --
+        重点：++
+            ++无论出现在变量前还是后，只要++运算结束，一定会自加1.
+            int i = 10;
+            i++;
+            System.out.println(i); // 11
+
+            int k = 10;
+            ++k;
+            System.out.println(k); // 11
+
+            ++出现在变量前：
+                int i = 10;
+                int k = ++i;
+                System.out.println(k); // 11
+                System.out.println(i); // 11
+            
+            ++出现在变量后：
+                int i = 10;
+                int k = i++;
+                System.out.println(k); // 10
+                System.out.println(i); // 11
+            
+            int i = 10;
+            System.out.println(i++); // 10
+            解开以上题目的窍门是什么？拆代码
+                int temp = i++;
+                System.out.println(temp); // 10
+                System.out.println(i); // 11
+            
+            int i = 10;
+            System.out.println(++i);
+            会拆代码:
+                int temp = ++i;
+                System.out.println(temp); // 11
+                System.out.println(i); // 11
+
+    关系运算符
+        &gt;
+        &gt;=
+        &lt;
+        &lt;=
+        ==
+        !=
+        结果都是布尔类型。true/false
+
+    逻辑运算符
+        &amp;
+        |
+        !
+        &amp;&amp;
+        ||
+
+        逻辑运算符要求两边都是布尔类型，并且最终结果还是布尔类型。
+            左边是布尔类型 &amp; 右边还是布尔类型 --&gt;最终结果还是布尔类型。
+        &amp; 两边都是true，结果才是true
+        | 一边是true，结果就是true
+        ! 取反
+
+        &amp;&amp;实际上和&amp;运算结果完全相同，区别在于：&amp;&amp;有短路现象。
+        左边的为false的时候：&amp;&amp; 短路了。
+
+        左边为true的时候：|| 短路了。
+
+    赋值运算符
+        =
+        +=
+        -=
+        *=
+        /=
+        %=
+        重要规则：
+            扩展赋值运算符在使用的时候要注意，不管怎么运算，最终的
+            运算结果类型不会变。
+
+            byte x = 100; // byte最大值127
+
+            x += 1000; // 编译可以通过，x变量还是byte类型，只不过损失精度了。
+
+            x += 1000; 等同于： x = (byte)(x + 1000);
+            
+            int i = 10;
+            i += 10; // 等同于：i = i + 10; 累加。
+        
+
+    条件运算符
+        ?:
+        三目
+        布尔表达式 ? 表达式1:表达式2
+
+        布尔表达式为true，选择表达式1作为结果。
+        反之选择表达式2作为结果。
+
+    字符串连接运算符
+        +
+        + 两边都是数字，进行求和。
+        + 有一边是字符串，进行字符串的拼接。
+        + 有多个的话，遵循自左向右依次执行：1 + 2 + 3
+        如果想让其中某个加号先执行，可以添加小括号：1 + (2 + 3)
+        注意：字符串拼接完之后的结果还是一个字符串。
+
+        技巧：怎么把一个变量塞到一个字符串当中。
+            String name = &quot;jackson&quot;;
+            System.out.println(&quot;登录成功，欢迎&quot;+name+&quot;回来&quot;);
+</code></pre>
+<h2 id="十三、控制语句"><a href="#十三、控制语句" class="headerlink" title="十三、控制语句"></a>十三、控制语句</h2><p>控制语句的出现可以让我们的程序具有逻辑性/条理性，可以使用控制语句来实现一个“业务”了。</p>
+<h3 id="控制语句包括几类？"><a href="#控制语句包括几类？" class="headerlink" title="控制语句包括几类？"></a>控制语句包括几类？</h3><p>3类：<br>            选择语句<br>            循环语句<br>            转向语句</p>
+<p><strong>选择语句也可以叫做分支语句</strong><br>        if语句<br>        switch语句</p>
+<p>选择语句/分支语句 if</p>
+<pre><code>        四种写法。
+        语法机制：
+            if(布尔表达式)&#123;
+            &#125;
+            
+            if(布尔表达式)&#123;
+            &#125;else&#123;
+            &#125;
+
+            if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;
+
+            if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else if(布尔表达式)&#123;
+            &#125;else&#123;
+            &#125;
+
+            if语句嵌套：
+                if(布尔表达式)&#123; //前提条件
+                    if(布尔表达式)&#123;
+                        if(布尔表达式)&#123;
+                        
+                        &#125;else&#123;
+                        
+                        &#125;
+                    &#125;
+                &#125;else&#123;
+                
+                &#125;
+</code></pre>
+<p>执行原理：<br>对于一个if语句来说，只要有1个分支执行，整个if语句结束。<br>当布尔表达式的结果为true时，分支才会执行。<br>分支当中只有一条java语句，大括号可以省略。<br>带有else的可以保证肯定会有一个分支执行。</p>
+<p><strong>循环语句：主要循环反复的去执行某段特定的代码块</strong><br>for循环语法机制：</p>
+<pre><code>            for(初始化表达式;条件表达式;更新表达式)&#123;
+                循环体;
+            &#125;
+
+            for(int i = 0; i &lt; 10; i++)&#123;
+                System.out.println(i);
+            &#125;
+
+        for循环执行原理：
+            1、先执行初始化表达式，并且只执行1次。
+            2、然后判断条件表达式
+            3、如果为true，则执行循环体。
+            4、循环体结束之后，执行更新表达式。
+            5、继续判断条件，如果条件还是true，继续循环。
+            6、直到条件为false，循环结束。
+</code></pre>
+<p>while循环</p>
+<pre><code>        while(布尔表达式)&#123;
+            循环体;
+        &#125;
+        执行次数：0~N次。
+</code></pre>
+<p>do..while循环</p>
+<pre><code>        do&#123;
+            循环体;
+        &#125;while(布尔表达式);
+
+        执行次数：1~N次。
+</code></pre>
+<p><strong>转向语句</strong><br>break;<br>默认情况下，终止离它最近的循环。<br>当然，也可以通过标识符的方式，终止指定的循环。</p>
+<pre><code>        for(int i = 0; i &lt; 10; i++)&#123;
+            if(i == 5)&#123;
+                break;
+            &#125;
+            code1;
+            code2;
+            code3;
+            code4;
+            ....
+        &#125;
+</code></pre>
+<p>continue;<br>终止当前“本次”循环，直接跳入下一次循环继续执行。</p>
+<pre><code>        for(int i = 0; i &lt; 10; i++)&#123;
+            if(i == 5)&#123;
+                continue;
+            &#125;
+            code1;
+            code2;
+            code3;
+            code4;
+            ....
+        &#125;
+    
+</code></pre>
+<h2 id="十四、方法是什么？"><a href="#十四、方法是什么？" class="headerlink" title="十四、方法是什么？"></a>十四、方法是什么？</h2><p>方法是一段可以完成某个特定功能的并且可以被重复利用的代码片段。<br>方法的出现，让代码具有了很强的复用性。</p>
+<p>方法最难实现的是：<br>根据业务怎么进行方法的抽取。<br>方法的返回值类型定义为 什么？<br>方法的名字叫什么？<br>方法的形式参数列表定义为 什么？<br>….<br>一个方法就是一个独立的功能。</p>
+<h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><blockquote>
+<p>[修饰符列表] 返回值类型 方法名(形式参数列表){<br>方法体;<br>}</p>
+</blockquote>
+<h3 id="方法的每一个细节学习"><a href="#方法的每一个细节学习" class="headerlink" title="方法的每一个细节学习"></a>方法的每一个细节学习</h3><ul>
+<li>1、修饰符列表：可选项，目前先写成：public static </li>
+<li>2、怎么理解返回值？返回值是一个方法执行结束之后的结果。</li>
+<li>3、返回值类型都可以指定哪些类型？</li>
+<li>4、返回值和“return语句”的关系。</li>
+<li>5、方法名只要是合法的标识符就行，首字母小写，后面每个单词首字母大写。见名知意。</li>
+<li>6、形式参数列表</li>
+<li>7、方法体：方法体当中的代码遵循自上而下的顺序依次逐行执行。</li>
+<li>8、方法怎么调用？“类名.”什么时候可以省略？</li>
+<li><em>实际参数列表，简称实参。（调用方法时传递的实际数据。）</em>*</li>
+<li><em>实参和形参的关系是一一对应。</em>*</li>
+</ul>
+<h2 id="十五、JVM的内存结构中三块比较重要的内存空间。"><a href="#十五、JVM的内存结构中三块比较重要的内存空间。" class="headerlink" title="十五、JVM的内存结构中三块比较重要的内存空间。"></a>十五、JVM的内存结构中三块比较重要的内存空间。</h2><h2 id="方法区："><a href="#方法区：" class="headerlink" title="方法区："></a>方法区：</h2><p>存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>类加载器首先将代码加载到这里。</p>
+<h2 id="堆内存："><a href="#堆内存：" class="headerlink" title="堆内存："></a>堆内存：</h2><h2 id="栈内存："><a href="#栈内存：" class="headerlink" title="栈内存："></a>栈内存：</h2><p>stack栈当中存储什么？<br>每个方法执行时所需要的内存空间（局部变量）。</p>
+<h3 id="关于数据结构中的栈数据结构"><a href="#关于数据结构中的栈数据结构" class="headerlink" title="关于数据结构中的栈数据结构"></a>关于数据结构中的栈数据结构</h3><p><strong>原则：</strong></p>
+<ul>
+<li>后进先出</li>
+<li>先进后出</li>
+</ul>
+<p><strong>栈数据结构相关的术语：</strong></p>
+<ul>
+<li>栈帧：永远指向栈顶部的元素（栈顶元素具有活跃权。）</li>
+<li>栈顶元素</li>
+<li>栈底元素</li>
+<li>压栈，入栈，进栈，push</li>
+<li>弹栈，出栈，pop</li>
+</ul>
+<h3 id="分析程序运行过程中的内存变化"><a href="#分析程序运行过程中的内存变化" class="headerlink" title="分析程序运行过程中的内存变化"></a>分析程序运行过程中的内存变化</h3><p>方法只定义不调用是不会执行的。<br>方法调用时：压栈 （在栈中给该方法分配空间）<br>方法执行结束时：弹栈（将该方法占用的空间释放，局部变量的内存也释放。）</p>
+<h2 id="十六、方法重载overload"><a href="#十六、方法重载overload" class="headerlink" title="十六、方法重载overload"></a>十六、方法重载overload</h2><h3 id="什么情况下我们考虑使用方法重载机制？"><a href="#什么情况下我们考虑使用方法重载机制？" class="headerlink" title="什么情况下我们考虑使用方法重载机制？"></a>什么情况下我们考虑使用方法重载机制？</h3><p>当功能相似的时候，建议将方法名定义为一致的，<br>这样代码美观，又方便编程。</p>
+<p>注意：如果功能不相似，坚决要让方法名不一致。</p>
+<h3 id="代码满足什么条件的时候构成了方法重载？"><a href="#代码满足什么条件的时候构成了方法重载？" class="headerlink" title="代码满足什么条件的时候构成了方法重载？"></a>代码满足什么条件的时候构成了方法重载？</h3><ul>
+<li>条件1：在同一个类当中</li>
+<li>条件2：方法名相同</li>
+<li>条件3：形式参数列表不同（类型、个数、顺序）</li>
+</ul>
+<p>注意：<br><strong>方法重载和返回值类型无关，和修饰符列表无关。</strong></p>
+<h2 id="十七、方法递归"><a href="#十七、方法递归" class="headerlink" title="十七、方法递归"></a>十七、方法递归</h2><h3 id="什么是方法递归？"><a href="#什么是方法递归？" class="headerlink" title="什么是方法递归？"></a>什么是方法递归？</h3><p>方法自身调用自身。</p>
+<p>使用递归的时候，必须添加结束条件，没有结束条件，会发生栈内存溢出错误。<br>StackOverflowError<br>原因：一直压栈，没有弹栈，栈内存不够用。</p>
+<p>能够使用循环代替递归的尽量使用循环，循环的执行耗费内存少一些，<br>递归耗费内存相对多一些，另外递归使用不当很容易内存溢出，JVM停止工作。<br>当然，只有极少数情况下，只能用递归，其它代码解决不了问题。</p>
+<p>当递归有结束条件，并且结束条件合法的时候，就一定不会内存溢出吗？<br>也不一定。可能递归的太深了。</p>
+<h2 id="十八、面向对象"><a href="#十八、面向对象" class="headerlink" title="十八、面向对象"></a>十八、面向对象</h2><h3 id="面向过程和面向对象有什么区别？"><a href="#面向过程和面向对象有什么区别？" class="headerlink" title="面向过程和面向对象有什么区别？"></a>面向过程和面向对象有什么区别？</h3><p>从语言方面出发：<br>对于C语言来说，是完全面向过程的。<br>对于C++语言来说，是一半面向过程，一半是面向对象。（C++是半面向对象的）<br>对于Java语言来说，是完全面向对象的。</p>
+<h3 id="什么是面向过程的开发方式？"><a href="#什么是面向过程的开发方式？" class="headerlink" title="什么是面向过程的开发方式？"></a>什么是面向过程的开发方式？</h3><p>面向过程的开发方式主要的特点是：<br>注重步骤，注重的是实现这个功能的步骤。<br>第一步干什么<br>第二步干什么<br>….<br>另外面向过程也注重实现功能的因果关系。<br>因为A所有B<br>因为B所以C<br>因为C所以D<br>…..<br>面向过程中没有对象的概念。只是实现这个功能的步骤以及因果关系。</p>
+<h3 id="面向过程有什么缺点？（耦合度高，扩展力差。）"><a href="#面向过程有什么缺点？（耦合度高，扩展力差。）" class="headerlink" title="面向过程有什么缺点？（耦合度高，扩展力差。）"></a>面向过程有什么缺点？（耦合度高，扩展力差。）</h3><p>面向过程最主要是每一步与每一步的因果关系，其中A步骤因果关系到B<br>步骤，A和B联合起来形成一个子模块，子模块和子模块之间又因为因果<br>关系结合在一起，假设其中任何一个因果关系出现问题（错误），此时<br>整个系统的运转都会出现问题。（代码和代码之间的耦合度太高，扩展力<br>太差。）<br>螺栓螺母拧在一起：耦合度高吗？<br>这是耦合度低的，因为螺栓螺母可以再拧开。（它们之间是有接口的。）<br>螺栓螺母拧在一起之后，再用焊条焊接在一起，耦合度高吗？<br>这个耦合度就很高了。耦合度就是黏连程度。<br>往往耦合度高的扩展力就差。</p>
+<p>耦合度高导致扩展力差。（集成显卡：计算机显卡不是独立的，是集成到主板上的）<br>耦合度低导致扩展力强。（灯泡和灯口关系，螺栓螺母关系）</p>
+<p>采用面向过程的方式开发一台计算机会是怎样？<br>这台计算机将没有任何一个部件，所有的都是融合在一起的。<br>你的这台计算机是一个实心儿的，没有部件的。一体机。<br>假设这台一体机的任何一个“部位”出问题，整个计算机就不能用了，<br>必须扔掉了。（没有对象的概念。）</p>
+<p>采用面向对象的方式开发一台计算机会是怎样？<br>内存条是一个对象<br>主板是一个对象<br>CPU是一个对象<br>硬盘是一个对象<br>然后这些对象组装在一起，形成一台计算机。<br>假设其中CPU坏了，我们可以将CPU拆下来，换一个新的。</p>
+<h3 id="面向过程有什么优点？（快速开发）"><a href="#面向过程有什么优点？（快速开发）" class="headerlink" title="面向过程有什么优点？（快速开发）"></a>面向过程有什么优点？（快速开发）</h3><p>对于小型项目（功能），采用面向过程的方式进行开发，效率较高。<br>不需要前期进行对象的提取，模型的建立，采用面向过程<br>方式可以直接开始干活。一上来直接写代码，编写因果关系。<br>从而实现功能。</p>
+<h3 id="什么是面向对象的开发方式？"><a href="#什么是面向对象的开发方式？" class="headerlink" title="什么是面向对象的开发方式？"></a>什么是面向对象的开发方式？</h3><p>采用面向对象的方式进行开发，更符合人类的思维方式。（面向对象成为主流的原因）<br>人类就是以“对象”的方式去认识世界的。<br>所以面向对象更容易让我们接受。</p>
+<p>面向对象就是将现实世界分割成不同的单元，然后每一个单元都实现成对象，然后给一个环境驱动一下，让各个对象之间协作起来形成一个系统。</p>
+<p>对象“张三”<br>对象“香烟”<br>对象“打火机”<br>对象“吸烟的场所”<br>然后将以上的4个对象组合在一起，就可以模拟一个人的抽烟场景。<br>其中“张三”对象可以更换为“李四”<br>其中“香烟”也可以更换品牌。<br>其中“打火机”也可以更换。<br>其中“吸烟的场所”也可以更换。</p>
+<p><strong>采用面向对象的方式进行开发：耦合度低，扩展力强</strong></p>
+<p>找一个合适的案例。说明一下面向对象和面向过程的区别？<br>蛋炒饭：<br>鸡蛋和米饭完全混合在一起。没有独立对象的概念。<br>假设客户提出新需求：我只想吃蛋炒饭中的米饭，怎么办？<br>客户提出需求，软件开发者必须满足这个需求，于是<br>开始扩展，这个软件的扩展是一场噩梦。（很难扩展，耦合度太高了。）</p>
+<p>盖饭：<br>老板，来一份：鱼香肉丝盖饭<br>鱼香肉丝是一道菜，可以看成一个独立的对象。<br>米饭可以看成一个独立的对象。<br>两个对象准备好之后，只要有一个动作，叫做：“盖”<br>这样两个对象就组合在一起了。</p>
+<p>假设客户提出新需求：我不想吃鱼香肉丝盖饭,想吃西红柿鸡蛋盖饭。<br>这个扩展就很轻松了。直接把“鱼香肉丝”对象换成“西红柿鸡蛋”对象。</p>
+<h3 id="面向对象的涉及到三个术语："><a href="#面向对象的涉及到三个术语：" class="headerlink" title="面向对象的涉及到三个术语："></a>面向对象的涉及到三个术语：</h3><ul>
+<li>OOA：面向对象分析</li>
+<li>OOD：面向对象设计</li>
+<li>OOP：面向对象编程<br>整个软件开发的过程，都是采用OO进行贯穿的。</li>
+</ul>
+<blockquote>
+<p>实现一个软件的过程：<br>分析(A) –&gt; 设计(D) –&gt; 编程(P)</p>
+</blockquote>
+<h3 id="面向对象包括三大特征"><a href="#面向对象包括三大特征" class="headerlink" title="面向对象包括三大特征"></a>面向对象包括三大特征</h3><blockquote>
+<p>封装<br>继承<br>多态</p>
+</blockquote>
+<p><strong>任何一个面向对象的编程语言都包括这三个特征</strong><br>例如：<br>python也有封装 继承 多态。<br>java也有封装 继承 多态。</p>
+<h2 id="十九、类和对象的概念"><a href="#十九、类和对象的概念" class="headerlink" title="十九、类和对象的概念"></a>十九、类和对象的概念</h2><h3 id="什么是类？"><a href="#什么是类？" class="headerlink" title="什么是类？"></a>什么是类？</h3><p>类实际上在现实世界当中是不存在的，是一个抽象的概念。<br>是一个模板。是我们人类大脑进行“思考、总结、抽象”的一个<br>结果。(主要是因为人类的大脑不一般才有了类的概念。)</p>
+<p>类本质上是现实世界当中某些事物具有共同特征，将这些共同<br>特征提取出来形成的概念就是一个“类”，“类”就是一个模板。</p>
+<p>明星是一个类</p>
+<h3 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h3><p>对象是实际存在的个体。（真实存在的个体）</p>
+<p>宋小宝就是一个对象<br>姚明就是一个对象<br>刘德华就是一个对象<br>….</p>
+<p>宋小宝、姚明、刘德华这3个对象都属于“明星”这个类。</p>
+<blockquote>
+<p>在java语言中，要想得到“对象”，必须先定义“类”，“对象”是通过“类”<br>这个模板创造出来的。<br>类就是一个模板：类中描述的是所有对象的“共同特征信息”<br>对象就是通过类创建出的个体。</p>
+</blockquote>
+<blockquote>
+<p>类：不存在的，人类大脑思考总结一个模板（这个模板当中描述了共同特征。）<br>对象：实际存在的个体。<br>实例：对象还有另一个名字叫做实例。<br>实例化：通过类这个模板创建对象的过程，叫做：实例化。<br>抽象：多个对象具有共同特征，进行思考总结抽取共同特征的过程。</p>
+</blockquote>
+<p><strong>类 –【实例化】–&gt; 对象(实例)</strong><br><strong>对象 –【抽象】–&gt; 类</strong></p>
+<p><strong>类是一个模板，是描述共同特征的一个模板，那么共同特征包括什么呢？</strong></p>
+<p>潘长江对象：<br>名字：潘长江<br>身高：165cm</p>
+<p>打篮球：非专业的<br>学习：考试80分</p>
+<p>姚明对象：<br>名字：姚明<br>身高：240cm<br>打篮球：NBA专业球员，打篮球非常棒<br>学习：考试100分</p>
+<p>共同特征包括哪些？<br>名字、身高都属于名词（状态特征）<br>打篮球、学习都属于动词（动作特征）</p>
+<p>类 = 属性 + 方法<br>属性来源于：状态<br>方法来源于：动作</p>
+<pre><code>    public class 明星类&#123;
+        //属性--&gt;状态，多见于名词
+        名字属性;
+        身高属性;
+
+        //方法--&gt;动作，多见于动词
+        打篮球方法()&#123;
+        
+        &#125;
+        学习方法()&#123;
+        
+        &#125;
+    &#125;
+
+    
+    可以定义一个学生类（Student）
+    public class Student &#123;
+        // 属性
+        // 姓名
+        // 性别
+        // 身高
+
+        // 方法
+        public .... sing()&#123;
+        
+        &#125;
+        public .... dance()&#123;
+        
+        &#125;
+        public .... study()&#123;
+        
+        &#125;
+        ....
+    &#125;
+</code></pre>
+<h3 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h3><p><strong>怎么定义一个类，语法格式是什么？</strong></p>
+<pre><code>    [修饰符列表] class 类名 &#123;
+        //类体 = 属性 + 方法
+        // 属性在代码上以“变量”的形式存在（描述状态）
+        // 方法描述动作/行为
+    &#125;
+
+    注意：修饰符列表可以省略。
+</code></pre>
+<p><strong>为什么属性是“以”变量的形式存在的？</strong></p>
+<blockquote>
+<p>假设我们要描述一个学生：<br>学生包括哪些属性：<br>学号: 110<br>姓名：”张三”<br>性别：’男’ (true/false)<br>住址：”深圳宝安区”<br>答案：是因为属性对应的是“数据”，数据在程序中只能放到变量中。<br>结论：属性其实就是变量。</p>
+</blockquote>
+<blockquote>
+<p>变量根据出现位置进行划分：<br><strong>方法体当中声明的变量：局部变量。</strong><br><strong>方法体外声明的变量：成员变量。（这里的成员变量就是“属性”）</strong></p>
+</blockquote>
+<h3 id="在语法级别上是怎么完成对象创建的呢？"><a href="#在语法级别上是怎么完成对象创建的呢？" class="headerlink" title="在语法级别上是怎么完成对象创建的呢？"></a>在语法级别上是怎么完成对象创建的呢？</h3><pre><code>类名 变量名 = new 类名();
+这样就完成了对象的创建。
+</code></pre>
+<h3 id="什么是实例变量？"><a href="#什么是实例变量？" class="headerlink" title="什么是实例变量？"></a>什么是实例变量？</h3><p>对象又被称为实例。<br>实例变量实际上就是：对象级别的变量。</p>
+<pre><code>public class 明星类&#123;
+    double height;
+&#125;
+</code></pre>
+<p>身高这个属性所有的明星对象都有，但是每一个对象都有“自己的身高值”。<br>假设创建10个明星对象，height变量应该有10份。<br>所以这种变量被称为对象级别的变量。属于实例变量。</p>
+<h3 id="对象和引用的区别？"><a href="#对象和引用的区别？" class="headerlink" title="对象和引用的区别？"></a>对象和引用的区别？</h3><ul>
+<li><strong>对象是通过new出来的，在堆内存中存储。</strong></li>
+<li><strong>引用是：但凡是变量，并且该变量中保存了内存地址指向了堆内存当中的对象的。</strong></li>
+</ul>
+<h2 id="二十、构造方法。"><a href="#二十、构造方法。" class="headerlink" title="二十、构造方法。"></a>二十、构造方法。</h2><ul>
+<li><p>当一个类中没有提供任何构造方法，系统默认提供一个无参数的构造方法。这个无参数的构造方法叫做缺省构造器。</p>
+</li>
+<li><p>当一个类中手动的提供了构造方法，那么系统将不再默认提供无参数构造方法。建议将无参数构造方法手动的写出来，这样一定不会出问题。</p>
+</li>
+<li><p>无参数构造方法和有参数的构造方法都可以调用。</p>
+</li>
+<li><ul>
+<li>Student x = new Student();</li>
+</ul>
+</li>
+<li><ul>
+<li>Student y = new Student(123);</li>
+</ul>
+</li>
+</ul>
+<h3 id="构造方法支持方法重载吗？"><a href="#构造方法支持方法重载吗？" class="headerlink" title="构造方法支持方法重载吗？"></a>构造方法支持方法重载吗？</h3><blockquote>
+<p>构造方法是支持方法重载的。<br>在一个类当中构造方法可以有多个。<br>并且所有的构造方法名字都是一样的。</p>
+</blockquote>
+<p><strong>方法重载特点：</strong><br>在同一个类中，方法名相同，参数列表不同。</p>
+<p>对于实例变量来说，只要你在构造方法中没有手动给它赋值，<br>统一都会默认赋值。默认赋系统值。</p>
+<h2 id="二十一、封装"><a href="#二十一、封装" class="headerlink" title="二十一、封装"></a>二十一、封装</h2><p><strong>有了封装，才有继承，有了继承，才能说多态。</strong></p>
+<h3 id="什么是封装？有什么用？"><a href="#什么是封装？有什么用？" class="headerlink" title="什么是封装？有什么用？"></a>什么是封装？有什么用？</h3><p>现实生活中有很多现实的例子都是封装的，例如：<br>手机，电视机，笔记本电脑，照相机，这些都是外部有一个坚硬的壳儿。<br>封装起来，保护内部的部件。保证内部的部件是安全的。另外封装了之后，<br>对于我们使用者来说，我们是看不见内部的复杂结构的，我们也不需要关心<br>内部有多么复杂，我们只需要操作外部壳儿上的几个按钮就可以完成操作。</p>
+<h3 id="封装的作用"><a href="#封装的作用" class="headerlink" title="封装的作用"></a>封装的作用</h3><ul>
+<li>第一个作用：保证内部结构的安全。</li>
+<li>第二个作用：屏蔽复杂，暴露简单。</li>
+</ul>
+<p><strong>在代码级别上，封装有什么用</strong></p>
+<blockquote>
+<p>一个类体当中的数据，假设封装之后，对于代码的调用人员来说，<br>不需要关心代码的复杂实现，只需要通过一个简单的入口就可以访问了。<br>另外，类体中安全级别较高的数据封装起来，外部人员不能随意访问，<br>来保证数据的安全性。</p>
+</blockquote>
+<h3 id="封装的代码实现两步："><a href="#封装的代码实现两步：" class="headerlink" title="封装的代码实现两步："></a>封装的代码实现两步：</h3><p>第一步：属性私有化</p>
+<p>第二步：1个属性对外提供两个set和get方法。外部程序只能通过set方法修改，只能通过get方法读取，<br>可以在set方法中设立关卡来保证数据的安全性。</p>
+<p>在强调一下：<br>set和get方法都是实例方法，不能带static。<br>不带static的方法称为实例方法，实例方法的调用必须先new对象。</p>
+<p>set和get方法写的时候有严格的规范要求：（大家要按照规矩来）<br>set方法长这个样子：</p>
+<pre><code>            public void set+属性名首字母大写(1个参数)&#123;
+                xxx = 1个参数;
+            &#125;
+</code></pre>
+<p>get方法长这个样子：</p>
+<pre><code>            public 返回值类型 get+属性名首字母大写(无参)&#123;
+                return xxx;
+            &#125;
+</code></pre>
+<h2 id="二十二、static关键字"><a href="#二十二、static关键字" class="headerlink" title="二十二、static关键字"></a>二十二、static关键字</h2><ul>
+<li>static 是 java 语言中的关键字，表示“静态的”，它可以用来<strong>修饰变量、方法、代码块等</strong></li>
+<li><strong>修饰的变量叫做静态变量，修饰的方法叫做静态方法，修饰的代码块叫做静态代码块。</strong></li>
+<li>在 java语言中凡是用 static 修饰的都是类相关的，不需要创建对象，<strong>直接通过“类名”即可访问</strong>，即使用“引用”去访问，在运行的时候也和堆内存当中的对象无关。</li>
+<li>当一个属性是类级别的属性，所有对象的这个属性的值是一样的，建议定义为静态变量。</li>
+</ul>
+<blockquote>
+<p>static修饰的方法静态方法<br>static修饰的变量静态变量<br>static修饰的都用“类名.”访问。（都不需要new对象，就能访问）<br><strong>static{} 是静态代码块，在类加载时执行，并执行一次。</strong><br><strong>{} 实例语句块，在构造方法执行前执行，构造一次执行一次。</strong></p>
+</blockquote>
+<h2 id="二十三、this"><a href="#二十三、this" class="headerlink" title="二十三、this"></a>二十三、this</h2><ul>
+<li>1、this是一个关键字，<strong>是一个引用，保存内存地址指向自身。</strong></li>
+<li>2、this可以使用在实例方法中，也可以使用在构造方法中。</li>
+<li>3、<strong>this出现在实例方法中其实代表的是当前对象。</strong></li>
+<li>4、<strong>this不能使用在静态方法中。</strong></li>
+<li>5、this. 大部分情况下可以省略，但是用来区分局部变量和实例变量的时候不能省略。</li>
+<li>6、<strong>this() 这种语法只能出现在构造方法第一行，</strong>表示当前构造方法调用本类其他的构造方法，目的是代码复用。</li>
+</ul>
+<h2 id="二十四、继承extends"><a href="#二十四、继承extends" class="headerlink" title="二十四、继承extends"></a>二十四、继承extends</h2><h3 id="什么是继承，有什么用？"><a href="#什么是继承，有什么用？" class="headerlink" title="什么是继承，有什么用？"></a>什么是继承，有什么用？</h3><p>继承：在现实世界当中也是存在的，例如：父亲很有钱，儿子不用努力也很有钱。<br>继承的作用：</p>
+<ul>
+<li><strong>基本作用：子类继承父类，代码可以得到复用。（这个不是重要的作用，是基本作用。）</strong></li>
+<li><strong>主要(重要)作用：因为有了继承关系，才有了后期的方法覆盖和多态机制。</strong></li>
+</ul>
+<h3 id="继承的相关特性"><a href="#继承的相关特性" class="headerlink" title="继承的相关特性"></a>继承的相关特性</h3><p>① B类继承A类，则称A类为超类(superclass)、父类、基类，<br>B类则称为子类(subclass)、派生类、扩展类。</p>
+<blockquote>
+<p>class A{}<br>class B extends A{}</p>
+</blockquote>
+<p>我们平时聊天说的比较多的是：父类和子类。<br>superclass 父类<br>subclass 子类</p>
+<p>② <strong>java 中的继承只支持单继承，不支持多继承，C++中支持多继承，</strong><br>这也是 java 体现简单性的一点，换句话说，java 中不允许这样写代码：</p>
+<blockquote>
+<p>class B extends A,C{ } 这是错误的。</p>
+</blockquote>
+<p>③ 虽然 java 中不支持多继承，但<strong>有的时候会产生间接继承的效果，</strong><br>例如：class C extends B，class B extends A，也就是说，C 直接继承 B，其实 C 还间接继承 A。</p>
+<p>④ java 中规定，<strong>子类继承父类，除构造方法不能继承之外，剩下都可以继承。但是私有的属性无法在子类中直接访问。</strong>(父类中private修饰的不能在子类中直接访问。可以通过间接的手段来访问。)</p>
+<p>⑤ java 中的类没有显示的继承任何类，则<strong>默认继承 Object类</strong>,Object类是 java 语言提供的根类（老祖宗类），也就是说，一个对象与生俱来就有 Object类型中所有的特征。</p>
+<p>⑥ 继承也存在一些缺点，例如：CreditAccount 类继承 Account 类会导致它们之间的耦合度非常高，Account 类发生改变之后会马上影响到 CreditAccount 类</p>
+<p><strong>子类继承父类之后，能使用子类对象调用父类方法</strong></p>
+<h3 id="满足什么条件的时候，可以使用继承呢"><a href="#满足什么条件的时候，可以使用继承呢" class="headerlink" title="满足什么条件的时候，可以使用继承呢"></a>满足什么条件的时候，可以使用继承呢</h3><p>凡是采用“is a”能描述的，都可以继承。<br>例如：<br>Cat is a Animal：猫是一个动物<br>Dog is a Animal：狗是一个动物<br>CreditAccount is a Account：信用卡账户是一个银行账户<br>….</p>
+<p>假设以后的开发中有一个A类，有一个B类，A类和B类确实也有重复的代码，<br>那么他们两个之间就可以继承吗？不一定，还是要看一看它们之间是否能够<br>使用is a来描述。</p>
+<pre><code>        class Customer&#123;
+            String name; // 名字
+            // setter and getter
+        &#125;
+
+        class Product&#123;
+            String name; // 名字
+            // setter and getter
+        &#125;
+
+        class Product extends Customer&#123;
+        
+        &#125;
+</code></pre>
+<p>以上的继承就属于很失败的。因为：Product is a Customer，是有违伦理的。</p>
+<h2 id="二十五、方法覆盖-重写"><a href="#二十五、方法覆盖-重写" class="headerlink" title="二十五、方法覆盖/重写"></a>二十五、方法覆盖/重写</h2><h3 id="什么时候考虑使用方法覆盖？"><a href="#什么时候考虑使用方法覆盖？" class="headerlink" title="什么时候考虑使用方法覆盖？"></a>什么时候考虑使用方法覆盖？</h3><p>父类中的方法无法满足子类的业务需求，子类有必要对继承过来的方法进行覆盖。</p>
+<h3 id="什么条件满足的时候构成方法覆盖"><a href="#什么条件满足的时候构成方法覆盖" class="headerlink" title="什么条件满足的时候构成方法覆盖"></a>什么条件满足的时候构成方法覆盖</h3><ul>
+<li>第一：有继承关系的两个类</li>
+<li>第二：具有相同方法名、返回值类型、形式参数列表</li>
+<li>第三：访问权限不能更低。</li>
+<li>第四：抛出异常不能更多。</li>
+</ul>
+<h3 id="关于Object类中toString-方法的覆盖"><a href="#关于Object类中toString-方法的覆盖" class="headerlink" title="关于Object类中toString()方法的覆盖"></a>关于Object类中toString()方法的覆盖</h3><p><strong>toString()方法存在的作用就是：将java对象转换成字符串形式。</strong><br>大多数的java类toString()方法都是需要覆盖的。因为<strong>Object类中提供的toString()方法输出的是一个java对象的内存地址。</strong><br>例如</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"User{"</span> <span class="token operator">+</span>
+                <span class="token string">"id="</span> <span class="token operator">+</span> id <span class="token operator">+</span>
+                <span class="token string">", username='"</span> <span class="token operator">+</span> username <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", birthday="</span> <span class="token operator">+</span> birthday <span class="token operator">+</span>
+                <span class="token string">", sex='"</span> <span class="token operator">+</span> sex <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", address='"</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", ordersList="</span> <span class="token operator">+</span> ordersList <span class="token operator">+</span>
+                <span class="token string">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="方法重载和方法覆盖有什么区别"><a href="#方法重载和方法覆盖有什么区别" class="headerlink" title="方法重载和方法覆盖有什么区别"></a>方法重载和方法覆盖有什么区别</h3><ul>
+<li><p>方法重载发生在同一个类当中。</p>
+</li>
+<li><p>方法覆盖是发生在具有继承关系的父子类之间。</p>
+</li>
+<li><p>方法重载是一个类中，方法名相同，参数列表不同。</p>
+</li>
+<li><p>方法覆盖是具有继承关系的父子类，并且重写之后的方法必须和之前的方法一致：方法名一致、参数列表一致、返回值类型一致。</p>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li><strong>私有不能覆盖。</strong></li>
+<li><strong>静态不谈覆盖。</strong></li>
+</ul>
+<h2 id="二十六、多态的基础语法"><a href="#二十六、多态的基础语法" class="headerlink" title="二十六、多态的基础语法"></a>二十六、多态的基础语法</h2><h3 id="向上转型和向下转型的概念。"><a href="#向上转型和向下转型的概念。" class="headerlink" title="向上转型和向下转型的概念。"></a>向上转型和向下转型的概念。</h3><blockquote>
+<p>向上转型：子—&gt;父 (upcasting)<br>又被称为自动类型转换：Animal a = new Cat();</p>
+</blockquote>
+<blockquote>
+<p>向下转型：父—&gt;子 (downcasting)<br>又被称为强制类型转换：Cat c = (Cat)a; 需要添加强制类型转换符。</p>
+</blockquote>
+<h3 id="什么时候需要向下转型"><a href="#什么时候需要向下转型" class="headerlink" title="什么时候需要向下转型"></a>什么时候需要向下转型</h3><p>需要调用或者执行子类对象中特有的方法。<br>必须进行向下转型，才可以调用。</p>
+<p><strong>向下转型有风险吗？</strong><br>容易出现ClassCastException（类型转换异常）<br>怎么避免这个风险？<br>instanceof运算符，可以在程序运行阶段动态的判断某个引用指向的对象<br>是否为某一种类型。<br>养成好习惯，向下转型之前一定要使用instanceof运算符进行判断。</p>
+<p>不管是向上转型还是向下转型，首先他们之间必须有继承关系，这样编译器就不会报错。</p>
+<h3 id="什么是多态。"><a href="#什么是多态。" class="headerlink" title="什么是多态。"></a>什么是多态。</h3><p><strong>多种形态，多种状态，编译和运行有两个不同的状态。</strong><br>编译期叫做静态绑定。<br>运行期叫做动态绑定。</p>
+<blockquote>
+<p>Animal a = new Cat();<br>// 编译的时候编译器发现a的类型是Animal，所以编译器会去Animal类中找move()方法<br>// 找到了，绑定，编译通过。但是运行的时候和底层堆内存当中的实际对象有关<br>// 真正执行的时候会自动调用“堆内存中真实对象”的相关方法。<br>a.move();</p>
+</blockquote>
+<p><strong><code>多态的典型代码：父类型的引用指向子类型的对象。</code></strong></p>
+<h3 id="什么时候必须进行向下转型？"><a href="#什么时候必须进行向下转型？" class="headerlink" title="什么时候必须进行向下转型？"></a>什么时候必须进行向下转型？</h3><p>调用子类对象上特有的方法时。</p>
+<h3 id="多态在开发中有什么作用"><a href="#多态在开发中有什么作用" class="headerlink" title="多态在开发中有什么作用"></a>多态在开发中有什么作用</h3><p>多态在开发中的作用是：<br><strong>降低程序的耦合度，提高程序的扩展力。</strong></p>
+<pre><code>    public class Master&#123;
+        public void feed(Dog d)&#123;&#125;
+        public void feed(Cat c)&#123;&#125;
+    &#125;
+    以上的代码中表示：Master和Dog以及Cat的关系很紧密（耦合度高）。导致扩展力很差。
+
+    public class Master&#123;
+        public void feed(Pet pet)&#123;
+            pet.eat();
+        &#125;
+    &#125;
+    以上的代表中表示：Master和Dog以及Cat的关系就脱离了，Master关注的是Pet类。
+    这样Master和Dog以及Cat的耦合度就降低了，提高了软件的扩展性。
+</code></pre>
+<p>面向对象的三大特征：<br>封装、继承、多态</p>
+<blockquote>
+<p>有了封装，有了这种整体的概念之后。<br>对象和对象之间产生了继承。<br>有了继承之后，才有了方法的覆盖和多态。</p>
+</blockquote>
+<blockquote>
+<p>&lt;这里提到了一个软件开发原则：<br>七大原则最基本的原则：OCP（对扩展开放，对修改关闭）<br>目的是：降低程序耦合度，提高程序扩展力。<br>面向抽象编程，不建议面向具体编程。</p>
+</blockquote>
+<h2 id="二十七、super关键字"><a href="#二十七、super关键字" class="headerlink" title="二十七、super关键字"></a>二十七、super关键字</h2><ul>
+<li><p>super能出现在实例方法和构造方法中。</p>
+</li>
+<li><p>super的语法是：“super.”、“super()”</p>
+</li>
+<li><p>super不能使用在静态方法中。</p>
+</li>
+</ul>
+<p>*super. 大部分情况下是可以省略的。</p>
+<h2 id="super-什么时候不能省略呢"><a href="#super-什么时候不能省略呢" class="headerlink" title="super.什么时候不能省略呢"></a>super.什么时候不能省略呢</h2><p>父类和子类中有同名属性，或者说有同样的方法，<br>想在子类中访问父类的，super. 不能省略。</p>
+<blockquote>
+<p>super() 只能出现在构造方法第一行，通过当前的构造方法去调用“父类”中<br>的构造方法，目的是：创建子类对象的时候，先初始化父类型特征。</p>
+</blockquote>
+<p>super的使用：<br>super.属性名——————-【访问父类的属性】<br>super.方法名(实参)————-【访问父类的方法】<br>super(实参)    ——————-【调用父类的构造方法】</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>Java类的成员变量有2种：一种是被static关键字修饰的变量，叫类变量或者静态变量；另一种没有static修饰，为实例变量。<br>在语法定义上的区别：静态变量前要加static关键字，而实例变量前则不加。<br>在程序运行时的区别：实例变量属于某个对象的属性，必须创建了实例对象，其中的实例变量才会被分配空间，才能使用这个实例变量。静态变量不属于某个实例对象，而是属于类，所以也称为类变量，只要程序加载了类的字节码，不用创建任何实例对象，静态变量就会被分配空间，静态变量就可以被使用了。总之，实例变量必须创建对象后才可以通过这个对象来使用，静态变量则可以直接使用类名来引用。<br>类的静态变量在内存中只有一个，java虚拟机在加载类的过程中为静态变量分配内存，静态变量位于方法区，被类的所有实例共享。静态变量可以直接通过类名进行访问，其生命周期取决于类的生命周期。<br>而实例变量取决于类的实例。每创建一个实例，java虚拟机就会为实例变量分配一次内存，实例变量位于堆区中，其生命周期取决于实例的生命周期</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">liuweiguang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2021/09/06/Java-SE%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">http://example.com/2021/09/06/Java-SE%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">liuweiguang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/09/06/Java-SE%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Java SE基础笔记">
+                        
+                        <span class="card-title">Java SE基础笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            liuweiguang
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09/02/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        <img src="/images/git/bg.jpg" class="responsive-img" alt="git学习笔记">
+                        
+                        <span class="card-title">git学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            liuweiguang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">版本控制工具</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">liuweiguang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/liuWeiGuang5/liuWeiGuang5.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1582301959@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1582301959" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1582301959" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+
+</html>
+
+
+
+<!-- 樱花 -->
+<script type="text/javascript" src="/js/sakura.js"></script>

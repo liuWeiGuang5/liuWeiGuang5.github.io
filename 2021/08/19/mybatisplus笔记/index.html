@@ -461,14 +461,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5k
+                    5.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    26 分
                 </div>
                 
 
@@ -488,7 +488,80 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、什么是-mybatis-plus"><a href="#一、什么是-mybatis-plus" class="headerlink" title="一、什么是 mybatis-plus"></a>一、什么是 mybatis-plus</h2><p>MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。<br>MyBatis-Plus 在 MyBatis 之上套了一层外衣，单表 CURD 的操作几乎都可以由 MyBatis-Plus 代替执行。而且提供了各种查询方式，分页行为。<br>作为使用者无需编写 xml,直接调用 MyBatis-Plus 提供的 API 就可以了。<br>官网：<a target="_blank" rel="noopener" href="http://mp.baomidou.com/">http://mp.baomidou.com/</a>  </p>
+                <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+<ul>
+<li><a href="#%E4%B8%80-%E4%BB%80%E4%B9%88%E6%98%AF-mybatis-plus">一、什么是 mybatis-plus</a></li>
+<li><a href="#%E4%BA%8C-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">二、快速开始</a></li>
+<li><a href="#%E4%B8%89-%E9%85%8D%E7%BD%AE-mybatis-%E6%97%A5%E5%BF%97">三、配置 mybatis 日志</a></li>
+<li><a href="#%E5%9B%9B-crud-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95">四、CRUD 基本用法</a><ul>
+<li><a href="#1-insert-%E6%93%8D%E4%BD%9C">1、insert 操作</a></li>
+<li><a href="#2-update%E6%93%8D%E4%BD%9C">2、update操作</a></li>
+<li><a href="#3-delete-%E6%93%8D%E4%BD%9C">3、delete 操作</a><ul>
+<li><a href="#1-deletebyid%E6%8C%89%E4%B8%BB%E9%94%AE%E5%88%A0%E9%99%A4">(1) deleteById:按主键删除</a></li>
+<li><a href="#2-%E6%A0%B9%E6%8D%AE-map-%E4%B8%AD%E6%9D%A1%E4%BB%B6%E5%88%A0%E9%99%A4">(2) 根据 Map 中条件删除</a></li>
+<li><a href="#3-%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4">(3) 批量删除</a></li>
+</ul>
+</li>
+<li><a href="#4-select-%E6%93%8D%E4%BD%9C">4、select 操作</a><ul>
+<li><a href="#1-%E6%A0%B9%E6%8D%AE-id-%E4%B8%BB%E9%94%AE%E6%9F%A5%E8%AF%A2">(1) 根据 id 主键查询</a></li>
+<li><a href="#2-%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E8%AE%B0%E5%BD%95">(2) 批量查询记录</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8map%E7%9A%84%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2">使用map的条件查询</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94-activerecordar">五、ActiveRecord（AR）</a><ul>
+<li><a href="#1-ar-%E4%B9%8B-insert">1、AR 之 insert</a></li>
+<li><a href="#2-ar-%E4%B9%8B-update">2、AR 之 update</a></li>
+<li><a href="#3-ar-%E4%B9%8B-delete">3、AR 之 delete</a></li>
+<li><a href="#4-ar-%E4%B9%8B-select">4、AR 之 select</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AD-%E8%A1%A8%E5%92%8C%E5%88%97">六、表和列</a><ul>
+<li><a href="#1-%E4%B8%BB%E9%94%AE%E7%B1%BB%E5%9E%8B">1、主键类型</a></li>
+<li><a href="#2-%E6%8C%87%E5%AE%9A%E8%A1%A8%E5%90%8D">2、指定表名</a></li>
+<li><a href="#3-%E6%8C%87%E5%AE%9A%E5%88%97%E5%90%8D">3、指定列名</a></li>
+<li><a href="#4-%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D">4、驼峰命名</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83-%E8%87%AA%E5%AE%9A%E4%B9%89-sql">七、自定义 sql</a></li>
+<li><a href="#%E5%85%AB-%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%88%86%E9%A1%B5">八、查询和分页</a><ul>
+<li><a href="#1-%E6%9F%A5%E8%AF%A2%E6%9E%84%E9%80%A0%E5%99%A8wrapper">1、查询构造器：Wrapper</a></li>
+<li><a href="#2-%E6%9F%A5%E8%AF%A2">2、查询</a><ul>
+<li><a href="#1-alleq">(1)、allEq</a></li>
+<li><a href="#2-eq">2)、eq</a></li>
+<li><a href="#3-ne">3)、ne</a></li>
+<li><a href="#4-gt">4)、gt</a></li>
+<li><a href="#5-ge">5)、ge</a></li>
+<li><a href="#6-lt">6)、lt</a></li>
+<li><a href="#7-le">7)、le</a></li>
+<li><a href="#8-between">8)、between</a></li>
+<li><a href="#9-notbetween">9)、notBetween</a></li>
+<li><a href="#10-like-notlike">10)、like , notLike</a></li>
+<li><a href="#11-likeleft-likeright">11)、likeLeft, likeRight</a></li>
+<li><a href="#12-isnull-isnotnull">12)、isNull , isNotNull</a></li>
+<li><a href="#13-in-notin">13)、in , notIn</a></li>
+<li><a href="#14-insql-notinsql">14)、inSql, notInSql</a></li>
+<li><a href="#15-groupby">15)、groupBy</a></li>
+<li><a href="#16-orderbyasc-orderybydesc-orderby">16)、orderByAsc ,orderyByDesc , orderBy</a></li>
+<li><a href="#17-or-and">17)、or , and</a></li>
+<li><a href="#18-last">18)、last</a></li>
+<li><a href="#19-exists-notexists">19)、exists ,notExists</a></li>
+</ul>
+</li>
+<li><a href="#3-%E5%88%86%E9%A1%B5">3、分页</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B9%9D-mp-%E7%94%9F%E6%88%90%E5%99%A8">九、MP 生成器</a></li>
+</ul>
+<!-- /code_chunk_output -->
+
+
+
+<h2 id="一、什么是-mybatis-plus"><a href="#一、什么是-mybatis-plus" class="headerlink" title="一、什么是 mybatis-plus"></a>一、什么是 mybatis-plus</h2><p>MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。<br>MyBatis-Plus 在 MyBatis 之上套了一层外衣，单表 CURD 的操作几乎都可以由 MyBatis-Plus 代替执行。而且提供了各种查询方式，分页行为。<br>作为使用者无需编写 xml,直接调用 MyBatis-Plus 提供的 API 就可以了。<br>官网：<a target="_blank" rel="noopener" href="http://mp.baomidou.com/">http://mp.baomidou.com/</a>  </p>
 <h2 id="二、快速开始"><a href="#二、快速开始" class="headerlink" title="二、快速开始"></a>二、快速开始</h2><p>几分钟就可以上手 MP，前提是需要熟悉 mybatis，spring 或 spring boot, maven，<br>掌握 lambda 表达式更能提升效率。<br>准备环境：<br>⚫ 拥有 Java 开发环境以及相应 IDE<br>⚫ 熟悉 Spring Boot<br>⚫ 熟悉 Maven<br>课堂的开发环境:IntelliJ IDEA 2018 Ultimate , MySQL 5.7 , Maven 3 , Spring Boot 2.x。 </p>
 <p>1.准备数据库表<br><img src="/images/mybatisplus/1.jpg">  </p>
 <p>2、idea 中配置 maven  </p>
