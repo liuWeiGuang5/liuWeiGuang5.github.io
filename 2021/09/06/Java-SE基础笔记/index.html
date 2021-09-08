@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/java%E9%9B%B6%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/bg.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -430,9 +430,21 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/javaSE/">
+                                <span class="chip bg-color">javaSE</span>
+                            </a>
+                        
+                            <a href="/tags/java%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">java基础</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -453,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.8k
+                    14.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    50 分
+                    52 分
                 </div>
                 
 
@@ -480,7 +492,138 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="windows的dos命令"><a href="#windows的dos命令" class="headerlink" title="windows的dos命令"></a>windows的dos命令</h3><pre><code>    cls 清屏
+                <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+<ul>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">常用操作</a><ul>
+<li><a href="#windows%E7%9A%84dos%E5%91%BD%E4%BB%A4">windows的dos命令</a></li>
+<li><a href="#%E5%BF%AB%E6%8D%B7%E9%94%AE">快捷键：</a></li>
+</ul>
+</li>
+<li><a href="#java%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B">Java语言简介</a><ul>
+<li><a href="#java%E8%AF%AD%E8%A8%80%E7%9A%84%E6%A6%82%E8%BF%B0%E4%BB%A5%E5%8F%8Ajava%E8%AF%AD%E8%A8%80%E7%9A%84%E5%8F%91%E5%B1%95%E5%8F%B2">Java语言的概述以及Java语言的发展史。</a></li>
+<li><a href="#java%E8%AF%AD%E8%A8%80%E7%9A%84%E7%89%B9%E6%80%A7">Java语言的特性</a><ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E6%80%A7">简单性</a></li>
+<li><a href="#java%E6%98%AF%E5%A0%AA%E7%A7%B0%E5%AE%8C%E5%85%A8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84">java是堪称完全面向对象的。</a></li>
+<li><a href="#%E5%81%A5%E5%A3%AE%E6%80%A7">健壮性</a></li>
+<li><a href="#java%E5%AE%8C%E5%85%A8%E5%AE%8C%E7%BE%8E%E6%94%AF%E6%8C%81%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91">java完全/完美支持多线程并发。</a></li>
+<li><a href="#%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7%E8%B7%A8%E5%B9%B3%E5%8F%B0">可移植性/跨平台</a></li>
+</ul>
+</li>
+<li><a href="#jdk-jre-jvm%E4%B8%89%E8%80%85%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB">JDK、JRE、JVM三者之间的关系？</a></li>
+</ul>
+</li>
+<li><a href="#java%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B">java运行过程</a><ul>
+<li><a href="#%E5%9B%9B-%E5%AF%B9java%E7%9A%84%E5%8A%A0%E8%BD%BD%E4%B8%8E%E6%89%A7%E8%A1%8C%E7%9A%84%E7%90%86%E8%A7%A3%E7%90%86%E8%AE%BA%E6%AF%94%E8%BE%83%E9%87%8D%E8%A6%81">四、对Java的加载与执行的理解（理论比较重要）</a></li>
+<li><a href="#java-helloworld%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86">“java HelloWorld”的执行过程以及原理。</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8Ejava%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E7%9A%84%E8%A7%A3%E9%87%8A%E8%AF%B4%E6%98%8E">关于java程序代码注释的解释说明！</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A0%87%E8%AF%86%E7%AC%A6-%E5%85%B3%E9%94%AE%E5%AD%97-%E5%8F%98%E9%87%8F-%E6%95%B0%E6%8D%AE%E7%B1%BB-%E8%BF%90%E7%AE%97%E7%AC%A6">标识符、关键字、变量、数据类、运算符</a><ul>
+<li><a href="#%E6%A0%87%E8%AF%86%E7%AC%A6">标识符</a></li>
+<li><a href="#%E5%85%B3%E9%94%AE%E5%AD%97">关键字</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F">变量</a><ul>
+<li><a href="#%E5%AD%97%E9%9D%A2%E9%87%8F">字面量</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F-1">变量</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">数据类型</a><ul>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8">数据类型有什么用？</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9C%A8java%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%8C%85%E6%8B%AC%E4%B8%A4%E7%A7%8D">数据类型在java语言中包括两种：</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D">数据类型详细介绍</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%9A%846%E6%9D%A1%E8%A7%84%E5%88%99">基本数据类型转换的6条规则：</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81">什么是字符编码？</a></li>
+<li><a href="#%E6%80%8E%E4%B9%88%E6%8E%A5%E6%94%B6%E7%94%A8%E6%88%B7%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5">怎么接收用户键盘输入？</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5">控制语句</a><ul>
+<li><a href="#%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%E5%8C%85%E6%8B%AC%E5%87%A0%E7%B1%BB">控制语句包括几类？</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95-%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD-%E6%96%B9%E6%B3%95%E5%9C%B0%E6%9F%9C">方法、方法重载、方法地柜</a><ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89">方法的定义</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E7%9A%84%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%BB%86%E8%8A%82%E5%AD%A6%E4%B9%A0">方法的每一个细节学习</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BDoverload">方法重载overload</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E6%88%91%E4%BB%AC%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E6%9C%BA%E5%88%B6">什么情况下我们考虑使用方法重载机制？</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%BB%A1%E8%B6%B3%E4%BB%80%E4%B9%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%97%B6%E5%80%99%E6%9E%84%E6%88%90%E4%BA%86%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD">代码满足什么条件的时候构成了方法重载？</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92">方法递归</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92">什么是方法递归？</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96%E9%87%8D%E5%86%99">方法覆盖/重写</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96">什么时候考虑使用方法覆盖？</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%9D%A1%E4%BB%B6%E6%BB%A1%E8%B6%B3%E7%9A%84%E6%97%B6%E5%80%99%E6%9E%84%E6%88%90%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96">什么条件满足的时候构成方法覆盖</a><ul>
+<li><a href="#%E5%85%B3%E4%BA%8Eobject%E7%B1%BB%E4%B8%ADtostring%E6%96%B9%E6%B3%95%E7%9A%84%E8%A6%86%E7%9B%96">关于Object类中toString()方法的覆盖</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E5%92%8C%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">方法重载和方法覆盖有什么区别</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#jvm%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E4%B8%AD%E4%B8%89%E5%9D%97%E6%AF%94%E8%BE%83%E9%87%8D%E8%A6%81%E7%9A%84%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4">JVM的内存结构中三块比较重要的内存空间。</a><ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E5%8C%BA">方法区：</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%AD%E7%9A%84%E6%A0%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">关于数据结构中的栈数据结构</a></li>
+<li><a href="#%E5%88%86%E6%9E%90%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E5%8F%98%E5%8C%96">分析程序运行过程中的内存变化</a></li>
+</ul>
+</li>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%A6%82%E5%BF%B5-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95">面向对象、类和对象的概念、构造方法</a><ul>
+<li><a href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">面向过程和面向对象有什么区别？</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%BC%80%E5%8F%91%E6%96%B9%E5%BC%8F">什么是面向过程的开发方式？</a></li>
+<li><a href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E7%BC%BA%E7%82%B9%E8%80%A6%E5%90%88%E5%BA%A6%E9%AB%98%E6%89%A9%E5%B1%95%E5%8A%9B%E5%B7%AE">面向过程有什么缺点？（耦合度高，扩展力差。）</a></li>
+<li><a href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E4%BC%98%E7%82%B9%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91">面向过程有什么优点？（快速开发）</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%80%E5%8F%91%E6%96%B9%E5%BC%8F">什么是面向对象的开发方式？</a></li>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%B6%89%E5%8F%8A%E5%88%B0%E4%B8%89%E4%B8%AA%E6%9C%AF%E8%AF%AD">面向对象的涉及到三个术语：</a></li>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%8C%85%E6%8B%AC%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81">面向对象包括三大特征</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%B1%BB">什么是类？</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AF%B9%E8%B1%A1">什么是对象？</a></li>
+<li><a href="#%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89">类的定义</a></li>
+<li><a href="#%E5%9C%A8%E8%AF%AD%E6%B3%95%E7%BA%A7%E5%88%AB%E4%B8%8A%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%8C%E6%88%90%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E5%91%A2">在语法级别上是怎么完成对象创建的呢？</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F">什么是实例变量？</a></li>
+<li><a href="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%BC%95%E7%94%A8%E7%9A%84%E5%8C%BA%E5%88%AB">对象和引用的区别？</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95">构造方法。</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%94%AF%E6%8C%81%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E5%90%97">构造方法支持方法重载吗？</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81">封装、继承、多态</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%B0%81%E8%A3%85%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8">什么是封装？有什么用？</a></li>
+<li><a href="#%E5%B0%81%E8%A3%85%E7%9A%84%E4%BD%9C%E7%94%A8">封装的作用</a></li>
+<li><a href="#%E5%B0%81%E8%A3%85%E7%9A%84%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E4%B8%A4%E6%AD%A5">封装的代码实现两步：</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BFextends">继承extends</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%A7%E6%89%BF%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8">什么是继承，有什么用？</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E7%89%B9%E6%80%A7">继承的相关特性</a></li>
+<li><a href="#%E6%BB%A1%E8%B6%B3%E4%BB%80%E4%B9%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E7%BB%A7%E6%89%BF%E5%91%A2">满足什么条件的时候，可以使用继承呢</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%9A%E6%80%81%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">多态的基础语法</a><ul>
+<li><a href="#%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E5%92%8C%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B%E7%9A%84%E6%A6%82%E5%BF%B5">向上转型和向下转型的概念。</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B">什么时候需要向下转型</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E6%80%81">什么是多态。</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BF%85%E9%A1%BB%E8%BF%9B%E8%A1%8C%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B">什么时候必须进行向下转型？</a></li>
+<li><a href="#%E5%A4%9A%E6%80%81%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8">多态在开发中有什么作用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#static-this-super%E5%85%B3%E9%94%AE%E5%AD%97">static、this、super关键字</a><ul>
+<li><a href="#this">this</a></li>
+<li><a href="#super%E5%85%B3%E9%94%AE%E5%AD%97">super关键字</a></li>
+<li><a href="#super%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E8%83%BD%E7%9C%81%E7%95%A5%E5%91%A2">super.什么时候不能省略呢</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
+</ul>
+<!-- /code_chunk_output -->
+
+
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="windows的dos命令"><a href="#windows的dos命令" class="headerlink" title="windows的dos命令"></a>windows的dos命令</h3><pre><code>    cls 清屏
     exit 退出
     ipconfig 查看IP地址
     ping 查看两台计算机之间是否可以正常通信
@@ -504,20 +647,20 @@
         win + l 锁屏（离开电脑的时候要锁屏）
         alt + tab 切换应用
 </code></pre>
-<h2 id="一、Java语言的概述以及Java语言的发展史。"><a href="#一、Java语言的概述以及Java语言的发展史。" class="headerlink" title="一、Java语言的概述以及Java语言的发展史。"></a>一、Java语言的概述以及Java语言的发展史。</h2><ul>
+<h2 id="Java语言简介"><a href="#Java语言简介" class="headerlink" title="Java语言简介"></a>Java语言简介</h2><h3 id="Java语言的概述以及Java语言的发展史。"><a href="#Java语言的概述以及Java语言的发展史。" class="headerlink" title="Java语言的概述以及Java语言的发展史。"></a>Java语言的概述以及Java语言的发展史。</h3><ul>
 <li>JDK（Java开发工具箱，做Java开发必须安装的，这是最根本的一个环境。）<br>JDK不是集成开发环境。<br>JDK这个开发工具箱中是Java最核心的库。</li>
 </ul>
 <p><strong>98年的时候：Java升级到JDK1.2，Java被分为三大块：</strong><br>        J2SE：标准版（基础，要学java，必须先学习SE。基础语法+基础库）<br>        J2EE：企业版（专门为企业开发软件，为企业提供解决方案。例如：OA办公系统，保险行业的系统，金融行业的系统，医院系统….）<br>        J2ME：微型版（专门为微型设备做嵌入式开发的。）</p>
 <p><strong>java诞生十周年改了名字：</strong><br>        JavaSE<br>        JavaEE<br>        JavaME</p>
-<h2 id="二、Java语言的特性"><a href="#二、Java语言的特性" class="headerlink" title="二、Java语言的特性"></a>二、Java语言的特性</h2><h3 id="2-1、简单性"><a href="#2-1、简单性" class="headerlink" title="2.1、简单性"></a>2.1、简单性</h3><p>在Java语言当中真正操作内存的是：JVM（Java虚拟机）<br>所有的java程序都是运行在Java虚拟机当中的。<br>而Java虚拟机执行过程中再去操作内存。<br>对于C或者C++来说程序员都是可以直接通过指针操作内存的。<br>C或者C++更灵活，可以直接程序员操作内存，但是要求程序员技术精湛。</p>
-<h2 id="2-2、java是堪称完全面向对象的。"><a href="#2-2、java是堪称完全面向对象的。" class="headerlink" title="2.2、java是堪称完全面向对象的。"></a>2.2、java是堪称完全面向对象的。</h2><p>面向对象更容易让人理解，人类通常是以对象的方式认知世界的。<br>采用面向对象的方式可以让复杂问题简单化。</p>
-<h2 id="2-3、健壮性"><a href="#2-3、健壮性" class="headerlink" title="2.3、健壮性"></a>2.3、健壮性</h2><p>主要是因为Java中有一种机制：<br>        自动垃圾回收机制（GC机制）。<br>        java语言是健壮的，相对于C语言来说，C语言没有Java健壮。<br>        Java不容易导致内存的泄漏。<br>        C++或者C语言使用不当时很容易导致内存泄漏。</p>
+<h3 id="Java语言的特性"><a href="#Java语言的特性" class="headerlink" title="Java语言的特性"></a>Java语言的特性</h3><h4 id="简单性"><a href="#简单性" class="headerlink" title="简单性"></a>简单性</h4><p>在Java语言当中真正操作内存的是：JVM（Java虚拟机）<br>所有的java程序都是运行在Java虚拟机当中的。<br>而Java虚拟机执行过程中再去操作内存。<br>对于C或者C++来说程序员都是可以直接通过指针操作内存的。<br>C或者C++更灵活，可以直接程序员操作内存，但是要求程序员技术精湛。</p>
+<h4 id="java是堪称完全面向对象的。"><a href="#java是堪称完全面向对象的。" class="headerlink" title="java是堪称完全面向对象的。"></a>java是堪称完全面向对象的。</h4><p>面向对象更容易让人理解，人类通常是以对象的方式认知世界的。<br>采用面向对象的方式可以让复杂问题简单化。</p>
+<h4 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h4><p>主要是因为Java中有一种机制：<br>        自动垃圾回收机制（GC机制）。<br>        java语言是健壮的，相对于C语言来说，C语言没有Java健壮。<br>        Java不容易导致内存的泄漏。<br>        C++或者C语言使用不当时很容易导致内存泄漏。</p>
 <p>JVM负责调度GC机制。程序员不需要干涉。</p>
 <p>以上讲解中又描述了这几个术语：<br>JVM（C++语言写的一个虚拟的计算机）、GC（垃圾回收机制）</p>
-<h2 id="2-4、java完全-完美支持多线程并发。"><a href="#2-4、java完全-完美支持多线程并发。" class="headerlink" title="2.4、java完全/完美支持多线程并发。"></a>2.4、java完全/完美支持多线程并发。</h2><h2 id="2-5、可移植性-跨平台"><a href="#2-5、可移植性-跨平台" class="headerlink" title="2.5、可移植性/跨平台"></a>2.5、可移植性/跨平台</h2><p>java语言只要编写一次，可以做到到处运行。<br>例如：java程序编写完之后，可以运行在windows操作系统上，不需要做任何改动可以直接运行在Linux操作系统上，同样也可以运行到MaC OS上面。</p>
+<h4 id="java完全-完美支持多线程并发。"><a href="#java完全-完美支持多线程并发。" class="headerlink" title="java完全/完美支持多线程并发。"></a>java完全/完美支持多线程并发。</h4><h4 id="可移植性-跨平台"><a href="#可移植性-跨平台" class="headerlink" title="可移植性/跨平台"></a>可移植性/跨平台</h4><p>java语言只要编写一次，可以做到到处运行。<br>例如：java程序编写完之后，可以运行在windows操作系统上，不需要做任何改动可以直接运行在Linux操作系统上，同样也可以运行到MaC OS上面。</p>
 <p>一次编写，到处运行。（平台改变了，程序不需要改。）</p>
 <p>JVM这种机制实现了跨平台，那么这种机制优点和缺点分别是什么？<br>            优点：一次编写到处运行，可以跨平台。<br>            缺点：麻烦。对于运行java程序来说必须先有一个JVM。<br>            就像你要想在网页上看视频，你必须先安装一个flash是一样的。</p>
-<h2 id="三、JDK、JRE、JVM三者之间的关系？"><a href="#三、JDK、JRE、JVM三者之间的关系？" class="headerlink" title="三、JDK、JRE、JVM三者之间的关系？"></a>三、JDK、JRE、JVM三者之间的关系？</h2><pre><code>JDK:Java开发工具箱
+<h3 id="JDK、JRE、JVM三者之间的关系？"><a href="#JDK、JRE、JVM三者之间的关系？" class="headerlink" title="JDK、JRE、JVM三者之间的关系？"></a>JDK、JRE、JVM三者之间的关系？</h3><pre><code>JDK:Java开发工具箱
 JRE:java运行环境
 JVM:java虚拟机
 
@@ -530,7 +673,7 @@ JRE和JDK都是可以独立安装的。
 没有单独的JVM安装包。
 </code></pre>
 <p>安装JDK的时候：JRE就自动安装了，同时JRE内部的JVM也就自动安装了。<br>安装JRE的时候：JVM也就自动安装了</p>
-<h2 id="四、对Java的加载与执行的理解（理论比较重要）"><a href="#四、对Java的加载与执行的理解（理论比较重要）" class="headerlink" title="四、对Java的加载与执行的理解（理论比较重要）"></a>四、对Java的加载与执行的理解（理论比较重要）</h2><p><strong>java程序从编写到最终运行经历了哪些过程？</strong></p>
+<h2 id="java运行过程"><a href="#java运行过程" class="headerlink" title="java运行过程"></a>java运行过程</h2><h3 id="四、对Java的加载与执行的理解（理论比较重要）"><a href="#四、对Java的加载与执行的理解（理论比较重要）" class="headerlink" title="四、对Java的加载与执行的理解（理论比较重要）"></a>四、对Java的加载与执行的理解（理论比较重要）</h3><p><strong>java程序从编写到最终运行经历了哪些过程？</strong></p>
 <p>java程序非常重要的两个阶段：</p>
 <blockquote>
 <p>编译阶段<br>  运行阶段</p>
@@ -595,7 +738,7 @@ JRE和JDK都是可以独立安装的。
 <li><p><em>注意：在以上的过程中，需要使用两个非常重要的命令？</em>*<br><code>javac 命令</code>，负责编译<br><code>java 命令</code>，负责运行</p>
 </li>
 </ul>
-<h2 id="五、“java-HelloWorld”的执行过程以及原理。"><a href="#五、“java-HelloWorld”的执行过程以及原理。" class="headerlink" title="五、“java HelloWorld”的执行过程以及原理。"></a>五、“java HelloWorld”的执行过程以及原理。</h2><ul>
+<h3 id="“java-HelloWorld”的执行过程以及原理。"><a href="#“java-HelloWorld”的执行过程以及原理。" class="headerlink" title="“java HelloWorld”的执行过程以及原理。"></a>“java HelloWorld”的执行过程以及原理。</h3><ul>
 <li>第一步：会先启动JVM（java虚拟机）</li>
 <li>第二步：JVM启动之后，JVM会去启动“类加载器classloader”<br>类加载器的作用：加载类的。本质上类加载器负责去硬盘上找“类”对应的“字节码”文件。<br>假设是“java HelloWorld”，那么类加载器会去硬盘上搜索：HelloWorld.class文件。<br>假设是“java Test”，那么类加载器会去硬盘上搜索：Test.class文件。<br>  …….</li>
 <li>第三步：<br>类加载器如果在硬盘上找不到对应的字节码文件，会报错，报什么错？<br>错误: 找不到或无法加载主类<br>类加载器如果在硬盘上找到了对应的字节码文件，类加载器会将该字节码<br>文件装载到JVM当中，JVM启动“解释器”将字节码解释为“101010000…”这种<br>二进制码，操作系统执行二进制码和硬件交互。</li>
@@ -611,7 +754,7 @@ JRE和JDK都是可以独立安装的。
 <p>结论是：<br>到目前为止：classpath环境变量不需要配置。<br>但你必须理解classpath环境变量是干什么的！！！！</p>
 <p><strong>你一定要理解classpath环境变量的作用是什么？</strong><br>是给类加载器指路的。<br>在没有配置环境变量classpath的时候，默认从当前路径下加载。<br>如果配置了环境变量classpath的话，就只能从指定的路径下加载了。</p>
 <p>path java_home classpath，这3个环境变量path需要配置，后面两个暂时不配置。</p>
-<h2 id="六、关于java程序代码注释的解释说明！"><a href="#六、关于java程序代码注释的解释说明！" class="headerlink" title="六、关于java程序代码注释的解释说明！"></a>六、关于java程序代码注释的解释说明！</h2><pre><code>// 单行注释
+<h3 id="关于java程序代码注释的解释说明！"><a href="#关于java程序代码注释的解释说明！" class="headerlink" title="关于java程序代码注释的解释说明！"></a>关于java程序代码注释的解释说明！</h3><pre><code>// 单行注释
 
 /*
     多行注释
@@ -621,7 +764,7 @@ JRE和JDK都是可以独立安装的。
 * javadoc注释：这里的注释信息可以自动被javadoc.exe命令解析提取并生成到帮助文档当中。
 */
 </code></pre>
-<h2 id="七、标识符"><a href="#七、标识符" class="headerlink" title="七、标识符"></a>七、标识符</h2><p><strong>标识符可以表示什么</strong><br>类名、接口名、方法名、变量名、常量名</p>
+<h2 id="标识符、关键字、变量、数据类、运算符"><a href="#标识符、关键字、变量、数据类、运算符" class="headerlink" title="标识符、关键字、变量、数据类、运算符"></a>标识符、关键字、变量、数据类、运算符</h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p><strong>标识符可以表示什么</strong><br>类名、接口名、方法名、变量名、常量名</p>
 <p><strong>标识符命名规则</strong><br>标识符只能由数字、字母(可以有中文)、下划线、美元符号组成，不能有其他符号 </p>
 <ul>
 <li>标识符不能以数字开头 </li>
@@ -635,13 +778,13 @@ JRE和JDK都是可以独立安装的。
 <li>变量名、方法名：首字母小写，后边的每一个单词的首字母大写</li>
 <li>常量名:全部大写，每个单词之间用下划线衔接</li>
 </ul>
-<h2 id="八、关键字"><a href="#八、关键字" class="headerlink" title="八、关键字"></a>八、关键字</h2><p><strong>什么是关键字？</strong><br>在SUN公司开发Java语言的时候，提前定义好了一些具有特殊含义的单词，<br>        这些单词全部小写，具有特殊含义，不能用作标识符。</p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p><strong>什么是关键字？</strong><br>在SUN公司开发Java语言的时候，提前定义好了一些具有特殊含义的单词，<br>        这些单词全部小写，具有特殊含义，不能用作标识符。</p>
 <p><strong>切记：</strong><br>        java语言中的所有关键字都是全部小写。<br>        注意：java语言中是严格区分大小写的。public和Public不一样。<br>        Class和class不一样。static和Static也不一样。</p>
 <p><strong>那么关键字有哪些呢</strong><br>        关键字：<br>            public<br>            static<br>            void<br>            class<br>            byte<br>            short<br>            int<br>            long<br>            float<br>            double<br>            boolean<br>            char<br>            true<br>            false<br>            if<br>            while<br>            for<br>            private<br>            protected…….</p>
-<h2 id="九、变量"><a href="#九、变量" class="headerlink" title="九、变量"></a>九、变量</h2><h3 id="9-1、字面量"><a href="#9-1、字面量" class="headerlink" title="9.1、字面量"></a>9.1、字面量</h3><p>字面量就是数据<br>数据就是字面量<br>是一个东西。</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h4 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h4><p>字面量就是数据<br>数据就是字面量<br>是一个东西。</p>
 <p>10 100 123 ：整型<br>1.34 3.14 2.0：浮点型<br>true false ：布尔型<br>        ‘a’ ‘国’：字符型<br>        “a” “abc”  “国” “中国”：字符串型</p>
 <p>10：整数，是一个数字<br>        “10”：它不是数字，是一个字符串，或者说，它属于“文字类”的。<br>        性质完全不同，在计算机中的对应的二进制码也是完全不同的。</p>
-<h3 id="9-2、变量"><a href="#9-2、变量" class="headerlink" title="9.2、变量"></a>9.2、变量</h3><p><strong>变量的理解</strong><br>            什么是变量？<br>                变量就是一个存数据盒子。（盒子大小谁来决定啊？数据类型）<br>                在内存中的最基本的存储单元。<br>                存数据用的，而且这个数据是可变的，所以叫做变量。</p>
+<h4 id="变量-1"><a href="#变量-1" class="headerlink" title="变量"></a>变量</h4><p><strong>变量的理解</strong><br>            什么是变量？<br>                变量就是一个存数据盒子。（盒子大小谁来决定啊？数据类型）<br>                在内存中的最基本的存储单元。<br>                存数据用的，而且这个数据是可变的，所以叫做变量。</p>
 <p><strong>变量的使用</strong><br>变量的三要素？<br>                数据类型、变量名、值  （值就是数据，就是字面量。）<br>                int i = 100;</p>
 <p>java中的变量必须先声明，再赋值才能访问（必须手动赋值。）<br>            int k; System.out.println(k); 这样是不行的。</p>
 <p>可以在一行上声明多个变量：<br>                int a, b, c = 100;<br>                c变量赋值100，a,b变量只声明了没有赋值。<br>                int a = 10, b = 20, c = 100;<br>                可以这样每个都赋值。</p>
@@ -670,8 +813,8 @@ JRE和JDK都是可以独立安装的。
             在这里是无法访问i变量。
         &#125;
 </code></pre>
-<h2 id="十、数据类型"><a href="#十、数据类型" class="headerlink" title="十、数据类型"></a>十、数据类型</h2><h3 id="数据类型有什么用？"><a href="#数据类型有什么用？" class="headerlink" title="数据类型有什么用？"></a>数据类型有什么用？</h3><p>数据类型用来声明变量，程序在运行过程中根据不同的数据类型分配不同大小的空间。<br>        int i = 10;<br>        double d = 1.23;<br>        i变量和d变量类型不同，空间大小不同。</p>
-<h3 id="数据类型在java语言中包括两种："><a href="#数据类型在java语言中包括两种：" class="headerlink" title="数据类型在java语言中包括两种："></a>数据类型在java语言中包括两种：</h3><p><strong>第一种：基本数据类型</strong><br>            基本数据类型又可以划分为4大类8小种：<br>                第一类：整数型<br>                    byte,short,int,long （没有小数的）<br>                第二类：浮点型<br>                    float,double （带有小数的）<br>                第三类：布尔型<br>                    boolean：只有两个值true和false，true表示真，false表示假<br>                第四类：字符型<br>                    char：java中规定字符型字面量必须使用单引号括起来。属于文字。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="数据类型有什么用？"><a href="#数据类型有什么用？" class="headerlink" title="数据类型有什么用？"></a>数据类型有什么用？</h4><p>数据类型用来声明变量，程序在运行过程中根据不同的数据类型分配不同大小的空间。<br>        int i = 10;<br>        double d = 1.23;<br>        i变量和d变量类型不同，空间大小不同。</p>
+<h4 id="数据类型在java语言中包括两种："><a href="#数据类型在java语言中包括两种：" class="headerlink" title="数据类型在java语言中包括两种："></a>数据类型在java语言中包括两种：</h4><p><strong>第一种：基本数据类型</strong><br>            基本数据类型又可以划分为4大类8小种：<br>                第一类：整数型<br>                    byte,short,int,long （没有小数的）<br>                第二类：浮点型<br>                    float,double （带有小数的）<br>                第三类：布尔型<br>                    boolean：只有两个值true和false，true表示真，false表示假<br>                第四类：字符型<br>                    char：java中规定字符型字面量必须使用单引号括起来。属于文字。</p>
 <p>8小种：<br>                byte,short,int,long<br>                float,double<br>                boolean<br>                char</p>
 <p><strong>第二种：引用数据类型</strong><br>            字符串型String属于引用数据类型。<br>            String字符串不属于基本数据类型范畴。<br>            java中除了基本数据类型之外，剩下的都是引用数据类型。<br>            引用数据类型后期面向对象的时候才会接触。</p>
 <p><strong>整数型：byte short int long有什么区别？</strong><br>        浮点型：float和double有什么区别？<br>        区别：占用的空间大小不同。</p>
@@ -698,7 +841,7 @@ JRE和JDK都是可以独立安装的。
 <p>short和char实际上容量相同，不过char可以表示更大的数字。<br>            因为char表示的是文字，文件没有正负之分，所以char可以表示<br>            更大的数字。</p>
 <p><strong>对于8种基本数据类型来说：</strong><br>        其中byte,short,int,long,float,double,boolean，这7种类型计算机表示起来<br>        比较容易，因为他们都是数字。其中布尔类型只有两个值true和false，实际上<br>        true和false分别在C++中对应的是1和0，1为true，false为0。</p>
 <p>对于char类型来说计算机表示起来比较麻烦，因为char对应的是文字，每一个国家的文字不一样，文字不能直接通过“自然算法”转换成二进制。这个时候怎么办？<br>            字符编码诞生了。</p>
-<h3 id="数据类型详细介绍"><a href="#数据类型详细介绍" class="headerlink" title="数据类型详细介绍"></a>数据类型详细介绍</h3><pre><code>        char
+<h4 id="数据类型详细介绍"><a href="#数据类型详细介绍" class="headerlink" title="数据类型详细介绍"></a>数据类型详细介绍</h4><pre><code>        char
             可以存储1个汉字
             用单引号括起来
             转义字符：
@@ -742,7 +885,7 @@ JRE和JDK都是可以独立安装的。
             boolean类型只有两个值：true false，没有其他值。
             布尔类型使用在逻辑运算，条件判断当中。
 </code></pre>
-<h3 id="基本数据类型转换的6条规则："><a href="#基本数据类型转换的6条规则：" class="headerlink" title="基本数据类型转换的6条规则："></a>基本数据类型转换的6条规则：</h3><pre><code>        第一条：只有boolean不能转换，其它都行。
+<h4 id="基本数据类型转换的6条规则："><a href="#基本数据类型转换的6条规则：" class="headerlink" title="基本数据类型转换的6条规则："></a>基本数据类型转换的6条规则：</h4><pre><code>        第一条：只有boolean不能转换，其它都行。
 
         第二条：自动类型转换
             byte &lt; short(char) &lt; int &lt; long &lt; float &lt; double
@@ -758,7 +901,7 @@ JRE和JDK都是可以独立安装的。
         第六条：多种数据类型混合运算的时候，先转换成容量最大的那一种再做运算。
     
 </code></pre>
-<h3 id="什么是字符编码？"><a href="#什么是字符编码？" class="headerlink" title="什么是字符编码？"></a>什么是字符编码？</h3><p>字符编码是人为的定义的一套转换表。<br>            在字符编码中规定了一系列的文字对应的二进制。<br>            字符编码其实本质上就是一本字典，该字段中描述了文字与二进制之间的对照关系。<br>            字符编码是人为规定的。（是某个计算机协会规定的。）</p>
+<h4 id="什么是字符编码？"><a href="#什么是字符编码？" class="headerlink" title="什么是字符编码？"></a>什么是字符编码？</h4><p>字符编码是人为的定义的一套转换表。<br>            在字符编码中规定了一系列的文字对应的二进制。<br>            字符编码其实本质上就是一本字典，该字段中描述了文字与二进制之间的对照关系。<br>            字符编码是人为规定的。（是某个计算机协会规定的。）</p>
 <p>字符编码涉及到编码和解码两个过程，编码和解码的时候必须采用同一套字符编码方式，不然就会出现乱码。</p>
 <p>关于字符编码的发展过程？<br>起初的时候计算机是不支持文字的，只支持科学计算。实际上计算机起初是为了<br>            战争而开发的，计算导弹的轨道….</p>
 <p>后来随着计算机的发展，计算机开始支持文字，最先支持的文字是英文，英文<br>            对应的字符编码方式是：ASCII码。</p>
@@ -782,13 +925,13 @@ JRE和JDK都是可以独立安装的。
 <p>后来发展到亚洲，才支持中文，日文，韩文….<br>            中文这块的编码方式：GB2312&lt;GBK&lt;GB18030 （容量的关系）<br>            以上编码方式是简体中文。<br>繁体中文：big5（台湾使用的是大五码。）</p>
 <p>在java中，java语言为了支持全球所有的文字，采用了一种字符编码方式<br>            叫做unicode编码。unicode编码统一了全球所有的文字，支持所有文字。<br>            具体的实现包括：UTF-8 UTF-16 UTF-32….</p>
 <p>需要记住：<br>            ASCII（’a’是97 ‘A’是65 ‘0’是48…）<br>            ISO-8859-1（latin-1）<br>            GB2312<br>            GBK<br>            GB18030<br>            Big5<br>            unicode（utf8 utf16 utf32）</p>
-<h2 id="十一、怎么接收用户键盘输入？"><a href="#十一、怎么接收用户键盘输入？" class="headerlink" title="十一、怎么接收用户键盘输入？"></a>十一、怎么接收用户键盘输入？</h2><pre class="line-numbers language-java"><code class="language-java">    java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h4 id="怎么接收用户键盘输入？"><a href="#怎么接收用户键盘输入？" class="headerlink" title="怎么接收用户键盘输入？"></a>怎么接收用户键盘输入？</h4><pre class="line-numbers language-java"><code class="language-java">    java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 接收整数</span>
     <span class="token keyword">int</span> i <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment" spellcheck="true">// 接收字符串</span>
     String str <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><pre><code>    算术运算符
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><pre><code>    算术运算符
         + - * / % ++ --
         重点：++
             ++无论出现在变量前还是后，只要++运算结束，一定会自加1.
@@ -894,7 +1037,7 @@ JRE和JDK都是可以独立安装的。
             String name = &quot;jackson&quot;;
             System.out.println(&quot;登录成功，欢迎&quot;+name+&quot;回来&quot;);
 </code></pre>
-<h2 id="十三、控制语句"><a href="#十三、控制语句" class="headerlink" title="十三、控制语句"></a>十三、控制语句</h2><p>控制语句的出现可以让我们的程序具有逻辑性/条理性，可以使用控制语句来实现一个“业务”了。</p>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><p>控制语句的出现可以让我们的程序具有逻辑性/条理性，可以使用控制语句来实现一个“业务”了。</p>
 <h3 id="控制语句包括几类？"><a href="#控制语句包括几类？" class="headerlink" title="控制语句包括几类？"></a>控制语句包括几类？</h3><p>3类：<br>            选择语句<br>            循环语句<br>            转向语句</p>
 <p><strong>选择语句也可以叫做分支语句</strong><br>        if语句<br>        switch语句</p>
 <p>选择语句/分支语句 if</p>
@@ -991,7 +1134,7 @@ JRE和JDK都是可以独立安装的。
         &#125;
     
 </code></pre>
-<h2 id="十四、方法是什么？"><a href="#十四、方法是什么？" class="headerlink" title="十四、方法是什么？"></a>十四、方法是什么？</h2><p>方法是一段可以完成某个特定功能的并且可以被重复利用的代码片段。<br>方法的出现，让代码具有了很强的复用性。</p>
+<h2 id="方法、方法重载、方法地柜"><a href="#方法、方法重载、方法地柜" class="headerlink" title="方法、方法重载、方法地柜"></a>方法、方法重载、方法地柜</h2><p>方法是一段可以完成某个特定功能的并且可以被重复利用的代码片段。<br>方法的出现，让代码具有了很强的复用性。</p>
 <p>方法最难实现的是：<br>根据业务怎么进行方法的抽取。<br>方法的返回值类型定义为 什么？<br>方法的名字叫什么？<br>方法的形式参数列表定义为 什么？<br>….<br>一个方法就是一个独立的功能。</p>
 <h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><blockquote>
 <p>[修饰符列表] 返回值类型 方法名(形式参数列表){<br>方法体;<br>}</p>
@@ -1008,8 +1151,54 @@ JRE和JDK都是可以独立安装的。
 <li><em>实际参数列表，简称实参。（调用方法时传递的实际数据。）</em>*</li>
 <li><em>实参和形参的关系是一一对应。</em>*</li>
 </ul>
-<h2 id="十五、JVM的内存结构中三块比较重要的内存空间。"><a href="#十五、JVM的内存结构中三块比较重要的内存空间。" class="headerlink" title="十五、JVM的内存结构中三块比较重要的内存空间。"></a>十五、JVM的内存结构中三块比较重要的内存空间。</h2><h2 id="方法区："><a href="#方法区：" class="headerlink" title="方法区："></a>方法区：</h2><p>存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>类加载器首先将代码加载到这里。</p>
-<h2 id="堆内存："><a href="#堆内存：" class="headerlink" title="堆内存："></a>堆内存：</h2><h2 id="栈内存："><a href="#栈内存：" class="headerlink" title="栈内存："></a>栈内存：</h2><p>stack栈当中存储什么？<br>每个方法执行时所需要的内存空间（局部变量）。</p>
+<h3 id="方法重载overload"><a href="#方法重载overload" class="headerlink" title="方法重载overload"></a>方法重载overload</h3><h4 id="什么情况下我们考虑使用方法重载机制？"><a href="#什么情况下我们考虑使用方法重载机制？" class="headerlink" title="什么情况下我们考虑使用方法重载机制？"></a>什么情况下我们考虑使用方法重载机制？</h4><p>当功能相似的时候，建议将方法名定义为一致的，<br>这样代码美观，又方便编程。</p>
+<p>注意：如果功能不相似，坚决要让方法名不一致。</p>
+<h4 id="代码满足什么条件的时候构成了方法重载？"><a href="#代码满足什么条件的时候构成了方法重载？" class="headerlink" title="代码满足什么条件的时候构成了方法重载？"></a>代码满足什么条件的时候构成了方法重载？</h4><ul>
+<li>条件1：在同一个类当中</li>
+<li>条件2：方法名相同</li>
+<li>条件3：形式参数列表不同（类型、个数、顺序）</li>
+</ul>
+<p>注意：<br><strong>方法重载和返回值类型无关，和修饰符列表无关。</strong></p>
+<h3 id="方法递归"><a href="#方法递归" class="headerlink" title="方法递归"></a>方法递归</h3><h4 id="什么是方法递归？"><a href="#什么是方法递归？" class="headerlink" title="什么是方法递归？"></a>什么是方法递归？</h4><p>方法自身调用自身。</p>
+<p>使用递归的时候，必须添加结束条件，没有结束条件，会发生栈内存溢出错误。<br>StackOverflowError<br>原因：一直压栈，没有弹栈，栈内存不够用。</p>
+<p>能够使用循环代替递归的尽量使用循环，循环的执行耗费内存少一些，<br>递归耗费内存相对多一些，另外递归使用不当很容易内存溢出，JVM停止工作。<br>当然，只有极少数情况下，只能用递归，其它代码解决不了问题。</p>
+<p>当递归有结束条件，并且结束条件合法的时候，就一定不会内存溢出吗？<br>也不一定。可能递归的太深了</p>
+<h3 id="方法覆盖-重写"><a href="#方法覆盖-重写" class="headerlink" title="方法覆盖/重写"></a>方法覆盖/重写</h3><h4 id="什么时候考虑使用方法覆盖？"><a href="#什么时候考虑使用方法覆盖？" class="headerlink" title="什么时候考虑使用方法覆盖？"></a>什么时候考虑使用方法覆盖？</h4><p>父类中的方法无法满足子类的业务需求，子类有必要对继承过来的方法进行覆盖。</p>
+<h3 id="什么条件满足的时候构成方法覆盖"><a href="#什么条件满足的时候构成方法覆盖" class="headerlink" title="什么条件满足的时候构成方法覆盖"></a>什么条件满足的时候构成方法覆盖</h3><ul>
+<li>第一：有继承关系的两个类</li>
+<li>第二：具有相同方法名、返回值类型、形式参数列表</li>
+<li>第三：访问权限不能更低。</li>
+<li>第四：抛出异常不能更多。</li>
+</ul>
+<h4 id="关于Object类中toString-方法的覆盖"><a href="#关于Object类中toString-方法的覆盖" class="headerlink" title="关于Object类中toString()方法的覆盖"></a>关于Object类中toString()方法的覆盖</h4><p><strong>toString()方法存在的作用就是：将java对象转换成字符串形式。</strong><br>大多数的java类toString()方法都是需要覆盖的。因为<strong>Object类中提供的toString()方法输出的是一个java对象的内存地址。</strong><br>例如</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"User{"</span> <span class="token operator">+</span>
+                <span class="token string">"id="</span> <span class="token operator">+</span> id <span class="token operator">+</span>
+                <span class="token string">", username='"</span> <span class="token operator">+</span> username <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", birthday="</span> <span class="token operator">+</span> birthday <span class="token operator">+</span>
+                <span class="token string">", sex='"</span> <span class="token operator">+</span> sex <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", address='"</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", ordersList="</span> <span class="token operator">+</span> ordersList <span class="token operator">+</span>
+                <span class="token string">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="方法重载和方法覆盖有什么区别"><a href="#方法重载和方法覆盖有什么区别" class="headerlink" title="方法重载和方法覆盖有什么区别"></a>方法重载和方法覆盖有什么区别</h4><ul>
+<li><p>方法重载发生在同一个类当中。</p>
+</li>
+<li><p>方法覆盖是发生在具有继承关系的父子类之间。</p>
+</li>
+<li><p>方法重载是一个类中，方法名相同，参数列表不同。</p>
+</li>
+<li><p>方法覆盖是具有继承关系的父子类，并且重写之后的方法必须和之前的方法一致：方法名一致、参数列表一致、返回值类型一致。</p>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li><strong>私有不能覆盖。</strong></li>
+<li><strong>静态不谈覆盖。</strong></li>
+</ul>
+<h2 id="JVM的内存结构中三块比较重要的内存空间。"><a href="#JVM的内存结构中三块比较重要的内存空间。" class="headerlink" title="JVM的内存结构中三块比较重要的内存空间。"></a>JVM的内存结构中三块比较重要的内存空间。</h2><h3 id="方法区："><a href="#方法区：" class="headerlink" title="方法区："></a>方法区：</h3><p>存储代码片段，存储xxx.class字节码文件，这个空间是最先有数据的，<br>类加载器首先将代码加载到这里。<br>堆内存：<br>栈内存：<br>stack栈当中存储什么？<br>每个方法执行时所需要的内存空间（局部变量）。</p>
 <h3 id="关于数据结构中的栈数据结构"><a href="#关于数据结构中的栈数据结构" class="headerlink" title="关于数据结构中的栈数据结构"></a>关于数据结构中的栈数据结构</h3><p><strong>原则：</strong></p>
 <ul>
 <li>后进先出</li>
@@ -1024,19 +1213,7 @@ JRE和JDK都是可以独立安装的。
 <li>弹栈，出栈，pop</li>
 </ul>
 <h3 id="分析程序运行过程中的内存变化"><a href="#分析程序运行过程中的内存变化" class="headerlink" title="分析程序运行过程中的内存变化"></a>分析程序运行过程中的内存变化</h3><p>方法只定义不调用是不会执行的。<br>方法调用时：压栈 （在栈中给该方法分配空间）<br>方法执行结束时：弹栈（将该方法占用的空间释放，局部变量的内存也释放。）</p>
-<h2 id="十六、方法重载overload"><a href="#十六、方法重载overload" class="headerlink" title="十六、方法重载overload"></a>十六、方法重载overload</h2><h3 id="什么情况下我们考虑使用方法重载机制？"><a href="#什么情况下我们考虑使用方法重载机制？" class="headerlink" title="什么情况下我们考虑使用方法重载机制？"></a>什么情况下我们考虑使用方法重载机制？</h3><p>当功能相似的时候，建议将方法名定义为一致的，<br>这样代码美观，又方便编程。</p>
-<p>注意：如果功能不相似，坚决要让方法名不一致。</p>
-<h3 id="代码满足什么条件的时候构成了方法重载？"><a href="#代码满足什么条件的时候构成了方法重载？" class="headerlink" title="代码满足什么条件的时候构成了方法重载？"></a>代码满足什么条件的时候构成了方法重载？</h3><ul>
-<li>条件1：在同一个类当中</li>
-<li>条件2：方法名相同</li>
-<li>条件3：形式参数列表不同（类型、个数、顺序）</li>
-</ul>
-<p>注意：<br><strong>方法重载和返回值类型无关，和修饰符列表无关。</strong></p>
-<h2 id="十七、方法递归"><a href="#十七、方法递归" class="headerlink" title="十七、方法递归"></a>十七、方法递归</h2><h3 id="什么是方法递归？"><a href="#什么是方法递归？" class="headerlink" title="什么是方法递归？"></a>什么是方法递归？</h3><p>方法自身调用自身。</p>
-<p>使用递归的时候，必须添加结束条件，没有结束条件，会发生栈内存溢出错误。<br>StackOverflowError<br>原因：一直压栈，没有弹栈，栈内存不够用。</p>
-<p>能够使用循环代替递归的尽量使用循环，循环的执行耗费内存少一些，<br>递归耗费内存相对多一些，另外递归使用不当很容易内存溢出，JVM停止工作。<br>当然，只有极少数情况下，只能用递归，其它代码解决不了问题。</p>
-<p>当递归有结束条件，并且结束条件合法的时候，就一定不会内存溢出吗？<br>也不一定。可能递归的太深了。</p>
-<h2 id="十八、面向对象"><a href="#十八、面向对象" class="headerlink" title="十八、面向对象"></a>十八、面向对象</h2><h3 id="面向过程和面向对象有什么区别？"><a href="#面向过程和面向对象有什么区别？" class="headerlink" title="面向过程和面向对象有什么区别？"></a>面向过程和面向对象有什么区别？</h3><p>从语言方面出发：<br>对于C语言来说，是完全面向过程的。<br>对于C++语言来说，是一半面向过程，一半是面向对象。（C++是半面向对象的）<br>对于Java语言来说，是完全面向对象的。</p>
+<h2 id="面向对象、类和对象的概念、构造方法"><a href="#面向对象、类和对象的概念、构造方法" class="headerlink" title="面向对象、类和对象的概念、构造方法"></a>面向对象、类和对象的概念、构造方法</h2><h3 id="面向过程和面向对象有什么区别？"><a href="#面向过程和面向对象有什么区别？" class="headerlink" title="面向过程和面向对象有什么区别？"></a>面向过程和面向对象有什么区别？</h3><p>从语言方面出发：<br>对于C语言来说，是完全面向过程的。<br>对于C++语言来说，是一半面向过程，一半是面向对象。（C++是半面向对象的）<br>对于Java语言来说，是完全面向对象的。</p>
 <h3 id="什么是面向过程的开发方式？"><a href="#什么是面向过程的开发方式？" class="headerlink" title="什么是面向过程的开发方式？"></a>什么是面向过程的开发方式？</h3><p>面向过程的开发方式主要的特点是：<br>注重步骤，注重的是实现这个功能的步骤。<br>第一步干什么<br>第二步干什么<br>….<br>另外面向过程也注重实现功能的因果关系。<br>因为A所有B<br>因为B所以C<br>因为C所以D<br>…..<br>面向过程中没有对象的概念。只是实现这个功能的步骤以及因果关系。</p>
 <h3 id="面向过程有什么缺点？（耦合度高，扩展力差。）"><a href="#面向过程有什么缺点？（耦合度高，扩展力差。）" class="headerlink" title="面向过程有什么缺点？（耦合度高，扩展力差。）"></a>面向过程有什么缺点？（耦合度高，扩展力差。）</h3><p>面向过程最主要是每一步与每一步的因果关系，其中A步骤因果关系到B<br>步骤，A和B联合起来形成一个子模块，子模块和子模块之间又因为因果<br>关系结合在一起，假设其中任何一个因果关系出现问题（错误），此时<br>整个系统的运转都会出现问题。（代码和代码之间的耦合度太高，扩展力<br>太差。）<br>螺栓螺母拧在一起：耦合度高吗？<br>这是耦合度低的，因为螺栓螺母可以再拧开。（它们之间是有接口的。）<br>螺栓螺母拧在一起之后，再用焊条焊接在一起，耦合度高吗？<br>这个耦合度就很高了。耦合度就是黏连程度。<br>往往耦合度高的扩展力就差。</p>
 <p>耦合度高导致扩展力差。（集成显卡：计算机显卡不是独立的，是集成到主板上的）<br>耦合度低导致扩展力强。（灯泡和灯口关系，螺栓螺母关系）</p>
@@ -1062,7 +1239,7 @@ JRE和JDK都是可以独立安装的。
 <p>封装<br>继承<br>多态</p>
 </blockquote>
 <p><strong>任何一个面向对象的编程语言都包括这三个特征</strong><br>例如：<br>python也有封装 继承 多态。<br>java也有封装 继承 多态。</p>
-<h2 id="十九、类和对象的概念"><a href="#十九、类和对象的概念" class="headerlink" title="十九、类和对象的概念"></a>十九、类和对象的概念</h2><h3 id="什么是类？"><a href="#什么是类？" class="headerlink" title="什么是类？"></a>什么是类？</h3><p>类实际上在现实世界当中是不存在的，是一个抽象的概念。<br>是一个模板。是我们人类大脑进行“思考、总结、抽象”的一个<br>结果。(主要是因为人类的大脑不一般才有了类的概念。)</p>
+<h3 id="什么是类？"><a href="#什么是类？" class="headerlink" title="什么是类？"></a>什么是类？</h3><p>类实际上在现实世界当中是不存在的，是一个抽象的概念。<br>是一个模板。是我们人类大脑进行“思考、总结、抽象”的一个<br>结果。(主要是因为人类的大脑不一般才有了类的概念。)</p>
 <p>类本质上是现实世界当中某些事物具有共同特征，将这些共同<br>特征提取出来形成的概念就是一个“类”，“类”就是一个模板。</p>
 <p>明星是一个类</p>
 <h3 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h3><p>对象是实际存在的个体。（真实存在的个体）</p>
@@ -1145,7 +1322,7 @@ JRE和JDK都是可以独立安装的。
 <li><strong>对象是通过new出来的，在堆内存中存储。</strong></li>
 <li><strong>引用是：但凡是变量，并且该变量中保存了内存地址指向了堆内存当中的对象的。</strong></li>
 </ul>
-<h2 id="二十、构造方法。"><a href="#二十、构造方法。" class="headerlink" title="二十、构造方法。"></a>二十、构造方法。</h2><ul>
+<h3 id="构造方法。"><a href="#构造方法。" class="headerlink" title="构造方法。"></a>构造方法。</h3><ul>
 <li><p>当一个类中没有提供任何构造方法，系统默认提供一个无参数的构造方法。这个无参数的构造方法叫做缺省构造器。</p>
 </li>
 <li><p>当一个类中手动的提供了构造方法，那么系统将不再默认提供无参数构造方法。建议将无参数构造方法手动的写出来，这样一定不会出问题。</p>
@@ -1166,7 +1343,7 @@ JRE和JDK都是可以独立安装的。
 </blockquote>
 <p><strong>方法重载特点：</strong><br>在同一个类中，方法名相同，参数列表不同。</p>
 <p>对于实例变量来说，只要你在构造方法中没有手动给它赋值，<br>统一都会默认赋值。默认赋系统值。</p>
-<h2 id="二十一、封装"><a href="#二十一、封装" class="headerlink" title="二十一、封装"></a>二十一、封装</h2><p><strong>有了封装，才有继承，有了继承，才能说多态。</strong></p>
+<h2 id="封装、继承、多态"><a href="#封装、继承、多态" class="headerlink" title="封装、继承、多态"></a>封装、继承、多态</h2><p><strong>有了封装，才有继承，有了继承，才能说多态。</strong></p>
 <h3 id="什么是封装？有什么用？"><a href="#什么是封装？有什么用？" class="headerlink" title="什么是封装？有什么用？"></a>什么是封装？有什么用？</h3><p>现实生活中有很多现实的例子都是封装的，例如：<br>手机，电视机，笔记本电脑，照相机，这些都是外部有一个坚硬的壳儿。<br>封装起来，保护内部的部件。保证内部的部件是安全的。另外封装了之后，<br>对于我们使用者来说，我们是看不见内部的复杂结构的，我们也不需要关心<br>内部有多么复杂，我们只需要操作外部壳儿上的几个按钮就可以完成操作。</p>
 <h3 id="封装的作用"><a href="#封装的作用" class="headerlink" title="封装的作用"></a>封装的作用</h3><ul>
 <li>第一个作用：保证内部结构的安全。</li>
@@ -1189,29 +1366,12 @@ JRE和JDK都是可以独立安装的。
                 return xxx;
             &#125;
 </code></pre>
-<h2 id="二十二、static关键字"><a href="#二十二、static关键字" class="headerlink" title="二十二、static关键字"></a>二十二、static关键字</h2><ul>
-<li>static 是 java 语言中的关键字，表示“静态的”，它可以用来<strong>修饰变量、方法、代码块等</strong></li>
-<li><strong>修饰的变量叫做静态变量，修饰的方法叫做静态方法，修饰的代码块叫做静态代码块。</strong></li>
-<li>在 java语言中凡是用 static 修饰的都是类相关的，不需要创建对象，<strong>直接通过“类名”即可访问</strong>，即使用“引用”去访问，在运行的时候也和堆内存当中的对象无关。</li>
-<li>当一个属性是类级别的属性，所有对象的这个属性的值是一样的，建议定义为静态变量。</li>
-</ul>
-<blockquote>
-<p>static修饰的方法静态方法<br>static修饰的变量静态变量<br>static修饰的都用“类名.”访问。（都不需要new对象，就能访问）<br><strong>static{} 是静态代码块，在类加载时执行，并执行一次。</strong><br><strong>{} 实例语句块，在构造方法执行前执行，构造一次执行一次。</strong></p>
-</blockquote>
-<h2 id="二十三、this"><a href="#二十三、this" class="headerlink" title="二十三、this"></a>二十三、this</h2><ul>
-<li>1、this是一个关键字，<strong>是一个引用，保存内存地址指向自身。</strong></li>
-<li>2、this可以使用在实例方法中，也可以使用在构造方法中。</li>
-<li>3、<strong>this出现在实例方法中其实代表的是当前对象。</strong></li>
-<li>4、<strong>this不能使用在静态方法中。</strong></li>
-<li>5、this. 大部分情况下可以省略，但是用来区分局部变量和实例变量的时候不能省略。</li>
-<li>6、<strong>this() 这种语法只能出现在构造方法第一行，</strong>表示当前构造方法调用本类其他的构造方法，目的是代码复用。</li>
-</ul>
-<h2 id="二十四、继承extends"><a href="#二十四、继承extends" class="headerlink" title="二十四、继承extends"></a>二十四、继承extends</h2><h3 id="什么是继承，有什么用？"><a href="#什么是继承，有什么用？" class="headerlink" title="什么是继承，有什么用？"></a>什么是继承，有什么用？</h3><p>继承：在现实世界当中也是存在的，例如：父亲很有钱，儿子不用努力也很有钱。<br>继承的作用：</p>
+<h3 id="继承extends"><a href="#继承extends" class="headerlink" title="继承extends"></a>继承extends</h3><h4 id="什么是继承，有什么用？"><a href="#什么是继承，有什么用？" class="headerlink" title="什么是继承，有什么用？"></a>什么是继承，有什么用？</h4><p>继承：在现实世界当中也是存在的，例如：父亲很有钱，儿子不用努力也很有钱。<br>继承的作用：</p>
 <ul>
 <li><strong>基本作用：子类继承父类，代码可以得到复用。（这个不是重要的作用，是基本作用。）</strong></li>
 <li><strong>主要(重要)作用：因为有了继承关系，才有了后期的方法覆盖和多态机制。</strong></li>
 </ul>
-<h3 id="继承的相关特性"><a href="#继承的相关特性" class="headerlink" title="继承的相关特性"></a>继承的相关特性</h3><p>① B类继承A类，则称A类为超类(superclass)、父类、基类，<br>B类则称为子类(subclass)、派生类、扩展类。</p>
+<h4 id="继承的相关特性"><a href="#继承的相关特性" class="headerlink" title="继承的相关特性"></a>继承的相关特性</h4><p>① B类继承A类，则称A类为超类(superclass)、父类、基类，<br>B类则称为子类(subclass)、派生类、扩展类。</p>
 <blockquote>
 <p>class A{}<br>class B extends A{}</p>
 </blockquote>
@@ -1225,7 +1385,7 @@ JRE和JDK都是可以独立安装的。
 <p>⑤ java 中的类没有显示的继承任何类，则<strong>默认继承 Object类</strong>,Object类是 java 语言提供的根类（老祖宗类），也就是说，一个对象与生俱来就有 Object类型中所有的特征。</p>
 <p>⑥ 继承也存在一些缺点，例如：CreditAccount 类继承 Account 类会导致它们之间的耦合度非常高，Account 类发生改变之后会马上影响到 CreditAccount 类</p>
 <p><strong>子类继承父类之后，能使用子类对象调用父类方法</strong></p>
-<h3 id="满足什么条件的时候，可以使用继承呢"><a href="#满足什么条件的时候，可以使用继承呢" class="headerlink" title="满足什么条件的时候，可以使用继承呢"></a>满足什么条件的时候，可以使用继承呢</h3><p>凡是采用“is a”能描述的，都可以继承。<br>例如：<br>Cat is a Animal：猫是一个动物<br>Dog is a Animal：狗是一个动物<br>CreditAccount is a Account：信用卡账户是一个银行账户<br>….</p>
+<h4 id="满足什么条件的时候，可以使用继承呢"><a href="#满足什么条件的时候，可以使用继承呢" class="headerlink" title="满足什么条件的时候，可以使用继承呢"></a>满足什么条件的时候，可以使用继承呢</h4><p>凡是采用“is a”能描述的，都可以继承。<br>例如：<br>Cat is a Animal：猫是一个动物<br>Dog is a Animal：狗是一个动物<br>CreditAccount is a Account：信用卡账户是一个银行账户<br>….</p>
 <p>假设以后的开发中有一个A类，有一个B类，A类和B类确实也有重复的代码，<br>那么他们两个之间就可以继承吗？不一定，还是要看一看它们之间是否能够<br>使用is a来描述。</p>
 <pre><code>        class Customer&#123;
             String name; // 名字
@@ -1242,57 +1402,22 @@ JRE和JDK都是可以独立安装的。
         &#125;
 </code></pre>
 <p>以上的继承就属于很失败的。因为：Product is a Customer，是有违伦理的。</p>
-<h2 id="二十五、方法覆盖-重写"><a href="#二十五、方法覆盖-重写" class="headerlink" title="二十五、方法覆盖/重写"></a>二十五、方法覆盖/重写</h2><h3 id="什么时候考虑使用方法覆盖？"><a href="#什么时候考虑使用方法覆盖？" class="headerlink" title="什么时候考虑使用方法覆盖？"></a>什么时候考虑使用方法覆盖？</h3><p>父类中的方法无法满足子类的业务需求，子类有必要对继承过来的方法进行覆盖。</p>
-<h3 id="什么条件满足的时候构成方法覆盖"><a href="#什么条件满足的时候构成方法覆盖" class="headerlink" title="什么条件满足的时候构成方法覆盖"></a>什么条件满足的时候构成方法覆盖</h3><ul>
-<li>第一：有继承关系的两个类</li>
-<li>第二：具有相同方法名、返回值类型、形式参数列表</li>
-<li>第三：访问权限不能更低。</li>
-<li>第四：抛出异常不能更多。</li>
-</ul>
-<h3 id="关于Object类中toString-方法的覆盖"><a href="#关于Object类中toString-方法的覆盖" class="headerlink" title="关于Object类中toString()方法的覆盖"></a>关于Object类中toString()方法的覆盖</h3><p><strong>toString()方法存在的作用就是：将java对象转换成字符串形式。</strong><br>大多数的java类toString()方法都是需要覆盖的。因为<strong>Object类中提供的toString()方法输出的是一个java对象的内存地址。</strong><br>例如</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"User{"</span> <span class="token operator">+</span>
-                <span class="token string">"id="</span> <span class="token operator">+</span> id <span class="token operator">+</span>
-                <span class="token string">", username='"</span> <span class="token operator">+</span> username <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
-                <span class="token string">", birthday="</span> <span class="token operator">+</span> birthday <span class="token operator">+</span>
-                <span class="token string">", sex='"</span> <span class="token operator">+</span> sex <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
-                <span class="token string">", address='"</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
-                <span class="token string">", ordersList="</span> <span class="token operator">+</span> ordersList <span class="token operator">+</span>
-                <span class="token string">'}'</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法重载和方法覆盖有什么区别"><a href="#方法重载和方法覆盖有什么区别" class="headerlink" title="方法重载和方法覆盖有什么区别"></a>方法重载和方法覆盖有什么区别</h3><ul>
-<li><p>方法重载发生在同一个类当中。</p>
-</li>
-<li><p>方法覆盖是发生在具有继承关系的父子类之间。</p>
-</li>
-<li><p>方法重载是一个类中，方法名相同，参数列表不同。</p>
-</li>
-<li><p>方法覆盖是具有继承关系的父子类，并且重写之后的方法必须和之前的方法一致：方法名一致、参数列表一致、返回值类型一致。</p>
-</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li><strong>私有不能覆盖。</strong></li>
-<li><strong>静态不谈覆盖。</strong></li>
-</ul>
-<h2 id="二十六、多态的基础语法"><a href="#二十六、多态的基础语法" class="headerlink" title="二十六、多态的基础语法"></a>二十六、多态的基础语法</h2><h3 id="向上转型和向下转型的概念。"><a href="#向上转型和向下转型的概念。" class="headerlink" title="向上转型和向下转型的概念。"></a>向上转型和向下转型的概念。</h3><blockquote>
+<h3 id="多态的基础语法"><a href="#多态的基础语法" class="headerlink" title="多态的基础语法"></a>多态的基础语法</h3><h4 id="向上转型和向下转型的概念。"><a href="#向上转型和向下转型的概念。" class="headerlink" title="向上转型和向下转型的概念。"></a>向上转型和向下转型的概念。</h4><blockquote>
 <p>向上转型：子—&gt;父 (upcasting)<br>又被称为自动类型转换：Animal a = new Cat();</p>
 </blockquote>
 <blockquote>
 <p>向下转型：父—&gt;子 (downcasting)<br>又被称为强制类型转换：Cat c = (Cat)a; 需要添加强制类型转换符。</p>
 </blockquote>
-<h3 id="什么时候需要向下转型"><a href="#什么时候需要向下转型" class="headerlink" title="什么时候需要向下转型"></a>什么时候需要向下转型</h3><p>需要调用或者执行子类对象中特有的方法。<br>必须进行向下转型，才可以调用。</p>
+<h4 id="什么时候需要向下转型"><a href="#什么时候需要向下转型" class="headerlink" title="什么时候需要向下转型"></a>什么时候需要向下转型</h4><p>需要调用或者执行子类对象中特有的方法。<br>必须进行向下转型，才可以调用。</p>
 <p><strong>向下转型有风险吗？</strong><br>容易出现ClassCastException（类型转换异常）<br>怎么避免这个风险？<br>instanceof运算符，可以在程序运行阶段动态的判断某个引用指向的对象<br>是否为某一种类型。<br>养成好习惯，向下转型之前一定要使用instanceof运算符进行判断。</p>
 <p>不管是向上转型还是向下转型，首先他们之间必须有继承关系，这样编译器就不会报错。</p>
-<h3 id="什么是多态。"><a href="#什么是多态。" class="headerlink" title="什么是多态。"></a>什么是多态。</h3><p><strong>多种形态，多种状态，编译和运行有两个不同的状态。</strong><br>编译期叫做静态绑定。<br>运行期叫做动态绑定。</p>
+<h4 id="什么是多态。"><a href="#什么是多态。" class="headerlink" title="什么是多态。"></a>什么是多态。</h4><p><strong>多种形态，多种状态，编译和运行有两个不同的状态。</strong><br>编译期叫做静态绑定。<br>运行期叫做动态绑定。</p>
 <blockquote>
 <p>Animal a = new Cat();<br>// 编译的时候编译器发现a的类型是Animal，所以编译器会去Animal类中找move()方法<br>// 找到了，绑定，编译通过。但是运行的时候和底层堆内存当中的实际对象有关<br>// 真正执行的时候会自动调用“堆内存中真实对象”的相关方法。<br>a.move();</p>
 </blockquote>
 <p><strong><code>多态的典型代码：父类型的引用指向子类型的对象。</code></strong></p>
-<h3 id="什么时候必须进行向下转型？"><a href="#什么时候必须进行向下转型？" class="headerlink" title="什么时候必须进行向下转型？"></a>什么时候必须进行向下转型？</h3><p>调用子类对象上特有的方法时。</p>
-<h3 id="多态在开发中有什么作用"><a href="#多态在开发中有什么作用" class="headerlink" title="多态在开发中有什么作用"></a>多态在开发中有什么作用</h3><p>多态在开发中的作用是：<br><strong>降低程序的耦合度，提高程序的扩展力。</strong></p>
+<h4 id="什么时候必须进行向下转型？"><a href="#什么时候必须进行向下转型？" class="headerlink" title="什么时候必须进行向下转型？"></a>什么时候必须进行向下转型？</h4><p>调用子类对象上特有的方法时。</p>
+<h4 id="多态在开发中有什么作用"><a href="#多态在开发中有什么作用" class="headerlink" title="多态在开发中有什么作用"></a>多态在开发中有什么作用</h4><p>多态在开发中的作用是：<br><strong>降低程序的耦合度，提高程序的扩展力。</strong></p>
 <pre><code>    public class Master&#123;
         public void feed(Dog d)&#123;&#125;
         public void feed(Cat c)&#123;&#125;
@@ -1314,7 +1439,24 @@ JRE和JDK都是可以独立安装的。
 <blockquote>
 <p>&lt;这里提到了一个软件开发原则：<br>七大原则最基本的原则：OCP（对扩展开放，对修改关闭）<br>目的是：降低程序耦合度，提高程序扩展力。<br>面向抽象编程，不建议面向具体编程。</p>
 </blockquote>
-<h2 id="二十七、super关键字"><a href="#二十七、super关键字" class="headerlink" title="二十七、super关键字"></a>二十七、super关键字</h2><ul>
+<h2 id="static、this、super关键字"><a href="#static、this、super关键字" class="headerlink" title="static、this、super关键字"></a>static、this、super关键字</h2><ul>
+<li>static 是 java 语言中的关键字，表示“静态的”，它可以用来<strong>修饰变量、方法、代码块等</strong></li>
+<li><strong>修饰的变量叫做静态变量，修饰的方法叫做静态方法，修饰的代码块叫做静态代码块。</strong></li>
+<li>在 java语言中凡是用 static 修饰的都是类相关的，不需要创建对象，<strong>直接通过“类名”即可访问</strong>，即使用“引用”去访问，在运行的时候也和堆内存当中的对象无关。</li>
+<li>当一个属性是类级别的属性，所有对象的这个属性的值是一样的，建议定义为静态变量。</li>
+</ul>
+<blockquote>
+<p>static修饰的方法静态方法<br>static修饰的变量静态变量<br>static修饰的都用“类名.”访问。（都不需要new对象，就能访问）<br><strong>static{} 是静态代码块，在类加载时执行，并执行一次。</strong><br><strong>{} 实例语句块，在构造方法执行前执行，构造一次执行一次。</strong></p>
+</blockquote>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><ul>
+<li>1、this是一个关键字，<strong>是一个引用，保存内存地址指向自身。</strong></li>
+<li>2、this可以使用在实例方法中，也可以使用在构造方法中。</li>
+<li>3、<strong>this出现在实例方法中其实代表的是当前对象。</strong></li>
+<li>4、<strong>this不能使用在静态方法中。</strong></li>
+<li>5、this. 大部分情况下可以省略，但是用来区分局部变量和实例变量的时候不能省略。</li>
+<li>6、<strong>this() 这种语法只能出现在构造方法第一行，</strong>表示当前构造方法调用本类其他的构造方法，目的是代码复用。</li>
+</ul>
+<h3 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h3><ul>
 <li><p>super能出现在实例方法和构造方法中。</p>
 </li>
 <li><p>super的语法是：“super.”、“super()”</p>
@@ -1323,7 +1465,7 @@ JRE和JDK都是可以独立安装的。
 </li>
 </ul>
 <p>*super. 大部分情况下是可以省略的。</p>
-<h2 id="super-什么时候不能省略呢"><a href="#super-什么时候不能省略呢" class="headerlink" title="super.什么时候不能省略呢"></a>super.什么时候不能省略呢</h2><p>父类和子类中有同名属性，或者说有同样的方法，<br>想在子类中访问父类的，super. 不能省略。</p>
+<h3 id="super-什么时候不能省略呢"><a href="#super-什么时候不能省略呢" class="headerlink" title="super.什么时候不能省略呢"></a>super.什么时候不能省略呢</h3><p>父类和子类中有同名属性，或者说有同样的方法，<br>想在子类中访问父类的，super. 不能省略。</p>
 <blockquote>
 <p>super() 只能出现在构造方法第一行，通过当前的构造方法去调用“父类”中<br>的构造方法，目的是：创建子类对象的时候，先初始化父类型特征。</p>
 </blockquote>
@@ -1392,7 +1534,19 @@ JRE和JDK都是可以独立安装的。
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/javaSE/">
+                                    <span class="chip bg-color">javaSE</span>
+                                </a>
+                            
+                                <a href="/tags/java%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">java基础</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1568,8 +1722,7 @@ JRE和JDK都是可以独立安装的。
                 <a href="/2021/09/06/Java-SE%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Java SE基础笔记">
+                        <img src="/images/java%E9%9B%B6%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/bg.jpg" class="responsive-img" alt="Java SE基础笔记">
                         
                         <span class="card-title">Java SE基础笔记</span>
                     </div>
@@ -1593,6 +1746,22 @@ JRE和JDK都是可以独立安装的。
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/javaSE/">
+                        <span class="chip bg-color">javaSE</span>
+                    </a>
+                    
+                    <a href="/tags/java%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">java基础</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
